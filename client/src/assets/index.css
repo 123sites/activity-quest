@@ -1,0 +1,27 @@
+:root {
+  /* main body */
+  --primary: #CAF0F8;
+
+  /* font */
+
+  /* cards */
+  --card-l: #E9E3E6;
+  /* buttons */
+  --btn-r: #A31621;
+  --btn-g: #3A4F41;
+  --btn-font: #E9E3E6;
+  --btn-shadow: #757083;
+  /* active/hover buttons */
+  --abtn-r: #B9314F;
+  --abtn-g: #3A4F41;
+  /* color pallette */
+  --federal-blue: #03045E;
+  --platinum: #E9E3E6;
+  --feldgrau: #3A4F41;
+  --rose-red: #B9314F;
+  --madder: #A31621;
+  --taupe-gray: #757083;
+  --pearl: #E6E1C5;
+  --celadon: #9BC59D;
+  --light-cyan: #CAF0F8;
+}
