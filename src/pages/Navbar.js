@@ -3,7 +3,7 @@ import { useContext } from "react";
 import { ThemeContext } from "../components/Theme/themeContext";
 import "../App.css";
 
-const Home = ({ handlePageChange }) => {
+const Navbar = ({ handlePageChange }) => {
   const { toggleTheme, theme } = useContext(ThemeContext);
   const [currentPath, setCurrentPath] = useState("");
 
@@ -21,4 +21,4 @@ const Home = ({ handlePageChange }) => {
   );
 };
 
-export default Home;
+export default Navbar;
