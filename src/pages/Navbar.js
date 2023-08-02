@@ -13,11 +13,11 @@ const Navbar = ({ handlePageChange }) => {
   }, []);
 
   return (
-    <main>
+    <nav className="flex sticky">
       <div
         className={`container-fluid mt-4 shadow-lg homeBox-${theme} vContainer-${theme}`}
       ></div>
-    </main>
+    </nav>
   );
 };
 
