@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { useContext } from "react";
-import { ThemeContext } from "../components/Theme/themeContext";
 import "../App.css";
 import "../index.css";
+import "./Navbar";
 
 const Home = ({ handlePageChange }) => {
   const [currentPath, setCurrentPath] = useState("");

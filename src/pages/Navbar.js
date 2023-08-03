@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { useContext } from "react";
 import { ThemeContext } from "../components/Theme/themeContext";
+import { Link } from "react-router-dom";
+import { faSun, faMoon } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "../App.css";
 import "../index.css";
 
