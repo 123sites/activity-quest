@@ -1,0 +1,26 @@
+:root {
+  /* main body */
+  --body: #F1FAEE;
+  /* font */
+  --font-light: #F1FAEE;
+  --font-dark: #1D3557;
+  /* cards */
+  --card: #A8DADC;
+  /* buttons */
+  --btn-b: #457B9D;
+  --btn-g-shadow: #757083;
+  --btn-r: #E63946;
+  --btn-b-shadow: #1D3557;
+  --btn-light-font: #F1FAEE;
+  --btn-dark-font: #1D3557;
+  /* active/hover buttons */
+  --abtn-r: #550527;
+  --abtn-b: #457B9D;
+  /* color pallette */
+  --pantone-red: #E63946;
+  --honeydew: #F1FAEE;
+  --nonphoto-blue: #A8DADC;
+  --cerulean: #457B9D;
+  --berkeley-blue: #1D3557;
+  --tyrian-purple: #550527;
+}
