@@ -25,13 +25,6 @@
   --tyrian-purple: #550527;
 }
 
-* {
-  font-family: 'JetBrains Mono', monospace;
-  font-family: 'Montserrat', sans-serif;
-  font-family: 'Nunito Sans', sans-serif;
-  font-family: 'Inter', sans-serif;
-}
-
 body {
   background-color: var(--body);
   font-family: 'jetBrains' sans-serif;
@@ -39,12 +32,14 @@ body {
   color: var(--font-dark);
 }
 
+
 .btn-light {
-  padding: 15px 25px;
+  padding: 10px 20px;
   font-size: 24px;
   text-align: center;
   cursor: pointer;
   outline: none;
+  letter-spacing: 1px;
   font-family: 'jetBrains' sans-serif;
   font-size: 1.2rem;
   font-weight: bolder;
@@ -55,7 +50,17 @@ body {
   box-shadow: 0 9px #999;
 }
 
+.home-title {
+  font-family: 'jetBrains' sans-serif;
+  font-weight: bolder;
+  color: var(--cerulean);
+}
 
+.home-text {
+  font-family: 'jetBrains' sans-serif;
+  font-weight: bolder;
+  color: var(--font-dark);
+}
 
 .btn-light:hover {
   background-color: var(--abtn-b);
@@ -68,11 +73,12 @@ body {
 }
 
 .btn-dark {
-  padding: 15px 25px;
+  padding: 10px 20px;
   font-size: 24px;
   text-align: center;
   cursor: pointer;
   outline: none;
+  letter-spacing: 1px;
   font-family: 'jetBrains' sans-serif;
   font-size: 1.2rem;
   font-weight: bolder;
