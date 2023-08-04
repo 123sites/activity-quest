@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-
 import Footer from "./Footer";
+import Home from "./Home";
 
 export default function WebpageContainer() {
   const [currentPage, setCurrentPage] = useState("Home");
@@ -9,20 +9,19 @@ export default function WebpageContainer() {
   const renderPage = () => {
     if (currentPage === "Footer") {
       return (
-        <Footer handlePageChange={handlePageChange} currentPage="footer" />
+        <Footer
+          changePage={changePage}
+          currentPage={currentPage}
+          handlePageChange={handlePageChange}
+        />
       );
     }
-    if (currentPage === "Home") {
-      return <Home handlePageChange={handlePageChange} currentPage="home" />;
-    }
-
     return (
-      <div>
-        <Navbar currentPage={currentPage} handlePageChange={handlePageChange} />
-
-        {renderPage()}
-        <Footer />
-      </div>
+      <Home
+        changePage={changePage}
+        currentPage={currentPage}
+        handlePageChange={handlePageChange}
+      />
     );
   };
 }

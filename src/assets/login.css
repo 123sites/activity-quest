@@ -1,0 +1,33 @@
+:root {
+  /* main body */
+  --body: #F1FAEE;
+  /* font */
+  --font-light: #F1FAEE;
+  --font-dark: #1D3557;
+  /* cards */
+  --card: #A8DADC;
+  /* buttons */
+  --btn-blue: #457B9D;
+  --btn-blue-shadow: #757083;
+  --btn-red: #E63946;
+  --btn-red-shadow: #1D3557;
+  --btn-light-font: #F1FAEE;
+  --btn-dark-font: #1D3557;
+  /* active/hover buttons */
+  --abtn-red: #550527;
+  --abtn-blue: #457B9D;
+  /* color pallette */
+  --pantone-red: #E63946;
+  --honeydew: #F1FAEE;
+  --nonphoto-blue: #A8DADC;
+  --cerulean: #457B9D;
+  --berkeley-blue: #1D3557;
+  --tyrian-purple: #550527;
+}
+
+body {
+  background-color: var(--body);
+  font-family: 'jetBrains' sans-serif;
+  font-size: 1.2rem;
+  color: var(--font-dark);
+}
