@@ -2,7 +2,6 @@ import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 // import Calender from "./components/Calender/calender";
 import Home from "./pages/Home.js";
-import Navbar from "./pages/Navbar.js";
 
 export default function App() {
   return (
