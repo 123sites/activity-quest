@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./Navbar";
+import Navbar from "../components/Navbar/navbar.js";
 import "../assets/index.css";
 import "../assets/home.css";
 
@@ -10,10 +10,11 @@ const Home = ({ handlePageChange }) => {
   useEffect(() => {
     console.log(currentPath);
     setCurrentPath(window.location.pathname);
-  }, []);
+  }, [currentPath]);
 
   return (
     <div className="container">
+      <Navbar />
       <div>
         <h1 className="text-center home-title m-5">
           Welcome to Activity Quest!
