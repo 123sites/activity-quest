@@ -14,44 +14,53 @@ const Navbar = ({ handlePageChange }) => {
   }, []);
 
   return (
-    <nav className="navbar navbar-expand-lg sticky-lg-top">
+    <nav className="navbar navbar-expand-lg">
       <div className="container-fluid">
         <div className="row col">
-          <div className="navbar-header">
+          <div className="navbar-header col">
             <button
+              class="navbar-toggler"
               type="button"
-              class="navbar-toggle"
-              data-toggle="collapse"
-              data-target="#myNavbar"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarText"
+              aria-controls="navbarText"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
             >
-              <span className="icon-bar"></span>
-              <span className="icon-bar"></span>
-              <span className="icon-bar"></span>
+              <span class="navbar-toggler-icon"></span>
             </button>
 
-            <a className="navbar-brand brand p-4" href="/">
+            <a className="navbar-brand brand p-4 d-flex" href="/">
               Activity Quest
             </a>
           </div>
-          <div className="nav-elements row mt-2 d-flex justify-content-end">
-            <ul className="nav">
-              <li className="nav-item">
-                <Link to="/">Home</Link>
+          <div className="nav-elements row">
+            <ul className="navbar-nav mb-2 mb-lg-0">
+              <li className="nav-link">
+                <li className="nav-link">
+                  <Link
+                    className={`nav-link link fs-6 text-center fw-bolder`}
+                    to="/home"
+                  >
+                    {" "}
+                    Home
+                  </Link>
+                </li>
               </li>
-              <li className="nav-item">
+              <li className="nav-link link">
                 <Link to="/Account">Account</Link>
               </li>
-              <li className="nav-item">
+              <li className="nav-link link">
                 <Link to="/Favorites">Favorites</Link>
               </li>
-              <li className="nav-item">
-                <Link to="/Login">Sign-Up</Link>
+              <li className="nav-link link">
+                <Link to="/Signup">Sign-Up</Link>
               </li>
-              <li>
+              <li className="nav-link link">
                 <Link to="/Login">Login</Link>
               </li>
-              <li className="nav-item">
-                <Link to="/Login">Log-out</Link>
+              <li className="nav-link link">
+                <Link to="/Logout">Log-out</Link>
               </li>
             </ul>
           </div>

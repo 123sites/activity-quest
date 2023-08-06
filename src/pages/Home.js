@@ -23,7 +23,7 @@ const Home = ({ handlePageChange }) => {
           Your one-stop App that helps you find fun activities in your area!
         </h4>
       </div>
-      <div id="carouselExample" className="carousel slide">
+      <div id="carouselExample" className="carousel slide m-5">
         <div className="carousel-inner">
           <div className="carousel-item active">
             <img src="../images/img1.jpg" className="d-block w-100" alt="..." />
