@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
+import Logo from "../../images/AQ.png";
 import "../../assets/index.css";
 import "../../assets/navbar.css";
 import "../../assets/login.css";
@@ -14,10 +15,22 @@ const Navbar = ({ handlePageChange }) => {
   }, []);
 
   return (
-    <nav className="navbar navbar-expand-lg">
+    <nav className="navbar navbar-expand-lg sticky-lg-top">
       <div className="container-fluid">
+        {/* DIV 1 */}
         <div className="row col">
-          <div className="navbar-header col">
+          <div className="col">
+            <Link
+              className="navbar-brand text-light d-inline-flex name"
+              to="/home"
+            >
+              {/* <img src={Logo} className="logo" alt="AQ Logo" /> */}
+              <div
+                className={`navbar-brand navbar-expand-lg brand ml-5 mt-1 fw-bold mb-0`}
+              >
+                Activity Quest
+              </div>
+            </Link>
             <button
               class="navbar-toggler"
               type="button"
@@ -29,10 +42,6 @@ const Navbar = ({ handlePageChange }) => {
             >
               <span class="navbar-toggler-icon"></span>
             </button>
-
-            <Link className="navbar-brand brand p-4 d-flex" href="/">
-              Activity Quest
-            </Link>
           </div>
           <div className="nav-elements row">
             <ul className="navbar-nav mb-2 mb-lg-0">

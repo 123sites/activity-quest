@@ -14,11 +14,16 @@
   position: relative;
 }
 
+.name {
+  text-decoration: none !important;
+}
+
 .brand {
+  font-family: 'Inter', sans-serif;
   align-items: center;
   justify-content: center;
-  font-size: 25px;
-  font-weight: 600;
+  font-size: 1.75rem;
+  font-weight: 400;
   color: var(--font-light);
   text-decoration: none !important;
 }
