@@ -13,14 +13,14 @@ const Home = ({ handlePageChange }) => {
   }, [currentPath]);
 
   return (
-    <div className="container">
+    <div className="container-fluid">
       <Navbar />
       <div>
         <h1 className="text-center home-title m-5">
           Welcome to Activity Quest!
         </h1>
         <h4 className="text-center home-text mb-5">
-          Information about the site goes here....
+          Your one-stop App that helps you find fun activities in your area!
         </h4>
       </div>
       <div id="carouselExample" className="carousel slide">

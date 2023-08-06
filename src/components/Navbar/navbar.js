@@ -14,7 +14,7 @@ const Navbar = ({ handlePageChange }) => {
   }, []);
 
   return (
-    <nav className="navbar">
+    <nav className="navbar navbar-expand-lg sticky-lg-top">
       <div className="container-fluid">
         <div className="row col">
           <div className="navbar-header">
@@ -33,16 +33,13 @@ const Navbar = ({ handlePageChange }) => {
               Activity Quest
             </a>
           </div>
-          <div className="nav-elements row mt-2">
-            <ul className="nav justify-content-end">
+          <div className="nav-elements row mt-2 d-flex justify-content-end">
+            <ul className="nav">
               <li className="nav-item">
                 <Link to="/">Home</Link>
               </li>
               <li className="nav-item">
                 <Link to="/Account">Account</Link>
-              </li>
-              <li>
-                <Link to="/Search">Activity Search</Link>
               </li>
               <li className="nav-item">
                 <Link to="/Favorites">Favorites</Link>
@@ -54,7 +51,7 @@ const Navbar = ({ handlePageChange }) => {
                 <Link to="/Login">Login</Link>
               </li>
               <li className="nav-item">
-                <Link to="/Login">Sign-Up</Link>
+                <Link to="/Login">Log-out</Link>
               </li>
             </ul>
           </div>
