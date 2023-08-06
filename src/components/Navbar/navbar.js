@@ -4,6 +4,7 @@ import "../../assets/index.css";
 import "../../assets/navbar.css";
 import "../../assets/login.css";
 import "../../App.css";
+import Logo from "../../images/logo.png";
 
 import { ThemeContext } from "../Theme/themeContext";
 import { faSun, faMoon } from "@fortawesome/free-solid-svg-icons";
@@ -18,44 +19,54 @@ const Navbar = ({ handlePageChange }) => {
   }, []);
 
   return (
-    <nav className="navbar navbar-inverse p-3 top sticky-lg-top">
+    <nav className="navbar">
       <div className="container-fluid">
-        <div className="navbar-header">
-          <button
-            type="button"
-            class="navbar-toggle"
-            data-toggle="collapse"
-            data-target="#myNavbar"
-          >
-            <span className="icon-bar"></span>
-            <span className="icon-bar"></span>
-            <span className="icon-bar"></span>
-          </button>
-          <a className="navbar-brand p-2" href="/">
-            Activity Quest
-          </a>
-        </div>
-        <div className="collapse navbar-collapse row" id="myNavbar">
-          <ul className="nav navbar-nav text-center col">
-            <Link className={`nav-link text-center`} to="/Home">
-              Home
-            </Link>
-            <Link className={`nav-link text-center`} to="/Search">
-              Activity Search
-            </Link>
-            <Link className={`nav-link text-center`} to="/Account">
-              Account
-            </Link>
-            <Link className={`nav-link text-center`} to="/Favorites">
-              Favorites
-            </Link>
-          </ul>
-          <ul className="nav navbar-nav navbar-right">
-            <Link className={`nav-link text-end`} to="Login">
-              Login
-            </Link>
-            <button className="col p-2 m-3 logout fw-boldest"></button>
-          </ul>
+        <div className="row col">
+          <div className="navbar-header">
+            <button
+              type="button"
+              class="navbar-toggle"
+              data-toggle="collapse"
+              data-target="#myNavbar"
+            >
+              <span className="icon-bar"></span>
+              <span className="icon-bar"></span>
+              <span className="icon-bar"></span>
+            </button>
+            <img
+              className="w-5"
+              src={Logo}
+              alt="AQ initials for Activity quest brand name."
+            />
+            <a className="navbar-brand brand p-4" href="/">
+              Activity Quest
+            </a>
+          </div>
+          <div className="nav-elements row mt-2">
+            <ul className="nav justify-content-end">
+              <li className="nav-item">
+                <Link to="/">Home</Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/Account">Account</Link>
+              </li>
+              <li>
+                <Link to="/Search">Activity Search</Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/Favorites">Favorites</Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/Login">Sign-Up</Link>
+              </li>
+              <li>
+                <Link to="/Login">Login</Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/Login">Sign-Up</Link>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </nav>
