@@ -4,11 +4,6 @@ import "../../assets/index.css";
 import "../../assets/navbar.css";
 import "../../assets/login.css";
 import "../../App.css";
-import Logo from "../../images/logo.png";
-
-import { ThemeContext } from "../Theme/themeContext";
-import { faSun, faMoon } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Navbar = ({ handlePageChange }) => {
   const [currentPath, setCurrentPath] = useState("");
@@ -33,11 +28,7 @@ const Navbar = ({ handlePageChange }) => {
               <span className="icon-bar"></span>
               <span className="icon-bar"></span>
             </button>
-            <img
-              className="w-5"
-              src={Logo}
-              alt="AQ initials for Activity quest brand name."
-            />
+
             <a className="navbar-brand brand p-4" href="/">
               Activity Quest
             </a>
