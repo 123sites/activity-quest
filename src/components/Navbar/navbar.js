@@ -30,9 +30,9 @@ const Navbar = ({ handlePageChange }) => {
               <span class="navbar-toggler-icon"></span>
             </button>
 
-            <a className="navbar-brand brand p-4 d-flex" href="/">
+            <Link className="navbar-brand brand p-4 d-flex" href="/">
               Activity Quest
-            </a>
+            </Link>
           </div>
           <div className="nav-elements row">
             <ul className="navbar-nav mb-2 mb-lg-0">
@@ -42,25 +42,49 @@ const Navbar = ({ handlePageChange }) => {
                     className={`nav-link link fs-6 text-center fw-bolder`}
                     to="/home"
                   >
-                    {" "}
                     Home
                   </Link>
                 </li>
               </li>
-              <li className="nav-link link">
-                <Link to="/Account">Account</Link>
+              <li className="nav-link link fw-boldest">
+                <Link
+                  className={`nav-link link fs-6 text-center fw-bolder`}
+                  to="/account"
+                >
+                  Account
+                </Link>
               </li>
-              <li className="nav-link link">
-                <Link to="/Favorites">Favorites</Link>
+              <li className="nav-link link fw-boldest">
+                <Link
+                  className={`nav-link link fs-6 text-center fw-bolder`}
+                  to="/favorites"
+                >
+                  Favorites
+                </Link>
               </li>
-              <li className="nav-link link">
-                <Link to="/Signup">Sign-Up</Link>
+              <li className="nav-link link fw-boldest">
+                <Link
+                  className={`nav-link link fs-6 text-center fw-bolder`}
+                  to="/signup"
+                >
+                  Sign-up
+                </Link>
               </li>
-              <li className="nav-link link">
-                <Link to="/Login">Login</Link>
+              <li className="nav-link link fw-boldest">
+                <Link
+                  className={`nav-link link fs-6 text-center fw-bolder`}
+                  to="/login"
+                >
+                  Log-in
+                </Link>
               </li>
-              <li className="nav-link link">
-                <Link to="/Logout">Log-out</Link>
+              <li className="nav-link link fw-boldest">
+                <Link
+                  className={`nav-link link fs-6 text-center fw-bolder`}
+                  to="/logout"
+                >
+                  Log-out
+                </Link>
               </li>
             </ul>
           </div>

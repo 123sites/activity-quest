@@ -63,3 +63,9 @@
   color: var(--tyrian-purple) !important;
   background-color: var(--bg-light) !important;
 }
+
+.link:active,
+.link:hover {
+  color: var(--berkeley-blue) !important;
+  text-decoration: none !important;
+}
