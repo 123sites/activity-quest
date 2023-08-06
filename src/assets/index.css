@@ -40,7 +40,7 @@ body {
 }
 
 .btn-light {
-  padding: 15px 25px;
+  padding: 10px 20px;
   font-size: 24px;
   text-align: center;
   cursor: pointer;
@@ -49,7 +49,7 @@ body {
   font-size: 1.2rem;
   font-weight: bolder;
   color: var(--font-light);
-  background-color: var(--btn-b);
+  background-color: var(--btn-blue);
   border: none;
   border-radius: 15px;
   box-shadow: 0 9px #999;
@@ -68,7 +68,7 @@ body {
 }
 
 .btn-dark {
-  padding: 15px 25px;
+  padding: 10px 20px;
   font-size: 24px;
   text-align: center;
   cursor: pointer;

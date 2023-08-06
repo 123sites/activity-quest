@@ -31,3 +31,19 @@ body {
   font-size: 1.2rem;
   color: var(--font-dark);
 }
+
+.logout {
+  padding: 7px 15px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  font-family: 'jetBrains' sans-serif;
+  font-size: 1.2rem;
+  font-weight: bolder;
+  color: var(--font-light);
+  background-color: var(--btn-blue);
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}

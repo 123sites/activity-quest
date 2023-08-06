@@ -1,6 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
+import { Link } from "react-router-dom";
 import "../../assets/index.css";
 import "../../App.css";
+import { ThemeContext } from "../Theme/themeContext";
+import { faSun, faMoon } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Navbar = ({ handlePageChange }) => {
   const [currentPath, setCurrentPath] = useState("");
@@ -24,31 +28,42 @@ const Navbar = ({ handlePageChange }) => {
             <span className="icon-bar"></span>
             <span className="icon-bar"></span>
           </button>
-          <a className="navbar-brand" href="#">
+          <a className="navbar-brand" href="/">
             Logo
           </a>
         </div>
         <div className="collapse navbar-collapse" id="myNavbar">
-          <ul className="nav navbar-nav">
-            <li className="active">
-              <a href="#">Home</a>
-            </li>
-            <li>
-              <a href="#">About</a>
-            </li>
-            <li>
-              <a href="#">Account</a>
-            </li>
-            <li>
-              <a href="#">???</a>
-            </li>
+          <ul className="nav navbar-nav fw-boldeset text-center">
+            <Link
+              className={`nav-link text-center letter-spacing-sm`}
+              to="/Home"
+            >
+              Home
+            </Link>
+            <Link
+              className={`nav-link text-center letter-spacing-sm`}
+              to="/Search"
+            >
+              Activity Search
+            </Link>
+            <Link
+              className={`nav-link text-center letter-spacing-sm`}
+              to="/Account"
+            >
+              Account
+            </Link>
+            <Link
+              className={`nav-link text-center letter-spacing-sm`}
+              to="/Favorites"
+            >
+              Favorites
+            </Link>
           </ul>
           <ul className="nav navbar-nav navbar-right">
-            <li>
-              <a href="#">
-                <span className="glyphicon glyphicon-log-in"></span> Login
-              </a>
-            </li>
+            <Link className={`nav-link text-end btn-light`} to="Login">
+              Login
+            </Link>
+            <button className="col p-2 m-3 logout fw-boldest"></button>
           </ul>
         </div>
       </div>
