@@ -30,67 +30,55 @@
   font-family: 'Montserrat', sans-serif;
   font-family: 'Nunito Sans', sans-serif;
   font-family: 'Inter', sans-serif;
+  font-weight: boldest;
+  letter-spacing: 1.25px;
 }
 
 body {
   background-color: var(--body);
-  font-family: 'jetBrains' sans-serif;
-  font-size: 1.2rem;
-  color: var(--font-dark);
+  font-size: 2.2rem;
 }
 
 .btn-light {
-  padding: 15px 25px;
-  font-size: 24px;
+  padding: 7px 10px;
+  font-size: 16px !important;
   text-align: center;
   cursor: pointer;
   outline: none;
-  font-family: 'jetBrains' sans-serif;
-  font-size: 1.2rem;
-  font-weight: bolder;
-  color: var(--font-light);
-  background-color: var(--btn-b);
-  border: none;
-  border-radius: 15px;
-  box-shadow: 0 9px #999;
-}
-
-
-
-.btn-light:hover {
-  background-color: var(--abtn-b);
-}
-
-.btn-light:active {
-  background-color: var(--abtn-b);
-  box-shadow: 0 5px var(--btn-blue-shadow);
-  transform: translateY(4px);
-}
-
-.btn-dark {
-  padding: 15px 25px;
-  font-size: 24px;
-  text-align: center;
-  cursor: pointer;
-  outline: none;
-  font-family: 'jetBrains' sans-serif;
   font-size: 1.2rem;
   font-weight: bolder;
   color: var(--font-light);
   background-color: var(--btn-blue);
   border: none;
   border-radius: 15px;
-  box-shadow: 0 9px --btn-blue-shadow;
+  box-shadow: 0 9px #999;
+}
+
+.btn-light:hover {
+  background-color: var(--nonphoto-blue) !important;
+  color: var(--font-dark);
+}
+
+.btn-light:active {
+  background-color: var(--nonphoto-blue) !important;
+  box-shadow: 0 5px var(--btn-blue-shadow) !important;
+  transform: translateY(4px);
+}
+
+.btn-dark {
+  color: var(--font-light);
+  background-color: var(--btn-blue) !important;
+  box-shadow: 0 9px var(--btn-blue-shadow) !important;
 }
 
 
 
 .btn-dark:hover {
-  background-color: var(--abtn-b);
+  background-color: var(--nonphoto-blue) !important;
 }
 
 .btn-dark:active {
-  background-color: var(--abtn-b);
-  box-shadow: 0 5px var(--btn-blue-shadow);
+  background-color: var(--nonphoto-blue) !important;
+  box-shadow: 0 5px var(--btn-blue-shadow) !important;
   transform: translateY(4px);
 }
