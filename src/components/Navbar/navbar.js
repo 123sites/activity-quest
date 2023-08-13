@@ -1,6 +1,9 @@
 import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 import Logo from "../../images/AQ.png";
+import { ThemeContext } from "../Theme/themeContext";
+import { faSun, faMoon } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "../../assets/index.css";
 import "../../assets/navbar.css";
 import "../../assets/login.css";
@@ -15,7 +18,10 @@ const Navbar = ({ handlePageChange }) => {
   }, []);
 
   return (
-    <nav className="navbar navbar-expand-lg sticky-lg-top">
+    <nav
+      className={`navbar navbar-expand-lg header sticky-lg-top top-${ThemeContext}`}
+    >
+      {/* <nav className="navbar navbar-expand-lg sticky-lg-top"> */}
       <div className="container-fluid">
         {/* DIV 1 */}
         <div className="row col">
