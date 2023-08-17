@@ -19,9 +19,7 @@ const Navbar = ({ handlePageChange }) => {
   }, []);
 
   return (
-    <nav
-      className={`navbar navbar-expand-lg header sticky-lg-top top-${theme}`}
-    >
+    <nav className={`navbar navbar-expand-lg header sticky-top top-${theme}`}>
       {/* <nav className="navbar navbar-expand-lg sticky-lg-top"> */}
       <div className="container-fluid">
         {/* DIV 1 */}
