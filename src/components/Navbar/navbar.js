@@ -11,6 +11,7 @@ import "../../App.css";
 
 const Navbar = ({ handlePageChange }) => {
   const [currentPath, setCurrentPath] = useState("");
+  const { toggleTheme, ThemeContext } = useContext(ThemeContext);
 
   useEffect(() => {
     console.log(currentPath);
@@ -32,7 +33,7 @@ const Navbar = ({ handlePageChange }) => {
             >
               {/* <img src={Logo} className="logo" alt="AQ Logo" /> */}
               <div
-                className={`navbar-brand navbar-expand-lg brand ml-5 mt-1 fw-bold mb-0`}
+                className={`name-${ThemeContext} navbar-brand navbar-expand-lg ml-2 fw-bold mb-0`}
               >
                 Activity Quest
               </div>
@@ -54,7 +55,7 @@ const Navbar = ({ handlePageChange }) => {
               <li className="nav-link">
                 <li className="nav-link">
                   <Link
-                    className={`nav-link link fs-6 text-center fw-bolder`}
+                    className={`nav-link link ${ThemeContext} text-center fw-bolder`}
                     to="/home"
                   >
                     Home
@@ -63,7 +64,7 @@ const Navbar = ({ handlePageChange }) => {
               </li>
               <li className="nav-link link fw-boldest">
                 <Link
-                  className={`nav-link link fs-6 text-center fw-bolder`}
+                  className={`nav-link link ${ThemeContext} text-center fw-bolder`}
                   to="/account"
                 >
                   Account
@@ -71,7 +72,7 @@ const Navbar = ({ handlePageChange }) => {
               </li>
               <li className="nav-link link fw-boldest">
                 <Link
-                  className={`nav-link link fs-6 text-center fw-bolder`}
+                  className={`nav-link link ${ThemeContext} text-center fw-bolder`}
                   to="/favorites"
                 >
                   Favorites
@@ -79,7 +80,7 @@ const Navbar = ({ handlePageChange }) => {
               </li>
               <li className="nav-link link fw-boldest">
                 <Link
-                  className={`nav-link link fs-6 text-center fw-bolder`}
+                  className={`nav-link link ${ThemeContext} text-center fw-bolder`}
                   to="/signup"
                 >
                   Sign-up
@@ -87,7 +88,7 @@ const Navbar = ({ handlePageChange }) => {
               </li>
               <li className="nav-link link fw-boldest">
                 <Link
-                  className={`nav-link link fs-6 text-center fw-bolder`}
+                  className={`nav-link link ${ThemeContext} text-center fw-bolder`}
                   to="/login"
                 >
                   Log-in
@@ -95,13 +96,22 @@ const Navbar = ({ handlePageChange }) => {
               </li>
               <li className="nav-link link fw-boldest">
                 <Link
-                  className={`nav-link link fs-6 text-center fw-bolder`}
+                  className={`nav-link link ${ThemeContext} text-center fw-bolder`}
                   to="/logout"
                 >
                   Log-out
                 </Link>
               </li>
             </ul>
+            <div className="d-inline-flex ml-2">
+              <button onClick={toggleTheme}>
+                {ThemeContext === "light" ? (
+                  <FontAwesomeIcon icon={faMoon} />
+                ) : (
+                  <FontAwesomeIcon icon={faSun} />
+                )}
+              </button>
+            </div>
           </div>
         </div>
       </div>
