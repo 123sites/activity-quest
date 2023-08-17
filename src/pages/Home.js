@@ -1,10 +1,7 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect } from "react";
 import Navbar from "../components/Navbar/navbar.js";
 import "../assets/index.css";
 import "../assets/home.css";
-import { ThemeContext } from "../Theme/themeContext";
-import { faSun, faMoon } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Home = ({ handlePageChange }) => {
   const [currentPath, setCurrentPath] = useState("");
@@ -12,8 +9,6 @@ const Home = ({ handlePageChange }) => {
 
   useEffect(() => {
     console.log(currentPath);
-    // eslint-disable-next-line react-hooks/rules-of-hooks
-    const { toggleTheme, theme } = useContext(ThemeContext);
     setCurrentPath(window.location.pathname);
   }, [currentPath]);
 
