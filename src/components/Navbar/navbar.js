@@ -28,12 +28,12 @@ const Navbar = ({ handlePageChange }) => {
         <div className="row">
           <div className="col">
             <Link
-              className={`nav-link ${theme} text-center fw-bolder`}
+              className={`nav-link ${theme} text-center fw-bolder col`}
               to="/home"
             >
               {/* <img src={Logo} className="logo" alt="AQ Logo" /> */}
               <div
-                className={`name-${theme} navbar-brand navbar-expand-lg ml-2 fw-bold mb-0`}
+                className={`name-${theme} navbar-brand navbar-expand-lg ml-4 fw-bold mb-0`}
               >
                 Activity Quest
               </div>
@@ -55,7 +55,7 @@ const Navbar = ({ handlePageChange }) => {
               <li className="nav-link">
                 <li className="nav-link">
                   <Link
-                    className={`nav-link ${theme} text-center fw-bolder`}
+                    className={`nav-link ${theme} text-center link fw-bolder`}
                     to="/home"
                   >
                     Home
@@ -64,7 +64,7 @@ const Navbar = ({ handlePageChange }) => {
               </li>
               <li className="nav-link fw-boldest">
                 <Link
-                  className={`nav-link ${theme} text-center fw-bolder`}
+                  className={`nav-link ${theme} text-center link fw-bolder`}
                   to="/account"
                 >
                   Account
@@ -72,7 +72,7 @@ const Navbar = ({ handlePageChange }) => {
               </li>
               <li className="nav-link fw-boldest">
                 <Link
-                  className={`nav-link ${theme} text-center fw-bolder`}
+                  className={`nav-link ${theme} text-center link fw-bolder`}
                   to="/favorites"
                 >
                   Favorites
@@ -80,7 +80,7 @@ const Navbar = ({ handlePageChange }) => {
               </li>
               <li className="nav-link fw-boldest">
                 <Link
-                  className={`nav-link ${theme} text-center fw-bolder`}
+                  className={`nav-link ${theme} text-center link fw-bolder`}
                   to="/signup"
                 >
                   Sign-up
@@ -88,7 +88,7 @@ const Navbar = ({ handlePageChange }) => {
               </li>
               <li className="nav-link fw-boldest">
                 <Link
-                  className={`nav-link ${theme} text-center fw-bolder`}
+                  className={`nav-link ${theme} text-center link fw-bolder`}
                   to="/login"
                 >
                   Log-in
@@ -96,7 +96,7 @@ const Navbar = ({ handlePageChange }) => {
               </li>
               <li className="nav-link fw-boldest">
                 <Link
-                  className={`nav-link ${theme} text-center fw-bolder`}
+                  className={`nav-link ${theme} text-center link fw-bolder`}
                   to="/logout"
                 >
                   Log-out
@@ -106,7 +106,7 @@ const Navbar = ({ handlePageChange }) => {
           </div>
           <div className="ml-5">
             {/* // eslint-disable-next-line no-undef */}
-            <button onClick={toggleTheme} className="">
+            <button onClick={toggleTheme}>
               {theme === "light" ? (
                 <FontAwesomeIcon icon={faMoon} />
               ) : (

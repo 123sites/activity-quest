@@ -68,7 +68,7 @@ body {
 
 .btn-light:hover {
   background-color: var(--light-nonphoto-blue) !important;
-  color: var(--font-dark);
+  color: var(--tyrian-purple) !important;
 }
 
 .btn-light:active {
@@ -94,10 +94,11 @@ body {
 
 .btn-dark:hover {
   background-color: var(--dark-abtn-blue) !important;
-  color: var(--font-dark);
+  color: var(--tyrian-purple) !important;
 }
 
 .btn-dark:active {
+  color: var(--tyrian-purple) !important;
   background-color: var(--dark-abtn-blue) !important;
   box-shadow: 0 5px var(--dark-abtn-blue-shadow) !important;
   transform: translateY(4px);

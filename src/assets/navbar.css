@@ -36,6 +36,16 @@ a:hover {
   text-decoration: none !important;
 }
 
+.link {
+  font-family: 'Inter', sans-serif;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: var(--light-font) !important;
+  text-decoration: none !important;
+}
+
 .nav-elements ul {
   display: flex;
   justify-content: space-between;
