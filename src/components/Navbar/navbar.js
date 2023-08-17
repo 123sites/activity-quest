@@ -33,7 +33,7 @@ const Navbar = ({ handlePageChange }) => {
             >
               {/* <img src={Logo} className="logo" alt="AQ Logo" /> */}
               <div
-                className={`name-${theme} navbar-brand navbar-expand-lg ml-4 fw-bold mb-0`}
+                className={`name-${theme} navbar-brand navbar-expand-lg mt-2 ml-4 fw-bold mb-0`}
               >
                 Activity Quest
               </div>
