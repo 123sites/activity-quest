@@ -1,61 +1,50 @@
 import React from "react";
 import { AiFillCaretLeft, AiFillCaretRight } from "react-icons/ai";
+import "../../assets/calender.css";
 
 export default function Calender() {
   return (
-    <>
-      <div class="wrapper">
-        <header>
-          <p class="current-date">July 2023</p>
-          <div class="icons">
-            < AiFillCaretLeft />
-            < AiFillCaretRight />
+    <body>
+    <div class="contianer">
+      <div class="calendar">
+        <div class="calendar-header">
+          <span class="month-picker" id="month-picker"> May </span>
+          <div class="year-picker" id="year-picker">
+            <span class="year-change" id="pre-year">
+              <pre></pre>
+            </span>
+            <span id="year">2020 </span>
+            <span class="year-change" id="next-year">
+              <pre></pre>
+            </span>
           </div>
-        </header>
-        <div class="calendar">
-          <ul class="weeks">
-            <li>Sun</li>
-            <li>Mon</li>
-            <li>Tue</li>
-            <li>Wed</li>
-            <li>Thu</li>
-            <li>Fri</li>
-            <li>Sat</li>
-          </ul>
-          <ul class="days">
-            <li>28</li>
-            <li>29</li>
-            <li>30</li>
-            <li>1</li>
-            <li>2</li>
-            <li>3</li>
-            <li>4</li>
-            <li>5</li>
-            <li>6</li>
-            <li>7</li>
-            <li>8</li>
-            <li>9</li>
-            <li>10</li>
-            <li>11</li>
-            <li>12</li>
-            <li>13</li>
-            <li>14</li>
-            <li>15</li>
-            <li>16</li>
-            <li>17</li>
-            <li>18</li>
-            <li>19</li>
-            <li>20</li>
-            <li>21</li>
-            <li>22</li>
-            <li>23</li>
-            <li>24</li>
-            <li>25</li>
-            <li>26</li>
-            <li>27</li>
-          </ul>
         </div>
+ 
+        <div class="calendar-body">
+          <div class="calendar-week-days">
+            <div>Sun</div>
+            <div>Mon</div>
+            <div>Tue</div>
+            <div>Wed</div>
+            <div>Thu</div>
+            <div>Fri</div>
+            <div>Sat</div>
+          </div>
+          <div class="calendar-days">
+          </div>
+        </div>
+        <div class="calendar-footer">
+        </div>
+        <div class="date-time-formate">
+          <div class="day-text-formate">TODAY</div>
+          <div class="date-time-value">
+            <div class="time-formate">02:51:20</div>
+            <div class="date-formate">23 - july - 2022</div>
+          </div>
+        </div>
+        <div class="month-list"></div>
       </div>
-    </>
+    </div>
+  </body>
   );
 }
