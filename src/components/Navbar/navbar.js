@@ -1,6 +1,9 @@
 import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 import Logo from "../../images/AQ.png";
+import { ThemeContext } from "../Theme/themeContext";
+import { faSun, faMoon } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "../../assets/index.css";
 import "../../assets/navbar.css";
 import "../../assets/login.css";
@@ -8,6 +11,7 @@ import "../../App.css";
 
 const Navbar = ({ handlePageChange }) => {
   const [currentPath, setCurrentPath] = useState("");
+  const { toggleTheme, theme } = useContext(ThemeContext);
 
   useEffect(() => {
     console.log(currentPath);
@@ -15,18 +19,19 @@ const Navbar = ({ handlePageChange }) => {
   }, []);
 
   return (
-    <nav className="navbar navbar-expand-lg sticky-lg-top">
+    <nav className={`navbar navbar-expand-lg header sticky-top top-${theme}`}>
+      {/* <nav className="navbar navbar-expand-lg sticky-lg-top"> */}
       <div className="container-fluid">
         {/* DIV 1 */}
-        <div className="row col">
+        <div className="row">
           <div className="col">
             <Link
-              className="navbar-brand text-light d-inline-flex name"
+              className={`nav-link ${theme} text-center fw-bolder col`}
               to="/home"
             >
               {/* <img src={Logo} className="logo" alt="AQ Logo" /> */}
               <div
-                className={`navbar-brand navbar-expand-lg brand ml-5 mt-1 fw-bold mb-0`}
+                className={`name-${theme} navbar-brand navbar-expand-lg mt-2 ml-4 fw-bold mb-0`}
               >
                 Activity Quest
               </div>
@@ -48,54 +53,64 @@ const Navbar = ({ handlePageChange }) => {
               <li className="nav-link">
                 <li className="nav-link">
                   <Link
-                    className={`nav-link link fs-6 text-center fw-bolder`}
+                    className={`nav-link ${theme} text-center link fw-bolder`}
                     to="/home"
                   >
                     Home
                   </Link>
                 </li>
               </li>
-              <li className="nav-link link fw-boldest">
+              <li className="nav-link fw-boldest">
                 <Link
-                  className={`nav-link link fs-6 text-center fw-bolder`}
+                  className={`nav-link ${theme} text-center link fw-bolder`}
                   to="/account"
                 >
                   Account
                 </Link>
               </li>
-              <li className="nav-link link fw-boldest">
+              <li className="nav-link fw-boldest">
                 <Link
-                  className={`nav-link link fs-6 text-center fw-bolder`}
+                  className={`nav-link ${theme} text-center link fw-bolder`}
                   to="/favorites"
                 >
                   Favorites
                 </Link>
               </li>
-              <li className="nav-link link fw-boldest">
+              <li className="nav-link fw-boldest">
                 <Link
-                  className={`nav-link link fs-6 text-center fw-bolder`}
+                  className={`nav-link ${theme} text-center link fw-bolder`}
                   to="/signup"
                 >
                   Sign-up
                 </Link>
               </li>
-              <li className="nav-link link fw-boldest">
+              <li className="nav-link fw-boldest">
                 <Link
-                  className={`nav-link link fs-6 text-center fw-bolder`}
+                  className={`nav-link ${theme} text-center link fw-bolder`}
                   to="/login"
                 >
                   Log-in
                 </Link>
               </li>
-              <li className="nav-link link fw-boldest">
+              <li className="nav-link fw-boldest">
                 <Link
-                  className={`nav-link link fs-6 text-center fw-bolder`}
+                  className={`nav-link ${theme} text-center link fw-bolder`}
                   to="/logout"
                 >
                   Log-out
                 </Link>
               </li>
             </ul>
+          </div>
+          <div className="ml-5">
+            {/* // eslint-disable-next-line no-undef */}
+            <button onClick={toggleTheme}>
+              {theme === "light" ? (
+                <FontAwesomeIcon icon={faMoon} />
+              ) : (
+                <FontAwesomeIcon icon={faSun} />
+              )}
+            </button>
           </div>
         </div>
       </div>

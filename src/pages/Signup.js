@@ -1,102 +1,66 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
-
-import { useMutation } from "@apollo/client";
-import { ADD_USER } from "../utils/mutations";
-import Auth from "../utils/auth";
+import "../assets/index.css";
+import "../assets/signup.css";
 
 const Signup = () => {
-  const [formState, setFormState] = useState({
-    username: "",
-    email: "",
-    password: "",
-  });
-  const [addUser, { error, data }] = useMutation(ADD_USER);
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const [signedUp, setSignedUp] = useState(false);
 
-  const handleChange = (event) => {
-    const { name, value } = event.target;
-
-    setFormState({
-      ...formState,
-      [name]: value,
-    });
-  };
-
-  const handleFormSubmit = async (event) => {
-    event.preventDefault();
-    console.log(formState);
-
-    try {
-      const { data } = await addUser({
-        variables: { ...formState },
-      });
-
-      Auth.login(data.addUser.token);
-    } catch (e) {
-      console.error(e);
+  const handleSignup = () => {
+    if (password === confirmPassword) {
+      setSignedUp(true);
+    } else {
+      alert("Passwords do not match");
     }
   };
 
   return (
-    <main className="flex-row justify-center m-4">
-      <div className="col-10 col-lg-7">
-        <div className="card shadow-lg">
-          <h4 className="card-header shadow-lg p-3 text-center text-light login-card-header">
-            Signup
-            <i className="fa-sharp fa-solid fa-right-to-bracket ml-3 door-open"></i>
-          </h4>
-          <div className="card-body shadow-lg">
-            {data ? (
-              <p>
-                Success! You may now head{" "}
-                <Link to="/">back to the homepage.</Link>
-              </p>
-            ) : (
-              <form
-                className="d-flex p-2 flex-column justify-content-center align-items-center"
-                onSubmit={handleFormSubmit}
-              >
-                <input
-                  className="form-input shadow-lg"
-                  placeholder="Your username"
-                  name="username"
-                  type="text"
-                  value={formState.name}
-                  onChange={handleChange}
-                />
-                <input
-                  className="form-input shadow-lg"
-                  placeholder="Your email"
-                  name="email"
-                  type="email"
-                  value={formState.email}
-                  onChange={handleChange}
-                />
-                <input
-                  className="form-input shadow-lg"
-                  placeholder="******"
-                  name="password"
-                  type="password"
-                  value={formState.password}
-                  onChange={handleChange}
-                />
-                <button
-                  className="sbtn m-3 col-2 btn-block fw-bolder fs-5"
-                  style={{ cursor: "pointer" }}
-                  type="submit"
-                >
-                  Submit
-                </button>
-              </form>
-            )}
-
-            {error && (
-              <div className="my-3 p-3 bg-danger rounded text-white">
-                {error.message}
-              </div>
-            )}
+    <main className="flex-row p-5 justify-center">
+      <div>
+        {signedUp ? (
+          <div>
+            <h1>Registration Successful</h1>
+            <p>Your account has been created successfully.</p>
           </div>
-        </div>
+        ) : (
+          <div className="card d-flex p-2 m-0 align-items-center text-center">
+            <h4 className="card card-header col text-center login-card-header">
+              Sign Up
+            </h4>
+            <input
+              type="text"
+              className="form-input shadow-lg"
+              placeholder="Username"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+            />
+            <br />
+            <input
+              type="password"
+              className="form-input shadow-lg"
+              placeholder="Password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+            <br />
+            <input
+              type="password"
+              placeholder="Confirm Password"
+              value={confirmPassword}
+              onChange={(e) => setConfirmPassword(e.target.value)}
+            />
+            <br />
+            <button
+              onClick={handleSignup}
+              className="btn-light m-3 btn-block fw-bold"
+              style={{ cursor: "pointer" }}
+            >
+              Sign Up
+            </button>
+          </div>
+        )}
       </div>
     </main>
   );

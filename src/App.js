@@ -2,15 +2,26 @@ import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 // import Calender from "./components/Calender/calender";
 import Home from "./pages/Home.js";
+import Signup from "./pages/Signup.js";
+import Login from "./pages/Login.js";
+import { ThemeProvider } from "./components/Theme/themeContext";
+import "@fortawesome/fontawesome-svg-core/styles.css";
 
 export default function App() {
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/home" element={<Home />} />
-        {/* <Route path="/calender" element={<Calender />} /> */}
-      </Routes>
+      <ThemeProvider>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Home />} />
+          {/* <Route path="/calender" element={<Calendar />} /> */}
+          {/* <Route path="/account" element={<Account />} /> */}
+          {/* <Route path="/favorites" element={<Favorites /> } /> */}
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="./public/404.html">"404 Not Found!"</Route>
+        </Routes>
+      </ThemeProvider>
     </BrowserRouter>
   );
 }
