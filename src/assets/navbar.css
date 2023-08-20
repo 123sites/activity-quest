@@ -46,6 +46,11 @@ a:hover {
   text-decoration: none !important;
 }
 
+.logo {
+  width: 20%;
+  height: auto;
+}
+
 .nav-elements ul {
   display: flex;
   justify-content: space-between;
