@@ -1291,7 +1291,7 @@ label form [type='radio'] {
   margin-right: -15px;
 }
 
-[class*='col-'] {
+[className*='col-'] {
   position: relative;
   width: 100%;
   padding-right: 15px;

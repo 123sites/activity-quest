@@ -37,7 +37,7 @@ const Navbar = ({ handlePageChange }) => {
               </div>
             </Link>
             <button
-              class="navbar-toggler"
+              className="navbar-toggler"
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#navbarText"
@@ -45,20 +45,18 @@ const Navbar = ({ handlePageChange }) => {
               aria-expanded="false"
               aria-label="Toggle navigation"
             >
-              <span class="navbar-toggler-icon"></span>
+              <span className="navbar-toggler-icon"></span>
             </button>
           </div>
           <div className="nav-elements row">
             <ul className="navbar-nav mb-2 mb-lg-0">
               <li className="nav-link">
-                <li className="nav-link">
-                  <Link
-                    className={`nav-link ${theme} text-center link fw-bolder`}
-                    to="/home"
-                  >
-                    Home
-                  </Link>
-                </li>
+                <Link
+                  className={`nav-link ${theme} text-center link fw-bolder`}
+                  to="/home"
+                >
+                  Home
+                </Link>
               </li>
               <li className="nav-link fw-boldest">
                 <Link

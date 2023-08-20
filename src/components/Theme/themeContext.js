@@ -10,7 +10,7 @@ export const ThemeProvider = ({ children }) => {
       "data-theme",
       theme === "light" ? "dark" : "light"
     );
-    setTheme(theme === "light" ? "dark" : "light");
+    setTheme(theme === "dark" ? "light" : "dark");
   };
 
   return (
