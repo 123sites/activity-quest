@@ -9,9 +9,7 @@ const Signup = () => {
   const [signedUp, setSignedUp] = useState(false);
 
   const handleSignup = () => {
-    // Simulate user registration (replace this with your actual registration logic)
     if (password === confirmPassword) {
-      // Here, you might want to call an API to register the user
       setSignedUp(true);
     } else {
       alert("Passwords do not match");
