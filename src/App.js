@@ -17,7 +17,6 @@ export default function App() {
           {/* <Route path="/calender" element={<Calendar />} /> */}
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
-          <Route path="/logout" element={<Login />} />
           <Route path="./public/404.html">"404 Not Found!"</Route>
         </Routes>
       </ThemeProvider>
