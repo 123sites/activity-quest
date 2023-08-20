@@ -15,6 +15,7 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/home" element={<Home />} />
           {/* <Route path="/calender" element={<Calendar />} /> */}
+          {/* <Route path="/account" element={<Account />} /> */}
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="./public/404.html">"404 Not Found!"</Route>
