@@ -19,100 +19,100 @@ const Navbar = ({ handlePageChange }) => {
   }, []);
 
   return (
-    <nav className={`navbar navbar-expand-lg header sticky-top top-${theme}`}>
-      {/* <nav className="navbar navbar-expand-lg sticky-lg-top"> */}
-      <div className="container-fluid">
-        {/* DIV 1 */}
-        <div className="row">
-          <div className="col">
-            <Link
-              className={`nav-link ${theme} text-center fw-bolder col`}
-              to="/home"
-            >
-              {/* <img src={Logo} className="logo" alt="AQ Logo" /> */}
-              <div
-                className={`name-${theme} navbar-brand navbar-expand-lg mt-2 ml-4 fw-bold mb-0`}
+    <div>
+      <img src={Logo} className="logo" alt="AQ Logo" />
+      <nav className={`navbar navbar-expand-lg sticky-top top-${theme}`}>
+        <div className="container-fluid">
+          <div className="row">
+            <div className="col">
+              <Link
+                className={`nav-link ${theme} text-center fw-bolder col`}
+                to="/home"
               >
-                Activity Quest
-              </div>
-            </Link>
-            <button
-              className="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarText"
-              aria-controls="navbarText"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span className="navbar-toggler-icon"></span>
-            </button>
-          </div>
-          <div className="nav-elements row">
-            <ul className="navbar-nav mb-2 mb-lg-0">
-              <li className="nav-link">
-                <Link
-                  className={`nav-link ${theme} text-center link fw-bolder`}
-                  to="/home"
+                <div
+                  className={`name-${theme} navbar-brand navbar-expand-lg mt-2 ml-4 fw-bold mb-0`}
                 >
-                  Home
-                </Link>
-              </li>
-              <li className="nav-link fw-boldest">
-                <Link
-                  className={`nav-link ${theme} text-center link fw-bolder`}
-                  to="/account"
-                >
-                  Account
-                </Link>
-              </li>
-              <li className="nav-link fw-boldest">
-                <Link
-                  className={`nav-link ${theme} text-center link fw-bolder`}
-                  to="/favorites"
-                >
-                  Favorites
-                </Link>
-              </li>
-              <li className="nav-link fw-boldest">
-                <Link
-                  className={`nav-link ${theme} text-center link fw-bolder`}
-                  to="/signup"
-                >
-                  Sign-up
-                </Link>
-              </li>
-              <li className="nav-link fw-boldest">
-                <Link
-                  className={`nav-link ${theme} text-center link fw-bolder`}
-                  to="/login"
-                >
-                  Log-in
-                </Link>
-              </li>
-              <li className="nav-link fw-boldest">
-                <Link
-                  className={`nav-link ${theme} text-center link fw-bolder`}
-                  to="/logout"
-                >
-                  Log-out
-                </Link>
-              </li>
-            </ul>
-          </div>
-          <div className="ml-5">
-            {/* // eslint-disable-next-line no-undef */}
-            <button onClick={toggleTheme}>
-              {theme === "light" ? (
-                <FontAwesomeIcon icon={faMoon} />
-              ) : (
-                <FontAwesomeIcon icon={faSun} />
-              )}
-            </button>
+                  Activity Quest
+                </div>
+              </Link>
+              <button
+                className="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarText"
+                aria-controls="navbarText"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span className="navbar-toggler-icon"></span>
+              </button>
+            </div>
+            <div className="nav-elements row">
+              <ul className="navbar-nav mb-2 mb-lg-0">
+                <li className="nav-link">
+                  <Link
+                    className={`nav-link ${theme} text-center link fw-bolder`}
+                    to="/home"
+                  >
+                    Home
+                  </Link>
+                </li>
+                <li className="nav-link fw-boldest">
+                  <Link
+                    className={`nav-link ${theme} text-center link fw-bolder`}
+                    to="/account"
+                  >
+                    Account
+                  </Link>
+                </li>
+                <li className="nav-link fw-boldest">
+                  <Link
+                    className={`nav-link ${theme} text-center link fw-bolder`}
+                    to="/favorites"
+                  >
+                    Favorites
+                  </Link>
+                </li>
+                <li className="nav-link fw-boldest">
+                  <Link
+                    className={`nav-link ${theme} text-center link fw-bolder`}
+                    to="/signup"
+                  >
+                    Sign-up
+                  </Link>
+                </li>
+                <li className="nav-link fw-boldest">
+                  <Link
+                    className={`nav-link ${theme} text-center link fw-bolder`}
+                    to="/login"
+                  >
+                    Log-in
+                  </Link>
+                </li>
+                <li className="nav-link fw-boldest">
+                  <Link
+                    className={`nav-link ${theme} text-center link fw-bolder`}
+                    to="/logout"
+                  >
+                    Log-out
+                  </Link>
+                </li>
+              </ul>
+            </div>
+            <div className="ml-5">
+              {/* // eslint-disable-next-line no-undef */}
+              <button onClick={toggleTheme}>
+                {theme === "light" ? (
+                  <FontAwesomeIcon icon={faMoon} />
+                ) : (
+                  <FontAwesomeIcon icon={faSun} />
+                )}
+              </button>
+            </div>
           </div>
         </div>
-      </div>
-    </nav>
+      </nav>
+    </div>
   );
 };
 
