@@ -19,7 +19,9 @@ const Navbar = ({ handlePageChange }) => {
   }, []);
 
   return (
-    <nav className={`navbar navbar-expand-lg sticky-top top-${theme}`}>
+    <nav
+      className={`navbar navbar-expand-lg d-inline sticky-top brand-${theme}`}
+    >
       <div className="container-fluid">
         <div className="row">
           <div className="col">
@@ -44,66 +46,72 @@ const Navbar = ({ handlePageChange }) => {
             ></button>
           </div>
           <div className="nav-elements row">
-            <ul className="navbar-nav mb-2 mb-lg-0">
-              <li className="nav-link">
-                <Link
-                  className={`nav-link link-${theme} text-center link fw-bolder`}
-                  to="/home"
-                >
-                  Home
-                </Link>
-              </li>
-              <li className="nav-link fw-boldest">
-                <Link
-                  className={`nav-link link-${theme} text-center link fw-bolder`}
-                  to="/account"
-                >
-                  Account
-                </Link>
-              </li>
-              <li className="nav-link fw-boldest">
-                <Link
-                  className={`nav-link ${theme} text-center link fw-bolder`}
-                  to="/favorites"
-                >
-                  Favorites
-                </Link>
-              </li>
-              <li className="nav-link fw-boldest">
-                <Link
-                  className={`nav-link link-${theme} text-center link fw-bolder`}
-                  to="/signup"
-                >
-                  Sign-up
-                </Link>
-              </li>
-              <li className="nav-link fw-boldest">
-                <Link
-                  className={`nav-link link-${theme} text-center link fw-bolder`}
-                  to="/login"
-                >
-                  Log-in
-                </Link>
-              </li>
-              <li className="nav-link fw-boldest">
-                <Link
-                  className={`nav-link link-${theme} text-center link fw-bolder`}
-                  to="/logout"
-                >
-                  Log-out
-                </Link>
-              </li>
-            </ul>
-          </div>
-          <div className="ml-5">
-            {/* // eslint-disable-next-line no-undef */}
-            <button onClick={toggleTheme}>
-              {theme === "light" ? (
-                <FontAwesomeIcon icon={faMoon} />
-              ) : (
-                <FontAwesomeIcon icon={faSun} />
-              )}
-            </button>
+            <div className="col">
+              <ul className="navbar-nav d-flex mb-2 ml-4 mb-lg-0">
+                <li className="nav-link">
+                  <Link
+                    className={`nav-link link-${theme} text-center link ml-3 fw-bolder`}
+                    to="/home"
+                  >
+                    Home
+                  </Link>
+                </li>
+                <li className="nav-link fw-boldest">
+                  <Link
+                    className={`nav-link link-${theme} text-center link fw-bolder`}
+                    to="/account"
+                  >
+                    Account
+                  </Link>
+                </li>
+                <li className="nav-link fw-boldest">
+                  <Link
+                    className={`nav-link ${theme} text-center link fw-bolder`}
+                    to="/favorites"
+                  >
+                    Favorites
+                  </Link>
+                </li>
+              </ul>
+            </div>
+            <div className="col">
+              <ul className="navbar-nav d-flex mb-2 ml-4 mb-lg-0">
+                <li className="nav-link fw-boldest">
+                  <Link
+                    className={`nav-link link-${theme} text-center link fw-bolder`}
+                    to="/signup"
+                  >
+                    Sign-up
+                  </Link>
+                </li>
+                <li className="nav-link fw-boldest">
+                  <Link
+                    className={`nav-link link-${theme} text-center link fw-bolder`}
+                    to="/login"
+                  >
+                    Log-in
+                  </Link>
+                </li>
+                <li className="nav-link fw-boldest">
+                  <Link
+                    className={`nav-link link-${theme} text-center link fw-bolder`}
+                    to="/logout"
+                  >
+                    Log-out
+                  </Link>
+                </li>
+              </ul>
+            </div>
+            <div className="ml-3 mt-2 sun-moon">
+              {/* // eslint-disable-next-line no-undef */}
+              <button onClick={toggleTheme}>
+                {theme === "light" ? (
+                  <FontAwesomeIcon icon={faMoon} className="m-1 sun-moon" />
+                ) : (
+                  <FontAwesomeIcon icon={faSun} className="m-1 sun-moon" />
+                )}
+              </button>
+            </div>
           </div>
         </div>
       </div>
