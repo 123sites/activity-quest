@@ -39,7 +39,7 @@ const Home = ({ handlePageChange }) => {
         </div>
         <div className="text-center">
           <button
-            className="carousel-control-prev btn-light p-2 m-2"
+            className="carousel-control-prev btn-light mx-5"
             type="button"
             data-bs-target="#carouselExample"
             data-bs-slide="prev"
@@ -51,7 +51,7 @@ const Home = ({ handlePageChange }) => {
             <span className="visually-hidden">Previous</span>
           </button>
           <button
-            className="carousel-control-next btn-light p-2"
+            className="carousel-control-next btn-light"
             type="button"
             data-bs-target="#carouselExample"
             data-bs-slide="next"

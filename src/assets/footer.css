@@ -9,3 +9,10 @@
   font-weight: bolder !important;
   color: var(--light-cerulean) !important;
 }
+
+.fab,
+.fas {
+  justify-content: space-between !important;
+  margin: 10px;
+  font-size: 30px;
+}

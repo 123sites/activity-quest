@@ -4,27 +4,27 @@ import "../../assets/footer.css";
 
 const Footer = () => {
   return (
-    <footer className="text-center mt-3">
+    <footer className="text-center">
       <a
         target="_blank"
         rel="noopener noreferrer"
         href="https://www.linkedin.com/in/chelwebdeveloper"
       >
-        <i className="fab fa-linkedin"></i>
+        <i className="fa-brands fa-linkedin fa-beat pb-3"></i>
       </a>
       <a
         target="_blank"
         rel="noopener noreferrer"
-        href="https://github.com/123sites/bark-buddy"
+        href="https://github.com/123sites/activity-quest"
       >
-        <i className="fa-brands fa-github fa-beat"></i>
+        <i className="fa-brands fa-github fa-beat pb-3"></i>
       </a>
       <a
         target="_blank"
         rel="noopener noreferrer"
         href="mailto:cfreitas12345@gmail.com"
       >
-        <i className="fas fa-envelope"></i>
+        <i className="fa-solid fa-envelope fa-beat pb-3"></i>
       </a>
       <h4 className="footer-title">
         🌟 Activity Quest{" "}
