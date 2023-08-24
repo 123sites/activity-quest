@@ -15,11 +15,7 @@ const Favorites = ({ handlePageChange }) => {
     setCurrentPath(window.location.pathname);
   }, [currentPath]);
 
-  return (
-    <div className="container-fluid">
-      <Navbar />
-    </div>
-  );
+  return <div className="container-fluid"></div>;
 };
 
 export default Favorites;

@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import Navbar from "../components/Navbar/navbar.js";
 import "../components/Footer/footer.js";
 import "../assets/index.css";
 import "../assets/home.css";
@@ -18,7 +17,6 @@ const Home = ({ handlePageChange }) => {
 
   return (
     <div className="container-fluid">
-      <Navbar />
       <div>
         <h1 className="text-center home-title m-5">
           Welcome to Activity Quest!

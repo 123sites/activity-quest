@@ -6,6 +6,7 @@ import Home from "./pages/Home.js";
 import Signup from "./pages/Signup.js";
 import Login from "./pages/Login.js";
 import Footer from "./components/Footer/footer";
+import Navbar from "./components/Navbar/navbar";
 import { ThemeProvider } from "./components/Theme/themeContext";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 
@@ -21,6 +22,7 @@ function App() {
   return (
     <BrowserRouter>
       <ThemeProvider>
+        <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/home" element={<Home />} />
