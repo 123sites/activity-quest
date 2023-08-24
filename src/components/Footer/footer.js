@@ -17,7 +17,7 @@ const Footer = () => {
         rel="noopener noreferrer"
         href="https://github.com/123sites/bark-buddy"
       >
-        <i className="fab fa-github"></i>
+        <i className="fa-brands fa-github fa-beat"></i>
       </a>
       <a
         target="_blank"
