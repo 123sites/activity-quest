@@ -1,11 +1,11 @@
 .home-title {
   font-family: 'jetBrains' sans-serif;
   font-weight: bolder;
-  color: var(--cerulean);
+  color: var(--cerulean) !important;
 }
 
 .home-text {
   font-family: 'jetBrains' sans-serif;
   font-weight: bolder;
-  color: var(--font-dark);
+  color: var(--font-dark) !important;
 }

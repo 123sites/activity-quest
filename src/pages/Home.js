@@ -2,6 +2,9 @@ import React, { useState, useEffect } from "react";
 import Navbar from "../components/Navbar/navbar.js";
 import "../assets/index.css";
 import "../assets/home.css";
+import "../App.css";
+import "../assets/navbar.css";
+import "../index.css";
 
 const Home = ({ handlePageChange }) => {
   const [currentPath, setCurrentPath] = useState("");

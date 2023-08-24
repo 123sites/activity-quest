@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import "../assets/index.css";
 import "../assets/signup.css";
+import "../App.css";
+import "../assets/navbar.css";
+import "../index.css";
 
 const Signup = () => {
   const [username, setUsername] = useState("");

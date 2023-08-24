@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "../assets/index.css";
 import "../assets/login.css";
+import "../App.css";
+import "../assets/navbar.css";
+import "../index.css";
 
 const Login = () => {
   const [username, setUsername] = useState("");

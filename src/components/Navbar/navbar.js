@@ -6,7 +6,6 @@ import { faSun, faMoon } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "../../assets/index.css";
 import "../../assets/navbar.css";
-import "../../assets/login.css";
 import "../../App.css";
 import ReactSwitch from "react-switch";
 
@@ -48,7 +47,7 @@ const Navbar = ({ handlePageChange }) => {
             <ul className="navbar-nav mb-2 mb-lg-0">
               <li className="nav-link">
                 <Link
-                  className={`nav-link ${theme} text-center link fw-bolder`}
+                  className={`nav-link link-${theme} text-center link fw-bolder`}
                   to="/home"
                 >
                   Home
@@ -56,7 +55,7 @@ const Navbar = ({ handlePageChange }) => {
               </li>
               <li className="nav-link fw-boldest">
                 <Link
-                  className={`nav-link ${theme} text-center link fw-bolder`}
+                  className={`nav-link link-${theme} text-center link fw-bolder`}
                   to="/account"
                 >
                   Account
@@ -72,7 +71,7 @@ const Navbar = ({ handlePageChange }) => {
               </li>
               <li className="nav-link fw-boldest">
                 <Link
-                  className={`nav-link ${theme} text-center link fw-bolder`}
+                  className={`nav-link link-${theme} text-center link fw-bolder`}
                   to="/signup"
                 >
                   Sign-up
@@ -80,7 +79,7 @@ const Navbar = ({ handlePageChange }) => {
               </li>
               <li className="nav-link fw-boldest">
                 <Link
-                  className={`nav-link ${theme} text-center link fw-bolder`}
+                  className={`nav-link link-${theme} text-center link fw-bolder`}
                   to="/login"
                 >
                   Log-in
@@ -88,7 +87,7 @@ const Navbar = ({ handlePageChange }) => {
               </li>
               <li className="nav-link fw-boldest">
                 <Link
-                  className={`nav-link ${theme} text-center link fw-bolder`}
+                  className={`nav-link link-${theme} text-center link fw-bolder`}
                   to="/logout"
                 >
                   Log-out
@@ -96,7 +95,6 @@ const Navbar = ({ handlePageChange }) => {
               </li>
             </ul>
           </div>
-          <ReactSwitch />
           <div className="ml-5">
             {/* // eslint-disable-next-line no-undef */}
             <button onClick={toggleTheme}>
