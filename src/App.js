@@ -5,6 +5,7 @@ import { createContext, useState } from "react";
 import Home from "./pages/Home.js";
 import Signup from "./pages/Signup.js";
 import Login from "./pages/Login.js";
+import Footer from "./components/Footer/footer";
 import { ThemeProvider } from "./components/Theme/themeContext";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 
@@ -26,10 +27,14 @@ function App() {
           {/* <Route path="/calender" element={<Calendar />} /> */}
           {/* <Route path="/account" element={<Account />} /> */}
           {/* <Route path="/favorites" element={<Favorites /> } /> */}
+          <Route path="/footer" element={<Footer />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="./public/404.html">"404 Not Found!"</Route>
         </Routes>
+        <div>
+          <Footer />
+        </div>
       </ThemeProvider>
     </BrowserRouter>
   );

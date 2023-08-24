@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "../components/Footer/footer.js";
 import "../assets/index.css";
 import "../assets/signup.css";
 import "../App.css";

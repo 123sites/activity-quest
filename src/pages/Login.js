@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import "../components/Footer/footer.js";
 import "../assets/index.css";
 import "../assets/login.css";
 import "../App.css";

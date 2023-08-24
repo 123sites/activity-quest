@@ -1,5 +1,6 @@
 import React from "react";
 import "../../index.css";
+import "../../assets/footer.css";
 
 const Footer = () => {
   return (
@@ -25,7 +26,7 @@ const Footer = () => {
       >
         <i className="fas fa-envelope"></i>
       </a>
-      <h4 className="made my-3 fw-bolder fs-7">
+      <h4 className="footer-title">
         🌟 Activity Quest{" "}
         <span
           className="emoji"
