@@ -28,13 +28,13 @@ const Signup = () => {
             <p>Your account has been created successfully.</p>
           </div>
         ) : (
-          <div className="card d-flex p-2 m-0 align-items-center text-center">
-            <h4 className="card card-header col text-center login-card-header">
+          <div className="card d-flex p-2 align-items-center text-center">
+            <h4 className="card card-header signup-top col p-3 m-0 mb-2 text-center login-card-header">
               Sign Up
             </h4>
             <input
               type="text"
-              className="form-input shadow-lg"
+              className="form-input input shadow-lg"
               placeholder="Username"
               value={username}
               onChange={(e) => setUsername(e.target.value)}
@@ -42,7 +42,7 @@ const Signup = () => {
             <br />
             <input
               type="password"
-              className="form-input shadow-lg"
+              className="form-input input shadow-lg"
               placeholder="Password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
@@ -50,6 +50,7 @@ const Signup = () => {
             <br />
             <input
               type="password"
+              className="form-input input shadow-lg"
               placeholder="Confirm Password"
               value={confirmPassword}
               onChange={(e) => setConfirmPassword(e.target.value)}
