@@ -1,13 +1,12 @@
 import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
-import Logo from "../../images/AQ.png";
+// import Logo from "../../images/logo.jpg";
 import { ThemeContext } from "../Theme/themeContext";
 import { faSun, faMoon } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "../../assets/index.css";
 import "../../assets/navbar.css";
 import "../../App.css";
-import ReactSwitch from "react-switch";
 
 const Navbar = ({ handlePageChange }) => {
   const [currentPath, setCurrentPath] = useState("");
@@ -19,16 +18,16 @@ const Navbar = ({ handlePageChange }) => {
   }, []);
 
   return (
-    <nav
-      className={`navbar navbar-expand-lg d-inline sticky-top brand-${theme}`}
-    >
+    <nav className={`navbar navbar-expand-lg sticky-top brand-${theme}`}>
       <div className="container-fluid">
-        <div className="row">
+        <div className="row col">
           <div className="col">
             <Link
-              className={`nav-link ${theme} text-center fw-bolder col`}
+              className={`nav-link ${theme} text-center d-inline-flex`}
               to="/home"
             >
+              {/* <img src={Logo} className="logo" alt="Activity Quest Logo" /> */}
+
               <div
                 className={`name-${theme} navbar-brand navbar-expand-lg mt-2 ml-4 fw-bold mb-0`}
               >
