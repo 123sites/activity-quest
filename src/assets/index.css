@@ -1,6 +1,16 @@
 :root {
   /* light mode */
-  --light-body: #F1FAEE;
+  --light-primary: #F1FAEE;
+  --light-secondary: hsl(182, 43, 76);
+  --light-tertiary: hsl(203, 39, 44);
+  --light-accent: hsl(215, 50, 23);
+  --light-red: hsl(355, 78, 56);
+  --light-tyrian: hsl(325, 100, 56);
+  /* dark mode */
+  --dark-primary: #0A2342;
+
+
+
   --light-font: #F1FAEE;
   --light-card: #A8DADC;
   --light-btn-blue: #457B9D;
@@ -16,8 +26,8 @@
   --light-cerulean: #457B9D;
   --light-berkeley-blue: #1D3557;
   /* dark mode */
-  --dark-body: #F1FAEE;
-  --dark-font: #0A2342;
+  --dark-primary: #0A2342;
+  --dark-font: #f1FAEE;
   --dark-card: #70798C;
   --dark-btn-blue: #247BA0;
   --dark-btn-red: #89023E;
@@ -30,9 +40,6 @@
   --dark-nonphoto-blue: #A8DADC;
   --dark-oxford-blue: #0A2342;
   --dark-slate-gray: #70798C;
-  /* both pallettes */
-  --honeydew: #F1FAEE;
-  --tyrian-purple: #550527;
 }
 
 *,
@@ -53,12 +60,12 @@
 }
 
 body {
-  background-color: var(--light-body);
+  background-color: var(--light-primary);
   font-size: 2.2rem;
 }
 
 body[data-theme="dark"] {
-  background-color: var(--dark-body);
+  background-color: var(--dark-primary);
   font-size: 2.2rem;
 }
 
@@ -69,7 +76,7 @@ body[data-theme="dark"] {
   outline: none;
   font-size: 1rem !important;
   font-weight: bolder;
-  color: var(--honeydew) !important;
+  color: var(--light-font) !important;
   background-color: var(--light-btn-blue) !important;
   border: none;
   border-radius: 15px;
@@ -91,7 +98,7 @@ body[data-theme="dark"] {
   outline: none;
   font-size: 1rem !important;
   font-weight: bolder;
-  color: var(--font-light);
+  color: var(--light-font);
   background-color: var(--dark-btn-blue);
   border: none;
   border-radius: 15px;
