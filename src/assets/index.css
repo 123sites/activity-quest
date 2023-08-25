@@ -1,13 +1,17 @@
 :root {
   /* light mode */
-  --light-primary: #F1FAEE;
+  --light-primary: hsl(105, 55, 96);
   --light-secondary: hsl(182, 43, 76);
   --light-tertiary: hsl(203, 39, 44);
   --light-accent: hsl(215, 50, 23);
   --light-red: hsl(355, 78, 56);
-  --light-tyrian: hsl(325, 100, 56);
   /* dark mode */
-  --dark-primary: #0A2342;
+  --dark-primary: hsl(213, 74, 15);
+  --dark-secondary: hsl(198, 63, 38);
+  --dark-tertiary: hsl(221, 11, 49);
+  --dark-font: hsl(105, 55, 96);
+  --dark-red: hsl(333, 97, 27);
+
 
 
 
@@ -26,7 +30,7 @@
   --light-cerulean: #457B9D;
   --light-berkeley-blue: #1D3557;
   /* dark mode */
-  --dark-primary: #0A2342;
+  --dark-body: hsl(213, 74, 15);
   --dark-font: #f1FAEE;
   --dark-card: #70798C;
   --dark-btn-blue: #247BA0;

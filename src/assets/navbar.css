@@ -49,7 +49,7 @@ a:hover {
   justify-content: center;
   font-size: 1.25rem;
   font-weight: 400;
-  color: var(--light-font) !important;
+  color: var(--dark-primary) !important;
   text-decoration: none !important;
 }
 
@@ -59,7 +59,7 @@ a:hover {
   justify-content: center;
   font-size: 1.25rem;
   font-weight: 400;
-  color: var(--light-font) !important;
+  color: var(--light-primary) !important;
   text-decoration: none !important;
 }
 
