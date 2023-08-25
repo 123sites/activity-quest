@@ -39,7 +39,7 @@ a:hover {
   align-items: center;
   justify-content: center;
   font-weight: 600;
-  color: var(--tyrian-purple) !important;
+  color: var(--dark-accent) !important;
   text-decoration: none !important;
 }
 
@@ -49,7 +49,7 @@ a:hover {
   justify-content: center;
   font-size: 1.25rem;
   font-weight: 400;
-  color: var(--dark-primary) !important;
+  color: var(--dark-font) !important;
   text-decoration: none !important;
 }
 
@@ -85,12 +85,12 @@ a:hover {
 }
 
 .nav-elements-dark ul a.active-dark {
-  color: var(--dark-abtn-blue) !important;
+  color: var(--dark-accent) !important;
   position: relative;
 }
 
 .nav-elements-light ul a.active-light {
-  color: var(--tyrian-purple) !important;
+  color: var(--dark-accent) !important;
   /* position: relative; */
 }
 
@@ -101,13 +101,13 @@ a:hover {
   left: 0;
   width: 100%;
   height: 2px;
-  color: var(--tyrian-purple) !important;
+  color: var(--dark-accent) !important;
   background-color: var(--bg-light) !important;
 }
 
 .link:active,
 .link:hover {
-  color: var(--tyrian-purple) !important;
+  color: var(--dark-accent) !important;
   text-decoration: none !important;
 }
 

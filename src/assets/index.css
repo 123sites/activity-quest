@@ -9,11 +9,11 @@
   --dark-primary: hsl(213, 74, 15);
   --dark-secondary: hsl(198, 63, 38);
   --dark-tertiary: hsl(221, 11, 49);
+  --dark-accent: hsl(335, 89%, 18%);
   --dark-font: hsl(105, 55, 96);
   --dark-red: hsl(333, 97, 27);
 
-
-
+  --tyrian-purple: hsl(276.9, 87.4, 53.3);
 
   --light-font: #F1FAEE;
   --light-card: #A8DADC;
@@ -59,7 +59,7 @@
   font-family: 'Montserrat', sans-serif;
   font-family: 'Nunito Sans', sans-serif;
   font-family: 'Inter', sans-serif;
-  font-weight: boldest;
+  font-weight: bolder;
   letter-spacing: 1.25px;
 }
 
