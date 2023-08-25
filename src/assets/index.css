@@ -1,33 +1,29 @@
 :root {
-  /* main body */
+  /* light mode pallette */
   --body: #F1FAEE;
-  /* font */
   --light-font: #F1FAEE;
-  --dark-font: #0A2342;
-  /* cards */
   --light-card: #A8DADC;
-  --dark-card: #70798C;
-  /* buttons */
   --light-btn-blue: #457B9D;
   --light-btn-blue-shadow: #757083;
   --light-btn-red: #E63946;
   --light-btn-red-shadow: #1D3557;
-  --dark-btn-blue: #247BA0;
-  --dark-btn-red: #89023E;
-  --dark-btn-blue-shadow: #0A2342;
-  /* active/hover buttons */
   --light-abtn-red: #550527;
   --light-abtn-blue: #457B9D;
   --light-abtn-shadow: #1D3557;
-  --dark-abtn-blue: #247BA0;
-  --dark-abtn-red: #550527;
-  --dark-abtn-blue-shadow: #0A2342;
-  /* light mode pallette */
   --light-pantone-red: #E63946;
   --light-nonphoto-blue: #A8DADC;
   --light-cerulean: #457B9D;
   --light-berkeley-blue: #1D3557;
   /* dark mode pallette */
+  --dark-body: #F1FAEE;
+  --dark-font: #0A2342;
+  --dark-card: #70798C;
+  --dark-btn-blue: #247BA0;
+  --dark-btn-red: #89023E;
+  --dark-btn-blue-shadow: #0A2342;
+  --dark-abtn-blue: #247BA0;
+  --dark-abtn-red: #550527;
+  --dark-abtn-shadow: #0A2342;
   --dark-murrey-red: #89023E;
   --dark-nonphoto-blue: #A8DADC;
   --dark-oxford-blue: #0A2342;

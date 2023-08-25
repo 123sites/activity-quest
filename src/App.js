@@ -9,6 +9,7 @@ import Footer from "./components/Footer/footer";
 import Navbar from "./components/Navbar/navbar";
 import { ThemeProvider } from "./components/Theme/themeContext";
 import "@fortawesome/fontawesome-svg-core/styles.css";
+import useLocalStorage from "./hooks/useLocalStorage";
 
 export const ThemeContext = createContext(null);
 
