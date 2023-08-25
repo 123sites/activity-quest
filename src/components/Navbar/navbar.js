@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
-// import Logo from "../../images/logo.jpg";
+import Logo from "../../images/logo.png";
 import { ThemeContext } from "../Theme/themeContext";
 import { faSun, faMoon } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -20,14 +20,12 @@ const Navbar = ({ handlePageChange }) => {
   return (
     <nav className={`navbar navbar-expand-lg sticky-top brand-${theme}`}>
       <div className="container-fluid">
-        <div className="row col">
+        <div className="row">
           <div className="col">
-            <Link
-              className={`nav-link ${theme} text-center d-inline-flex`}
-              to="/home"
-            >
-              {/* <img src={Logo} className="logo" alt="Activity Quest Logo" /> */}
-
+            <Link className="nav-link row" to="/home">
+              <div>
+                <img src={Logo} className="logo" alt="Activity Quest Logo" />
+              </div>
               <div
                 className={`name-${theme} navbar-brand navbar-expand-lg mt-2 ml-4 fw-bold mb-0`}
               >
