@@ -18,16 +18,16 @@ const Navbar = ({ handlePageChange }) => {
   }, []);
 
   return (
-    <nav className={`navbar navbar-expand-lg sticky-top brand-${theme}`}>
+    <nav className="navbar navbar-expand-lg sticky-top">
       <div className="container-fluid">
         <div className="row">
           <div className="col">
-            <Link className="nav-link row" to="/home">
+            <Link className="nav-link row ml-4 mr-4 mt-1" to="/home">
               <div>
                 <img src={Logo} className="logo" alt="Activity Quest Logo" />
               </div>
               <div
-                className={`name-${theme} navbar-brand navbar-expand-lg mt-2 ml-4 fw-bold mb-0`}
+                className={`brand-${theme} row ml-0 navbar-brand navbar-expand-lg`}
               >
                 Activity Quest
               </div>

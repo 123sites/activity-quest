@@ -6,7 +6,8 @@
   --light-accent: hsl(215, 50, 23);
   --light-red: hsl(355, 78, 56);
   /* dark mode */
-  --dark-primary: hsl(213, 74, 15);
+  /* --dark-primary: hsl(213, 74, 15); */
+  --dark-primary: #0A2342;
   --dark-secondary: hsl(198, 63, 38);
   --dark-tertiary: hsl(221, 11, 49);
   --dark-accent: hsl(335, 89%, 18%);
