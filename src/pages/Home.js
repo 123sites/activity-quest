@@ -21,12 +21,10 @@ const Home = ({ handlePageChange }) => {
   return (
     <div className="container-fluid">
       <div>
-        {/* className={`nav-link link-${theme} text-center link ml-4`} */}
-        <h1 className={`text-center title-${theme} m-5`}>
+        <h1 className={`text-center htitle-${theme} m-5`}>
           Welcome to Activity Quest!
         </h1>
-        {/* <h4 className="text-center home-text mb-5"> */}
-        <h4 className={`text-center text-${theme} m-5`}>
+        <h4 className={`text-center htext-${theme} m-5`}>
           Your one-stop App that helps you find fun activities in your area!
         </h4>
       </div>

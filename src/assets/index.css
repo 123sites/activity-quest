@@ -12,43 +12,6 @@
   --dark-accent: #550527;
   --dark-font: #F1FAEE;
   --dark-red: #89023E;
-
-  --tyrian-purple: hsl(276.9, 87.4, 53.3);
-
-
-
-
-
-
-  --light-font: #F1FAEE;
-  --light-card: #A8DADC;
-  --light-btn-blue: #457B9D;
-  --light-btn-blue-shadow: #757083;
-  --light-btn-red: #E63946;
-  --light-btn-red-shadow: #1D3557;
-  --light-abtn-red: #550527;
-  --light-abtn-blue: #457B9D;
-  --light-abtn-shadow: #1D3557;
-  /* light colors */
-  --light-pantone-red: #E63946;
-  --light-nonphoto-blue: #A8DADC;
-  --light-cerulean: #457B9D;
-  --light-berkeley-blue: #1D3557;
-  /* dark mode */
-  --dark-body: hsl(213, 74, 15);
-  --dark-font: #f1FAEE;
-  --dark-card: #70798C;
-  --dark-btn-blue: #247BA0;
-  --dark-btn-red: #89023E;
-  --dark-btn-blue-shadow: #0A2342;
-  --dark-abtn-blue: #247BA0;
-  --dark-abtn-red: #550527;
-  --dark-abtn-shadow: #0A2342;
-  /* dark colors */
-  --dark-murrey-red: #89023E;
-  --dark-nonphoto-blue: #A8DADC;
-  --dark-oxford-blue: #0A2342;
-  --dark-slate-gray: #70798C;
 }
 
 *,
@@ -85,8 +48,8 @@ body[data-theme="dark"] {
   outline: none;
   font-size: 1rem !important;
   font-weight: bolder;
-  color: var(--light-font) !important;
-  background-color: var(--light-btn-blue) !important;
+  color: var(--light-primary) !important;
+  background-color: var(--light-tertiary) !important;
   border: none;
   border-radius: 15px;
   box-shadow: 0 9px #999;
@@ -94,9 +57,9 @@ body[data-theme="dark"] {
 
 .btn-light:active,
 .btn-light:hover {
-  color: var(--tyrian-purple) !important;
-  background-color: var(--light-nonphoto-blue) !important;
-  box-shadow: 0 5px var(--light-btn-blue-shadow) !important;
+  color: var(--dark-accent) !important;
+  background-color: var(--light-secondary) !important;
+  box-shadow: 0 5px var(--light-accent) !important;
   transform: translateY(4px);
 }
 
@@ -107,8 +70,8 @@ body[data-theme="dark"] {
   outline: none;
   font-size: 1rem !important;
   font-weight: bolder;
-  color: var(--light-font);
-  background-color: var(--dark-btn-blue);
+  color: var(--light-primary);
+  background-color: var(--dark-secondary);
   border: none;
   border-radius: 15px;
   box-shadow: 0 9px #999;
@@ -116,8 +79,8 @@ body[data-theme="dark"] {
 
 .btn-dark:hover,
 .btn-dark:active {
-  background-color: var(--dark-abtn-blue) !important;
-  color: var(--tyrian-purple) !important;
-  box-shadow: 0 5px var(--dark-abtn-blue-shadow) !important;
+  background-color: var(--dark-secondary) !important;
+  color: var(--dark-accent) !important;
+  box-shadow: 0 5px var(--dark-tertiary) !important;
   transform: translateY(4px);
 }

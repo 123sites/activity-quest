@@ -1,22 +1,22 @@
-.title-dark {
-  font-family: 'jetBrains' sans-serif;
-  font-weight: bolder;
-  color: var(--light-secondary) !important;
-}
-
-.title-light {
-  font-family: 'jetBrains' sans-serif;
-  font-weight: bolder;
-  color: var(--light-secondary) !important;
-}
-
-.text-dark {
+.htitle-dark {
   font-family: 'jetBrains' sans-serif;
   font-weight: bolder;
   color: var(--dark-secondary) !important;
 }
 
-.text-light {
+.htitle-light {
+  font-family: 'jetBrains' sans-serif;
+  font-weight: bolder;
+  color: var(--light-tertiary) !important;
+}
+
+.htext-dark {
+  font-family: 'jetBrains' sans-serif;
+  font-weight: bolder;
+  color: var(--dark-secondary) !important;
+}
+
+.htext-light {
   font-family: 'jetBrains' sans-serif;
   font-weight: bolder;
   color: var(--dark-primary) !important;

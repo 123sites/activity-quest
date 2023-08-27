@@ -1,4 +1,4 @@
-/* .container {
+.container {
   max-width: 1100px;
   margin: 0 auto;
   padding: 0 15px;
@@ -6,7 +6,7 @@
   justify-content: space-between;
   align-items: center;
   height: 100%;
-} */
+}
 
 .top-dark {
   height: 60px;
@@ -22,11 +22,10 @@
 
 .brand,
 a {
-  font-family: 'Inter', sans-serif;
   align-items: center;
   font-size: 1.75rem;
   font-weight: 400;
-  color: var(--light-font);
+  color: var(--light-primary);
   text-decoration: none !important;
   transition: all 0.3s ease 0s;
 }
@@ -35,9 +34,6 @@ a {
 .brand:hover,
 a:active,
 a:hover {
-  align-items: center;
-  justify-content: center;
-  font-weight: 600;
   color: var(--dark-accent);
   text-decoration: none;
 }
@@ -47,7 +43,7 @@ a:hover {
   align-items: center;
   justify-content: center;
   font-size: 1.25rem;
-  font-weight: 600;
+  font-weight: 700;
   color: var(--dark-font) !important;
   text-decoration: none !important;
 }
@@ -57,20 +53,18 @@ a:hover {
   align-items: center;
   justify-content: center;
   font-size: 1.25rem;
-  font-weight: 600;
-  color: var(--light-font) !important;
+  font-weight: 700;
+  color: var(--light-primary) !important;
   text-decoration: none !important;
 }
 
 .logo {
   display: flex;
-  justify-content: center;
-  width: 40%;
 }
 
 .nav-elements ul {
   display: flex;
-  /* justify-content: space-between; */
+  justify-content: space-between;
   list-style-type: none;
 }
 
@@ -80,7 +74,8 @@ a:hover {
 
 .nav-elements ul a {
   font-size: 16px;
-  color: var(--light-font);
+  color: var(--light-primary);
+  font-weight: 700;
   text-decoration: none;
   transition: all 0.3s ease 0s;
 }
@@ -92,7 +87,7 @@ a:hover {
 
 .nav-elements-light ul a.active-light {
   color: var(--dark-accent);
-  /* position: relative; */
+  position: relative;
 }
 
 .nav-elements ul a.active::after {
@@ -102,8 +97,9 @@ a:hover {
   left: 0;
   width: 100%;
   height: 2px;
-  background-color: var(--bg-light);
+  background-color: var(--light-primary);
   color: var(--dark-accent);
+  font-weight: 700;
 }
 
 .link:active,
@@ -113,7 +109,7 @@ a:hover {
 }
 
 .sun-moon {
-  /* display: inline-block; */
+  display: inline-block;
   cursor: pointer !important;
   font-size: 75% !important;
   margin-right: 40px;

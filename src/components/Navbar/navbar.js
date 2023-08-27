@@ -15,7 +15,7 @@ const Navbar = ({ handlePageChange }) => {
   useEffect(() => {
     console.log(currentPath);
     setCurrentPath(window.location.pathname);
-  }, []);
+  }, [currentPath]);
 
   return (
     <nav className={`navbar navbar-expand-lg sticky-lg-top top-${theme}`}>
@@ -23,13 +23,13 @@ const Navbar = ({ handlePageChange }) => {
         <div className="row container-fluid">
           <div className="col">
             <Link
-              className="nav-link row navbar-container ml-4 mt-1 mr-0"
+              className="nav-link row navbar-container ml-4 mt-1 justify-content-center"
               to="/home"
             >
-              <div>
+              <div className="col-3">
                 <img
                   src={Logo}
-                  className="logo mr-0"
+                  className="logo mr-0 col-8"
                   alt="Activity Quest Logo"
                 />
               </div>
