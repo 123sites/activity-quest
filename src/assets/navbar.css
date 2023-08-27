@@ -1,33 +1,32 @@
-.container {
-  /* max-width: 1100px; */
+/* .container {
+  max-width: 1100px;
   margin: 0 auto;
   padding: 0 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 100%;
-}
+} */
 
-#dark .navbar {
+.top-dark {
   height: 60px;
-  background-color: var(--dark-oxford-blue) !important;
+  background-color: var(--dark-secondary) !important;
   position: relative;
 }
 
-.navbar {
+.top-light {
   height: 60px;
-  background-color: var(--light-cerulean) !important;
-  /* position: relative; */
+  background-color: var(--light-tertiary) !important;
+  position: relative;
 }
 
 .brand,
 a {
   font-family: 'Inter', sans-serif;
   align-items: center;
-  justify-content: center;
   font-size: 1.75rem;
   font-weight: 400;
-  color: var(--light-font) !important;
+  color: var(--light-font);
   text-decoration: none !important;
   transition: all 0.3s ease 0s;
 }
@@ -48,7 +47,7 @@ a:hover {
   align-items: center;
   justify-content: center;
   font-size: 1.25rem;
-  font-weight: 400;
+  font-weight: 600;
   color: var(--dark-font) !important;
   text-decoration: none !important;
 }
@@ -58,18 +57,20 @@ a:hover {
   align-items: center;
   justify-content: center;
   font-size: 1.25rem;
-  font-weight: 400;
-  color: var(--light-primary) !important;
+  font-weight: 600;
+  color: var(--light-font) !important;
   text-decoration: none !important;
 }
 
 .logo {
+  display: flex;
+  justify-content: center;
   width: 40%;
 }
 
 .nav-elements ul {
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   list-style-type: none;
 }
 
@@ -112,7 +113,8 @@ a:hover {
 }
 
 .sun-moon {
-  display: inline-block;
+  /* display: inline-block; */
   cursor: pointer !important;
   font-size: 75% !important;
+  margin-right: 40px;
 }

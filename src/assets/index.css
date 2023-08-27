@@ -1,18 +1,17 @@
 :root {
   /* light mode */
-  --light-primary: hsl(105, 55, 96);
-  --light-secondary: hsl(182, 43, 76);
-  --light-tertiary: hsl(203, 39, 44);
-  --light-accent: hsl(215, 50, 23);
-  --light-red: hsl(355, 78, 56);
+  --light-primary: #F1FAEE;
+  --light-secondary: #A8DADC;
+  --light-tertiary: #457B9D;
+  --light-accent: #757083;
+  --light-red: #E63946;
   /* dark mode */
-  /* --dark-primary: hsl(213, 74, 15); */
   --dark-primary: #0A2342;
-  --dark-secondary: hsl(198, 63, 38);
-  --dark-tertiary: hsl(221, 11, 49);
-  --dark-accent: hsl(335, 89%, 18%);
-  --dark-font: hsl(105, 55, 96);
-  --dark-red: hsl(333, 97, 27);
+  --dark-secondary: #247BA0;
+  --dark-tertiary: #70798C;
+  --dark-accent: #550527;
+  --dark-font: #F1FAEE;
+  --dark-red: #89023E;
 
   --tyrian-purple: hsl(276.9, 87.4, 53.3);
 

@@ -1,12 +1,15 @@
 import React, { useState, useEffect } from "react";
+import { useContext } from "react";
 import "../components/Footer/footer.js";
 import "../assets/index.css";
 import "../assets/home.css";
 import "../App.css";
 import "../assets/navbar.css";
 import "../index.css";
+import { ThemeContext } from "../components/Theme/themeContext";
 
 const Home = ({ handlePageChange }) => {
+  const { theme } = useContext(ThemeContext);
   const [currentPath, setCurrentPath] = useState("");
   console.log(currentPath);
 
@@ -18,10 +21,12 @@ const Home = ({ handlePageChange }) => {
   return (
     <div className="container-fluid">
       <div>
-        <h1 className="text-center home-title m-5">
+        {/* className={`nav-link link-${theme} text-center link ml-4`} */}
+        <h1 className={`text-center title-${theme} m-5`}>
           Welcome to Activity Quest!
         </h1>
-        <h4 className="text-center home-text mb-5">
+        {/* <h4 className="text-center home-text mb-5"> */}
+        <h4 className={`text-center text-${theme} m-5`}>
           Your one-stop App that helps you find fun activities in your area!
         </h4>
       </div>
