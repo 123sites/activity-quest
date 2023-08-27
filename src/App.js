@@ -10,6 +10,7 @@ import Navbar from "./components/Navbar/navbar";
 import { ThemeProvider } from "./components/Theme/themeContext";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import useLocalStorage from "./hooks/useLocalStorage";
+import Calendar from "./pages/Calender";
 
 export const ThemeContext = createContext(null);
 
@@ -28,7 +29,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/home" element={<Home />} />
-          {/* <Route path="/calender" element={<Calendar />} /> */}
+          <Route path="/calender" element={<Calendar />} />
           {/* <Route path="/account" element={<Account />} /> */}
           {/* <Route path="/favorites" element={<Favorites /> } /> */}
           <Route path="/footer" element={<Footer />} />
