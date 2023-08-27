@@ -1,31 +1,46 @@
-import React from "react";
-import "../../assets/style.css";
+import React, { useState, useEffect, useContext } from "react";
+import { ThemeContext } from "../Theme/themeContext";
+import "../../index.css";
+import "../../assets/footer.css";
 
 const Footer = () => {
+  const [currentPath, setCurrentPath] = useState("");
+  const { theme } = useContext(ThemeContext);
+
+  useEffect(() => {
+    console.log(currentPath);
+    setCurrentPath(window.location.pathname);
+  }, []);
+
   return (
-    <footer className="text-center mt-3">
+    <footer className={`text-center emojis-${theme}`}>
       <a
         target="_blank"
         rel="noopener noreferrer"
         href="https://www.linkedin.com/in/chelwebdeveloper"
       >
-        <i className="fab fa-linkedin"></i>
+        <i
+          className={`fa-brands fa-linkedin fa-beat emojis-${theme} pb-3 mr-3`}
+        ></i>
       </a>
       <a
         target="_blank"
         rel="noopener noreferrer"
-        href="https://github.com/123sites/bark-buddy"
+        href="https://github.com/123sites/activity-quest"
       >
-        <i className="fab fa-github"></i>
+        <i
+          className={`fa-brands fa-github fa-beat emojis-${theme} pb-3 mr-3`}
+        ></i>
       </a>
       <a
         target="_blank"
         rel="noopener noreferrer"
         href="mailto:cfreitas12345@gmail.com"
       >
-        <i className="fas fa-envelope"></i>
+        <i className={`fa-solid fa-envelope fa-beat emojis-${theme} pb-3`}></i>
       </a>
-      <h4 className="made my-3 fw-bolder fs-7">
+      <h4 className={`title-${theme}`}>
+        {/* {`text-center fab-${theme} fas-${theme}`} */}
         🌟 Activity Quest{" "}
         <span
           className="emoji"
@@ -38,7 +53,7 @@ const Footer = () => {
         {""}
       </h4>
       <p>
-        <span className="copyright">
+        <span className={`copyright-${theme}`}>
           Copyright © Chel Freitas and Gayle Hoefer | C & G, Inc.
         </span>
       </p>

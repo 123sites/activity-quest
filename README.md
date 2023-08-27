@@ -50,17 +50,18 @@ Our Team:
 ## License 📝
 
 The MIT license is in the GitHub repository. Click to link to view it:
-[MIT License](https://github.com/123sites/bark-buddy/blob/main/LICENSE)
+[MIT License](https://github.com/123sites/activity-quest/blob/main/LICENSE)
 
 ## Features ✍
 
+- React
+- Animated carousel
+- Animated icons
 - Uses a web manifest
 - Uses a service worker for offline functionality
 - Is installable
-- MERN Stack
-- Apollo Server
 - Coolors color palette
-- Light and dark mode
+- Light, dark, and custom mode
 - Advanced CSS, using CSS variables
 
 ![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
@@ -72,4 +73,3 @@ The MIT license is in the GitHub repository. Click to link to view it:
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 ![ESLint](https://img.shields.io/badge/ESLint-4B3263?style=for-the-badge&logo=eslint&logoColor=white)
 ![NPM](https://img.shields.io/badge/NPM-%23CB3837.svg?style=for-the-badge&logo=npm&logoColor=white)
-![Apollo-GraphQL](https://img.shields.io/badge/-ApolloGraphQL-311C87?style=for-the-badge&logo=apollo-graphql)

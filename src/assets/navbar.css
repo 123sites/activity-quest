@@ -8,47 +8,58 @@
   height: 100%;
 }
 
-.navbar {
+.top-dark {
   height: 60px;
-  background-color: var(--light-cerulean) !important;
+  background-color: var(--dark-secondary) !important;
+  position: relative;
+}
+
+.top-light {
+  height: 60px;
+  background-color: var(--light-tertiary) !important;
   position: relative;
 }
 
 .brand,
 a {
-  font-family: 'Inter', sans-serif;
   align-items: center;
-  justify-content: center;
   font-size: 1.75rem;
   font-weight: 400;
-  color: var(--light-font) !important;
+  color: var(--light-primary);
   text-decoration: none !important;
+  transition: all 0.3s ease 0s;
 }
 
 .brand:active,
 .brand:hover,
 a:active,
 a:hover {
-  align-items: center;
-  justify-content: center;
-  font-weight: 600;
-  color: var(--tyrian-purple) !important;
-  text-decoration: none !important;
+  color: var(--dark-accent);
+  text-decoration: none;
 }
 
-.link {
+.link-dark {
   font-family: 'Inter', sans-serif;
   align-items: center;
   justify-content: center;
   font-size: 1.25rem;
-  font-weight: 400;
-  color: var(--light-font) !important;
+  font-weight: 700;
+  color: var(--dark-font) !important;
+  text-decoration: none !important;
+}
+
+.link-light {
+  font-family: 'Inter', sans-serif;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--light-primary) !important;
   text-decoration: none !important;
 }
 
 .logo {
-  width: 20%;
-  height: auto;
+  display: flex;
 }
 
 .nav-elements ul {
@@ -63,12 +74,19 @@ a:hover {
 
 .nav-elements ul a {
   font-size: 16px;
-  color: var(--light-font) !important;
+  color: var(--light-primary);
+  font-weight: 700;
   text-decoration: none;
+  transition: all 0.3s ease 0s;
 }
 
-.nav-elements ul a.active {
-  color: var(--tyrian-purple) !important;
+.nav-elements-dark ul a.active-dark {
+  color: var(--dark-accent);
+  position: relative;
+}
+
+.nav-elements-light ul a.active-light {
+  color: var(--dark-accent);
   position: relative;
 }
 
@@ -79,12 +97,20 @@ a:hover {
   left: 0;
   width: 100%;
   height: 2px;
-  color: var(--tyrian-purple) !important;
-  background-color: var(--bg-light) !important;
+  background-color: var(--light-primary);
+  color: var(--dark-accent);
+  font-weight: 700;
 }
 
 .link:active,
 .link:hover {
-  color: var(--tyrian-purple) !important;
+  color: var(--dark-accent) !important;
   text-decoration: none !important;
+}
+
+.sun-moon {
+  display: inline-block;
+  cursor: pointer !important;
+  font-size: 75% !important;
+  margin-right: 40px;
 }

@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "../components/Navbar/navbar.js";
+import "../components/Footer/footer.js";
 import "../assets/index.css";
+import "../App.css";
+import "../assets/navbar.css";
+import "../index.css";
 
 const Favorites = ({ handlePageChange }) => {
   const [currentPath, setCurrentPath] = useState("");
@@ -11,11 +15,7 @@ const Favorites = ({ handlePageChange }) => {
     setCurrentPath(window.location.pathname);
   }, [currentPath]);
 
-  return (
-    <div className="container-fluid">
-      <Navbar />
-    </div>
-  );
+  return <div className="container-fluid"></div>;
 };
 
 export default Favorites;

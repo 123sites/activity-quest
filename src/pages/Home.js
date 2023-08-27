@@ -1,9 +1,15 @@
 import React, { useState, useEffect } from "react";
-import Navbar from "../components/Navbar/navbar.js";
+import { useContext } from "react";
+import "../components/Footer/footer.js";
 import "../assets/index.css";
 import "../assets/home.css";
+import "../App.css";
+import "../assets/navbar.css";
+import "../index.css";
+import { ThemeContext } from "../components/Theme/themeContext";
 
 const Home = ({ handlePageChange }) => {
+  const { theme } = useContext(ThemeContext);
   const [currentPath, setCurrentPath] = useState("");
   console.log(currentPath);
 
@@ -14,12 +20,11 @@ const Home = ({ handlePageChange }) => {
 
   return (
     <div className="container-fluid">
-      <Navbar />
       <div>
-        <h1 className="text-center home-title m-5">
+        <h1 className={`text-center htitle-${theme} m-5`}>
           Welcome to Activity Quest!
         </h1>
-        <h4 className="text-center home-text mb-5">
+        <h4 className={`text-center htext-${theme} m-5`}>
           Your one-stop App that helps you find fun activities in your area!
         </h4>
       </div>
@@ -37,7 +42,7 @@ const Home = ({ handlePageChange }) => {
         </div>
         <div className="text-center">
           <button
-            className="carousel-control-prev btn-light p-2 m-2"
+            className="carousel-control-prev m-3 btn-light"
             type="button"
             data-bs-target="#carouselExample"
             data-bs-slide="prev"
@@ -49,7 +54,7 @@ const Home = ({ handlePageChange }) => {
             <span className="visually-hidden">Previous</span>
           </button>
           <button
-            className="carousel-control-next btn-light p-2"
+            className="carousel-control-next btn-light"
             type="button"
             data-bs-target="#carouselExample"
             data-bs-slide="next"

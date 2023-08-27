@@ -1,7 +1,11 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import "../components/Footer/footer.js";
 import "../assets/index.css";
 import "../assets/login.css";
+import "../App.css";
+import "../assets/navbar.css";
+import "../index.css";
 
 const Login = () => {
   const [username, setUsername] = useState("");
@@ -34,15 +38,15 @@ const Login = () => {
             </p>
           </div>
         ) : (
-          <div className="d-flex flex-column align-items-center text-center">
+          <div className="d-flex flex-column login align-items-center text-center">
             <div>
-              <h4 className="card-header col p-3 m-1 text-center text-light login-card-header">
+              <h4 className="card-header col p-3 m-1 login-top text-center text-light login-card-header">
                 Login
               </h4>
               <div className="card-body">
                 <input
                   type="text"
-                  className="form-input shadow-lg"
+                  className="form-input input shadow-lg"
                   placeholder="Username"
                   value={username}
                   onChange={(e) => setUsername(e.target.value)}
@@ -50,7 +54,7 @@ const Login = () => {
                 <br />
                 <input
                   type="password"
-                  className="form-input shadow-lg"
+                  className="form-input input shadow-lg"
                   placeholder="Password"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}

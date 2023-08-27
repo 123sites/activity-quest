@@ -1,5 +1,7 @@
 import { createContext, useState } from "react";
 
+// import ReactSwitch from "react-switch"; // https://www.npmjs.com/package/react-switch
+
 export const ThemeContext = createContext();
 
 export const ThemeProvider = ({ children }) => {
@@ -10,7 +12,7 @@ export const ThemeProvider = ({ children }) => {
       "data-theme",
       theme === "light" ? "dark" : "light"
     );
-    setTheme(theme === "light" ? "dark" : "light");
+    setTheme(theme === "dark" ? "light" : "dark");
   };
 
   return (
