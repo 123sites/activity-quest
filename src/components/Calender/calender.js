@@ -1,17 +1,14 @@
 import React from "react";
 import { useState } from "react";
 import Calendar from "react-calendar";
-
-let ValuePiece = Date || null;
-
-let Value = ValuePiece || [ValuePiece, ValuePiece];
+// import 'react-calendar/dist/Calendar.css';
+import "./calender.css";
 
 export default function MyApp() {
     const [value, setValue] = useState(new Date());
 
-
   return (
-    <div>
+    <div className="calender">
       <Calendar onChange={setValue} value={value} />
     </div>
   );
