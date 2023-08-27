@@ -7,28 +7,28 @@
   line-height: 1.125em;
 }
 
-/* .react-calendar--doubleView {
+.react-calendar--doubleView {
   width: 700px;
-} */
+} 
 
-/* .react-calendar--doubleView .react-calendar__viewContainer {
+.react-calendar--doubleView .react-calendar__viewContainer {
   display: flex;
   margin: -0.5em;
-} */
+} 
 
-/* .react-calendar--doubleView .react-calendar__viewContainer > * {
+.react-calendar--doubleView .react-calendar__viewContainer > * {
   width: 50%;
   margin: 0.5em;
-} */
+} 
 
-/* .react-calendar,
+.react-calendar,
 .react-calendar *,
 .react-calendar *:before,
 .react-calendar *:after {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-} */
+} 
 
 .react-calendar button {
   margin: 0;
@@ -143,5 +143,5 @@
 }
 
 .calender {
-    margin: center;
+    margin: 15rem 0em 10rem 45rem;
 }
