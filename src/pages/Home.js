@@ -7,6 +7,9 @@ import "../App.css";
 import "../assets/navbar.css";
 import "../index.css";
 import { ThemeContext } from "../components/Theme/themeContext";
+import img1 from "../images/img1.jpg";
+import genealogists from "../images/genealogists.png";
+import img3 from "../images/img3.jpg";
 
 const Home = ({ handlePageChange }) => {
   const { theme } = useContext(ThemeContext);
@@ -28,16 +31,21 @@ const Home = ({ handlePageChange }) => {
           Your one-stop App that helps you find fun activities in your area!
         </h4>
       </div>
-      <div id="carouselExample" className="carousel slide m-5">
+      <div
+        id="carouselExampleSlidesOnly"
+        className="carousel slide"
+        data-bs-ride="carousel"
+      >
         <div className="carousel-inner">
-          <div className="carousel-item active">
-            <img src="../images/img1.jpg" className="d-block w-100" alt="..." />
+          <div className="carousel-item active" data-bs-ride="carousel">
+            <img src={img1} className="active d-block w-100" alt="..." />
           </div>
-          <div className="carousel-item">
-            <img src="/images/img2.jpg" className="d-block w-100" alt="..." />
+
+          <div className="carousel-item active" data-bs-ride="carousel">
+            <img src={genealogists} className="d-block w-100" alt="..." />
           </div>
-          <div className="carousel-item">
-            <img src="..." className="d-block w-100" alt="..." />
+          <div className="carousel-item active" data-bs-ride="carousel">
+            <img src={img3} className="d-block w-100" alt="..." />
           </div>
         </div>
         <div className="text-center">
