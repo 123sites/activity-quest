@@ -8,7 +8,9 @@
   /* dark mode */
   --dark-primary: #0A2342;
   --dark-secondary: #247BA0;
-  --dark-tertiary: #70798C;
+  --dark-tertiary: #656256;
+  /* (Ebony) */
+  /* --dark-tertiary: #70798C; */
   --dark-accent: #550527;
   --dark-font: #F1FAEE;
   --dark-red: #89023E;
@@ -70,17 +72,17 @@ body[data-theme="dark"] {
   outline: none;
   font-size: 1rem !important;
   font-weight: bolder;
-  color: var(--light-primary);
-  background-color: var(--dark-secondary);
+  color: var(--dark-font) !important;
+  background-color: var(--dark-primary) !important;
   border: none;
   border-radius: 15px;
-  box-shadow: 0 9px #999;
+  box-shadow: 0 7px var(--dark-accent) !important;
 }
 
 .btn-dark:hover,
 .btn-dark:active {
-  background-color: var(--dark-secondary) !important;
-  color: var(--dark-accent) !important;
-  box-shadow: 0 5px var(--dark-tertiary) !important;
+  background-color: var(--dark-accent) !important;
+  color: var(--dark-secondary) !important;
+  box-shadow: 0 5px var(--dark-primary) !important;
   transform: translateY(4px);
 }

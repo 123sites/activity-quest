@@ -1,9 +1,36 @@
+.outsideBox-dark {
+  display: flex;
+  color: var(--dark-accent) !important;
+}
+
+.outsideBox-light {
+  display: flex;
+  color: var(--light-accent) !important;
+}
+
+.box-dark {
+  background-color: var(--dark-secondary) !important;
+  border-radius: 15px;
+  box-shadow: 2px 2px 2px 2px var(--dark-accent) !important;
+}
+
+.box-light {
+  padding: 16px;
+  border-radius: 15px;
+  border-color: var(--light-accent) !important;
+  box-shadow: 5px 5px 5px var(--light-accent) !important;
+}
+
 .signup-dark {
-  background-color: var(--dark-tertiary) !important;
+  background-color: var(--dark-primary) !important;
+  border-radius: 15px;
+  box-shadow: 5px 5px 5px var(--dark-accent) !important;
 }
 
 .signup-light {
   background-color: var(--light-tertiary) !important;
+  border-radius: 15px;
+  box-shadow: 5px 5px 5px var(--light-accent) !important;
 }
 
 .input-dark {
@@ -14,7 +41,6 @@
   box-sizing: border-box;
   border-radius: 15px;
   border: 2px solid var(--dark-secondary) !important;
-  background-color: var(-dark-primary) !important;
   color: var(--dark-accent);
   box-shadow: 5px 5px 5px var(--dark-accent) !important;
 }
@@ -26,8 +52,8 @@
   margin: 8px 0;
   box-sizing: border-box;
   border-radius: 15px;
-  border: 2px solid var(--light-secondary) !important;
-  background-color: var(-light-primary) !important;
+  border: 2px solid var(--light-accent) !important;
   color: var(--light-accent) !important;
+  background-color: var(--light-primary) !important;
   box-shadow: 5px 5px 5px var(--light-accent) !important;
 }

@@ -15,7 +15,7 @@ const Signup = () => {
   const [signedUp, setSignedUp] = useState(false);
 
   const { theme } = useContext(ThemeContext);
-  const [currentPath, setCurrentPath] = useState("");
+  const [currentPath] = useState("");
   console.log(currentPath);
 
   const handleSignup = () => {
@@ -28,16 +28,18 @@ const Signup = () => {
 
   return (
     <main className="flex-row p-5 justify-center">
-      <div>
+      <div className={`outsideBox-${theme}`}>
         {signedUp ? (
           <div>
             <h1>Registration Successful</h1>
             <p>Your account has been created successfully.</p>
           </div>
         ) : (
-          <div className="card d-flex p-2 align-items-center text-center">
+          <div
+            className={`card d-flex p-2 box-${theme} align-items-center text-center`}
+          >
             <h4
-              className={`card card-header signup-${theme} col p-3 m-0 mb-2 text-center login-card-header`}
+              className={`card card-header signup-${theme} col p-2 m-0 mb-2 text-center`}
             >
               Sign Up
             </h4>
@@ -67,7 +69,7 @@ const Signup = () => {
             <br />
             <button
               onClick={handleSignup}
-              className="btn-light m-3 btn-block fw-bold"
+              className={`btn-light m-3 btn-block btn-${theme} fw-bold`}
               style={{ cursor: "pointer" }}
             >
               Sign Up
