@@ -1,15 +1,136 @@
-.login-top {
-  background-color: var(--light-cerulean) !important;
+.outsideBox-dark {
+  display: flex;
+  color: var(--dark-accent) !important;
 }
 
-.input {
+.outsideBox-light {
+  display: flex;
+  color: var(--light-accent) !important;
+}
+
+.box-dark {
+  background-color: var(--dark-secondary) !important;
+  border-radius: 15px;
+  box-shadow: 2px 2px 2px 2px var(--dark-accent) !important;
+}
+
+.box-light {
+  padding: 16px;
+  border-radius: 15px;
+  border-color: var(--light-accent) !important;
+  box-shadow: 5px 5px 5px var(--light-accent) !important;
+}
+
+.loginTop-dark {
+  background-color: var(--dark-primary) !important;
+  border-radius: 15px;
+  box-shadow: 5px 5px 5px var(--dark-accent) !important;
+}
+
+.loginTop-light {
+  background-color: var(--light-tertiary) !important;
+  border-radius: 15px;
+  box-shadow: 5px 5px 5px var(--light-accent) !important;
+}
+
+.input-dark {
   font-size: 1.5rem;
   width: 100%;
   padding: 10px 20px !important;
   margin: 8px 0;
   box-sizing: border-box;
   border-radius: 15px;
-  border: 2px solid var(--light-cerulean);
-  background-color: var(-light);
-  color: var(--dark-font);
+  border: 2px solid var(--dark-secondary) !important;
+  color: var(--dark-accent);
+  box-shadow: 5px 5px 5px var(--dark-accent) !important;
+}
+
+.input-light {
+  font-size: 1.5rem;
+  width: 100%;
+  padding: 10px 20px !important;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border-radius: 15px;
+  border: 2px solid var(--light-accent) !important;
+  color: var(--light-accent) !important;
+  background-color: var(--light-primary) !important;
+  box-shadow: 5px 5px 5px var(--light-accent) !important;
+}
+
+.outsideBox-dark {
+  display: flex;
+  color: var(--dark-accent) !important;
+}
+
+.outsideBox-light {
+  display: flex;
+  color: var(--light-accent) !important;
+}
+
+.box-dark {
+  background-color: var(--dark-secondary) !important;
+  border-radius: 15px;
+  box-shadow: 2px 2px 2px 2px var(--dark-accent) !important;
+}
+
+.box-light {
+  padding: 16px;
+  border-radius: 15px;
+  border-color: var(--light-accent) !important;
+  box-shadow: 5px 5px 5px var(--light-accent) !important;
+}
+
+.signup-dark {
+  background-color: var(--dark-primary) !important;
+  border-radius: 15px;
+  box-shadow: 5px 5px 5px var(--dark-accent) !important;
+}
+
+.signup-light {
+  background-color: var(--light-tertiary) !important;
+  border-radius: 15px;
+  box-shadow: 5px 5px 5px var(--light-accent) !important;
+}
+
+.input-dark {
+  font-size: 1.5rem;
+  width: 100%;
+  padding: 10px 20px !important;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border-radius: 15px;
+  border: 2px solid var(--dark-secondary) !important;
+  color: var(--dark-accent);
+  box-shadow: 5px 5px 5px var(--dark-accent) !important;
+}
+
+.input-light {
+  font-size: 1.5rem;
+  width: 100%;
+  padding: 10px 20px !important;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border-radius: 15px;
+  border: 2px solid var(--light-accent) !important;
+  color: var(--light-accent) !important;
+  background-color: var(--light-primary) !important;
+  box-shadow: 5px 5px 5px var(--light-accent) !important;
+}
+
+.message {
+  font-size: 1.5rem;
+  color: var(--light-red) !important;
+  text-align: center;
+  margin-top: 10px;
+  border: none !important;
+}
+
+.message {
+  font-size: 1.5rem;
+  color: var(--light-red) !important;
+  text-align: center;
+  margin-top: 10px;
+  border: none !important;
+
 }
