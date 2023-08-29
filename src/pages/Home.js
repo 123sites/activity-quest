@@ -7,6 +7,7 @@ import "../App.css";
 import "../assets/navbar.css";
 import "../index.css";
 import { ThemeContext } from "../components/Theme/themeContext";
+import "../components/Motion/styles.css";
 import img1 from "../images/img1.jpg";
 import genealogists from "../images/genealogists.png";
 import img3 from "../images/img3.jpg";
@@ -24,28 +25,44 @@ const Home = ({ handlePageChange }) => {
   return (
     <div className="container-fluid">
       <div>
-        <h1 className={`text-center htitle-${theme} m-5`}>
+        <h1 className={`d-flex text-center htitle-${theme} m-5`}>
           Welcome to Activity Quest!
         </h1>
-        <h4 className={`text-center htext-${theme} m-5`}>
+        <h4 className={`d-flex text-center htext-${theme} mx-5`}>
           Your one-stop App that helps you find fun activities in your area!
         </h4>
       </div>
-      <div
-        id="carouselExampleSlidesOnly"
-        className="carousel slide"
-        data-bs-ride="carousel"
-      >
+      <div id="view" className="carousel slide" data-bs-ride="carousel">
         <div className="carousel-inner">
           <div className="carousel-item active" data-bs-ride="carousel">
-            <img src={img1} className="active d-block w-100" alt="..." />
+            <img
+              src={img1}
+              className="d-block w-25 justify-center m-5 p-4"
+              alt="..."
+            />
           </div>
 
-          <div className="carousel-item active" data-bs-ride="carousel">
-            <img src={genealogists} className="d-block w-100" alt="..." />
+          <div
+            id="video"
+            className="carousel-item active"
+            data-bs-ride="carousel"
+          >
+            <img
+              src={genealogists}
+              className="d-block w-25 justify-center m-5 p-0"
+              alt="..."
+            />
           </div>
-          <div className="carousel-item active" data-bs-ride="carousel">
-            <img src={img3} className="d-block w-100" alt="..." />
+          <div
+            id="water"
+            className="carousel-item active"
+            data-bs-ride="carousel"
+          >
+            <img
+              src={img3}
+              className="d-block w-25 justify-center m-5 p-3"
+              alt="..."
+            />
           </div>
         </div>
         <div className="text-center">

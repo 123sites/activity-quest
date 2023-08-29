@@ -20,10 +20,10 @@ const Navbar = ({ handlePageChange }) => {
   return (
     <nav className={`navbar navbar-expand-lg sticky-lg-top top-${theme}`}>
       <div className="container-fluid">
-        <div className="row container-fluid">
+        <div className="row">
           <div className="col">
             <Link
-              className="nav-link row navbar-container ml-4 mt-1 justify-content-center"
+              className="nav-link row d-inline-flex navbar-container ml-4 mt-1 justify-content-center"
               to="/home"
             >
               <div className="col-3">

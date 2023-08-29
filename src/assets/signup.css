@@ -1,15 +1,33 @@
-.signup-top {
-  background-color: var(--light-cerulean) !important;
+.signup-dark {
+  background-color: var(--dark-tertiary) !important;
 }
 
-.input {
+.signup-light {
+  background-color: var(--light-tertiary) !important;
+}
+
+.input-dark {
   font-size: 1.5rem;
   width: 100%;
   padding: 10px 20px !important;
   margin: 8px 0;
   box-sizing: border-box;
   border-radius: 15px;
-  border: 2px solid var(--light-cerulean);
-  background-color: var(-light);
-  color: var(--dark-font);
+  border: 2px solid var(--dark-secondary) !important;
+  background-color: var(-dark-primary) !important;
+  color: var(--dark-accent);
+  box-shadow: 5px 5px 5px var(--dark-accent) !important;
+}
+
+.input-light {
+  font-size: 1.5rem;
+  width: 100%;
+  padding: 10px 20px !important;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border-radius: 15px;
+  border: 2px solid var(--light-secondary) !important;
+  background-color: var(-light-primary) !important;
+  color: var(--light-accent) !important;
+  box-shadow: 5px 5px 5px var(--light-accent) !important;
 }
