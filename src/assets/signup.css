@@ -22,7 +22,7 @@
 }
 
 .signup-dark {
-  background-color: var(--dark-primary);
+  background-color: var(--dark-primary) !important;
   border-radius: 15px;
   box-shadow: 5px 5px 5px var(--dark-accent);
 }
