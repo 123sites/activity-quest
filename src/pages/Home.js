@@ -32,6 +32,12 @@ const Home = ({ handlePageChange }) => {
           Your one-stop App that helps you find fun activities in your area!
         </h4>
       </div>
+      <div className="d-flex justify-content-center">
+        <iframe
+          src="https://happier-confidence-222439.framer.app/"
+          title="Images of events."
+        ></iframe>
+      </div>
       <div id="view" className="carousel slide" data-bs-ride="carousel">
         <div className="carousel-inner">
           <div className="carousel-item active" data-bs-ride="carousel">
