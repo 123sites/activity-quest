@@ -7,6 +7,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "../../assets/index.css";
 import "../../assets/navbar.css";
 import "../../App.css";
+import { AnimatePresence } from "framer-motion";
 
 const Navbar = ({ handlePageChange }) => {
   const [currentPath, setCurrentPath] = useState("");
@@ -89,12 +90,14 @@ const Navbar = ({ handlePageChange }) => {
                   </Link>
                 </li>
                 <li className="nav-link fw-boldest">
-                  <Link
-                    className={`nav-link link-${theme} text-center link`}
-                    to="/login"
-                  >
-                    Log-in
-                  </Link>
+                  <AnimatePresence>
+                    <Link
+                      className={`nav-link link-${theme} text-center link`}
+                      to="/login"
+                    >
+                      Log-in
+                    </Link>
+                  </AnimatePresence>
                 </li>
                 <li className="nav-link fw-boldest">
                   <Link

@@ -8,6 +8,8 @@ import "../assets/navbar.css";
 import "../index.css";
 import { useContext } from "react";
 import { ThemeContext } from "../components/Theme/themeContext";
+import "../components/Motion/loginModal.js";
+import { AnimatePresence } from "framer-motion";
 
 const Login = () => {
   const [username, setUsername] = useState("");

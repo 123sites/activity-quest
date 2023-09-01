@@ -11,11 +11,15 @@ import "../components/Motion/styles.css";
 import img1 from "../images/img1.jpg";
 import genealogists from "../images/genealogists.png";
 import img3 from "../images/img3.jpg";
+import { motion } from "framer-motion";
 
 const Home = ({ handlePageChange }) => {
   const { theme } = useContext(ThemeContext);
   const [currentPath, setCurrentPath] = useState("");
   console.log(currentPath);
+  const [x, setX] = useState(0);
+  const [y, setY] = useState(0);
+  const [rotate, setRotate] = useState(0);
 
   useEffect(() => {
     console.log(currentPath);
@@ -32,13 +36,13 @@ const Home = ({ handlePageChange }) => {
           Your one-stop App that helps you find fun activities in your area!
         </h4>
       </div>
-      <div className="d-flex justify-content-center">
+      <motion.div className="d-flex justify-content-center">
         <iframe
           src="https://happier-confidence-222439.framer.app/"
           title="Images of events."
         ></iframe>
-      </div>
-      <div id="view" className="carousel slide" data-bs-ride="carousel">
+      </motion.div>
+      {/* <div id="view" className="carousel slide" data-bs-ride="carousel">
         <div className="carousel-inner">
           <div className="carousel-item active" data-bs-ride="carousel">
             <img
@@ -97,7 +101,7 @@ const Home = ({ handlePageChange }) => {
             <span className="visually-hidden">Next</span>
           </button>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
