@@ -110,7 +110,6 @@ const Navbar = ({ handlePageChange }) => {
               </ul>
             </div>
             <div className="ml-3 mt-2 sun-moon">
-              {/* // eslint-disable-next-line no-undef */}
               <button onClick={toggleTheme}>
                 {theme === "light" ? (
                   <FontAwesomeIcon icon={faMoon} className="m-1 sun-moon" />

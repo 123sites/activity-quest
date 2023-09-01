@@ -1,6 +1,5 @@
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-// import Calender from "./components/Calender/calender";
 import { createContext, useState } from "react";
 import Home from "./pages/Home.js";
 import Signup from "./pages/Signup.js";
@@ -28,9 +27,6 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/home" element={<Home />} />
-          {/* <Route path="/calender" element={<Calendar />} /> */}
-          {/* <Route path="/account" element={<Account />} /> */}
-          {/* <Route path="/favorites" element={<Favorites /> } /> */}
           <Route path="/footer" element={<Footer />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />

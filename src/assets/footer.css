@@ -1,25 +1,25 @@
 .title-dark {
   font-family: 'jetBrains' sans-serif;
   font-weight: bolder;
-  color: var(--dark-secondary) !important;
+  color: var(--dark-secondary);
 }
 
 .title-light {
   font-family: 'jetBrains' sans-serif;
   font-weight: bolder;
-  color: var(--light-tertiary) !important;
+  color: var(--light-tertiary);
 }
 
 .copyright-dark {
   font-family: 'jetBrains' sans-serif;
-  font-weight: bolder !important;
-  color: var(--dark-secondary) !important;
+  font-weight: bolder;
+  color: var(--dark-secondary);
 }
 
 .copyright-light {
   font-family: 'jetBrains' sans-serif;
-  font-weight: bold !important;
-  color: var(--dark-secondary) !important;
+  font-weight: bold;
+  color: var(--dark-secondary);
 }
 
 .emojis-dark {
@@ -43,20 +43,3 @@
 :hover {
   color: var(--dark-accent);
 }
-
-/* 
-.fab-dark,
-.fas-dark {
-  justify-content: space-between;
-  margin: 10px;
-  font-size: 30px;
-  color: var(--dark-secondary);
-}
-
-.fab-light,
-.fas-light {
-  justify-content: space-between;
-  margin: 10px;
-  font-size: 30px;
-  color: var(--light-secondary)
-} */

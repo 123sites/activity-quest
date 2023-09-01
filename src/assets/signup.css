@@ -1,59 +1,59 @@
 .outsideBox-dark {
   display: flex;
-  color: var(--dark-accent) !important;
+  color: var(--dark-accent);
 }
 
 .outsideBox-light {
   display: flex;
-  color: var(--light-accent) !important;
+  color: var(--light-accent);
 }
 
 .box-dark {
-  background-color: var(--dark-secondary) !important;
+  background-color: var(--dark-secondary);
   border-radius: 15px;
-  box-shadow: 2px 2px 2px 2px var(--dark-accent) !important;
+  box-shadow: 2px 2px 2px 2px var(--dark-accent);
 }
 
 .box-light {
   padding: 16px;
   border-radius: 15px;
-  border-color: var(--light-accent) !important;
-  box-shadow: 5px 5px 5px var(--light-accent) !important;
+  border-color: var(--light-accent);
+  box-shadow: 5px 5px 5px var(--light-accent);
 }
 
 .signup-dark {
-  background-color: var(--dark-primary) !important;
+  background-color: var(--dark-primary);
   border-radius: 15px;
-  box-shadow: 5px 5px 5px var(--dark-accent) !important;
+  box-shadow: 5px 5px 5px var(--dark-accent);
 }
 
 .signup-light {
   background-color: var(--light-tertiary) !important;
   border-radius: 15px;
-  box-shadow: 5px 5px 5px var(--light-accent) !important;
+  box-shadow: 5px 5px 5px var(--light-accent);
 }
 
 .input-dark {
   font-size: 1.5rem;
   width: 100%;
-  padding: 10px 20px !important;
+  padding: 10px 20px;
   margin: 8px 0;
   box-sizing: border-box;
   border-radius: 15px;
-  border: 2px solid var(--dark-secondary) !important;
+  border: 2px solid var(--dark-secondary);
   color: var(--dark-accent);
-  box-shadow: 5px 5px 5px var(--dark-accent) !important;
+  box-shadow: 5px 5px 5px var(--dark-accent);
 }
 
 .input-light {
   font-size: 1.5rem;
   width: 100%;
-  padding: 10px 20px !important;
+  padding: 10px 20px;
   margin: 8px 0;
   box-sizing: border-box;
   border-radius: 15px;
-  border: 2px solid var(--light-accent) !important;
-  color: var(--light-accent) !important;
-  background-color: var(--light-primary) !important;
-  box-shadow: 5px 5px 5px var(--light-accent) !important;
+  border: 2px solid var(--light-accent);
+  color: var(--light-accent);
+  background-color: var(--light-primary);
+  box-shadow: 5px 5px 5px var(--light-accent);
 }
