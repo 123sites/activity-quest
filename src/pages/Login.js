@@ -21,7 +21,6 @@ const Login = () => {
   console.log(currentPath);
 
   const handleLogin = () => {
-    // Simulate authentication (replace this with your actual authentication logic)
     if (username === "user" && password === "password") {
       setLoggedIn(true);
     } else {

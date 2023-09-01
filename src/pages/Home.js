@@ -8,9 +8,9 @@ import "../assets/navbar.css";
 import "../index.css";
 import { ThemeContext } from "../components/Theme/themeContext";
 import "../components/Motion/styles.css";
-import img1 from "../images/img1.jpg";
-import genealogists from "../images/genealogists.png";
-import img3 from "../images/img3.jpg";
+// import img1 from "../images/img1.jpg";
+// import genealogists from "../images/genealogists.png";
+// import img3 from "../images/img3.jpg";
 import { motion } from "framer-motion";
 
 const Home = ({ handlePageChange }) => {
