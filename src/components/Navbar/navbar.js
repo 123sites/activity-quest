@@ -7,6 +7,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "../../assets/index.css";
 import "../../assets/navbar.css";
 import "../../App.css";
+import { AnimatePresence } from "framer-motion";
 
 const Navbar = ({ handlePageChange }) => {
   const [currentPath, setCurrentPath] = useState("");
@@ -20,10 +21,10 @@ const Navbar = ({ handlePageChange }) => {
   return (
     <nav className={`navbar navbar-expand-lg sticky-lg-top top-${theme}`}>
       <div className="container-fluid">
-        <div className="row container-fluid">
+        <div className="row">
           <div className="col">
             <Link
-              className="nav-link row navbar-container ml-4 mt-1 justify-content-center"
+              className="nav-link row d-inline-flex navbar-container ml-4 mt-1 justify-content-center"
               to="/home"
             >
               <div className="col-3">
@@ -89,12 +90,14 @@ const Navbar = ({ handlePageChange }) => {
                   </Link>
                 </li>
                 <li className="nav-link fw-boldest">
-                  <Link
-                    className={`nav-link link-${theme} text-center link`}
-                    to="/login"
-                  >
-                    Log-in
-                  </Link>
+                  <AnimatePresence>
+                    <Link
+                      className={`nav-link link-${theme} text-center link`}
+                      to="/login"
+                    >
+                      Log-in
+                    </Link>
+                  </AnimatePresence>
                 </li>
                 <li className="nav-link fw-boldest">
                   <Link
@@ -107,7 +110,6 @@ const Navbar = ({ handlePageChange }) => {
               </ul>
             </div>
             <div className="ml-3 mt-2 sun-moon">
-              {/* // eslint-disable-next-line no-undef */}
               <button onClick={toggleTheme}>
                 {theme === "light" ? (
                   <FontAwesomeIcon icon={faMoon} className="m-1 sun-moon" />

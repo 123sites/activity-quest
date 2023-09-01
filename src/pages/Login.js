@@ -6,14 +6,21 @@ import "../assets/login.css";
 import "../App.css";
 import "../assets/navbar.css";
 import "../index.css";
+import { useContext } from "react";
+import { ThemeContext } from "../components/Theme/themeContext";
+import "../components/Motion/loginModal.js";
+import { AnimatePresence } from "framer-motion";
 
 const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [loggedIn, setLoggedIn] = useState(false);
 
+  const { theme } = useContext(ThemeContext);
+  const [currentPath] = useState("");
+  console.log(currentPath);
+
   const handleLogin = () => {
-    // Simulate authentication (replace this with your actual authentication logic)
     if (username === "user" && password === "password") {
       setLoggedIn(true);
     } else {
@@ -27,7 +34,7 @@ const Login = () => {
 
   return (
     <main className="flex-row p-5 justify-center">
-      <div className="card">
+      <div className="card message">
         {loggedIn ? (
           <div>
             <h1>Welcome, {username}!</h1>
@@ -38,15 +45,19 @@ const Login = () => {
             </p>
           </div>
         ) : (
-          <div className="d-flex flex-column login align-items-center text-center">
+          <div
+            className={`card d-flex p-2 box-${theme} align-items-center text-center`}
+          >
             <div>
-              <h4 className="card-header col p-3 m-1 login-top text-center text-light login-card-header">
+              <h4
+                className={`card-header col p-3 m-1 loginTop-${theme} text-center text-light login-card-header`}
+              >
                 Login
               </h4>
               <div className="card-body">
                 <input
                   type="text"
-                  className="form-input input shadow-lg"
+                  className={`form-input input-${theme}`}
                   placeholder="Username"
                   value={username}
                   onChange={(e) => setUsername(e.target.value)}
@@ -54,7 +65,7 @@ const Login = () => {
                 <br />
                 <input
                   type="password"
-                  className="form-input input shadow-lg"
+                  className={`form-input input-${theme}`}
                   placeholder="Password"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
@@ -62,7 +73,7 @@ const Login = () => {
                 <br />
                 <button
                   onClick={handleLogin}
-                  className="btn-light m-3 btn-block fw-bold"
+                  className={`btn-light m-3 btn-block btn-${theme} fw-bold`}
                   style={{ cursor: "pointer" }}
                 >
                   Login

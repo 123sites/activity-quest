@@ -8,7 +8,8 @@
   /* dark mode */
   --dark-primary: #0A2342;
   --dark-secondary: #247BA0;
-  --dark-tertiary: #70798C;
+  --dark-tertiary: #656256;
+
   --dark-accent: #550527;
   --dark-font: #F1FAEE;
   --dark-red: #89023E;
@@ -42,14 +43,14 @@ body[data-theme="dark"] {
 }
 
 .btn-light {
-  padding: 10px 11px !important;
+  padding: 10px 11px;
   text-align: center;
   cursor: pointer;
   outline: none;
-  font-size: 1rem !important;
+  font-size: 1rem;
   font-weight: bolder;
-  color: var(--light-primary) !important;
-  background-color: var(--light-tertiary) !important;
+  color: var(--light-primary);
+  background-color: var(--light-tertiary);
   border: none;
   border-radius: 15px;
   box-shadow: 0 9px #999;
@@ -57,9 +58,9 @@ body[data-theme="dark"] {
 
 .btn-light:active,
 .btn-light:hover {
-  color: var(--dark-accent) !important;
-  background-color: var(--light-secondary) !important;
-  box-shadow: 0 5px var(--light-accent) !important;
+  color: var(--dark-accent);
+  background-color: var(--light-secondary);
+  box-shadow: 0 5px var(--light-accent);
   transform: translateY(4px);
 }
 
@@ -68,19 +69,19 @@ body[data-theme="dark"] {
   text-align: center;
   cursor: pointer;
   outline: none;
-  font-size: 1rem !important;
+  font-size: 1rem;
   font-weight: bolder;
-  color: var(--light-primary);
-  background-color: var(--dark-secondary);
+  color: var(--dark-font);
+  background-color: var(--dark-primary);
   border: none;
   border-radius: 15px;
-  box-shadow: 0 9px #999;
+  box-shadow: 0 7px var(--dark-accent);
 }
 
 .btn-dark:hover,
 .btn-dark:active {
-  background-color: var(--dark-secondary) !important;
-  color: var(--dark-accent) !important;
-  box-shadow: 0 5px var(--dark-tertiary) !important;
+  background-color: var(--dark-accent);
+  color: var(--dark-secondary);
+  box-shadow: 0 5px var(--dark-primary);
   transform: translateY(4px);
 }

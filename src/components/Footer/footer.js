@@ -13,7 +13,7 @@ const Footer = () => {
   }, []);
 
   return (
-    <footer className={`text-center emojis-${theme}`}>
+    <footer className={`text-center m-3 emojis-${theme}`}>
       <a
         target="_blank"
         rel="noopener noreferrer"
