@@ -9,14 +9,29 @@ import Navbar from "./components/Navbar/navbar";
 import { ThemeProvider } from "./components/Theme/themeContext";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import useLocalStorage from "./hooks/useLocalStorage";
+import { motion } from "framer-motion";
+import "../src/components/Motion/loginModal.js";
+import "../src/pages/Login.js";
 
 export const ThemeContext = createContext(null);
 
 function App() {
   const [theme, setTheme] = useState("dark");
+  const [x, setX] = useState(0);
+  const [y, setY] = useState(0);
+  const [rotate, setRotate] = useState(0);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const toggleTheme = () => {
     setTheme((curr) => (curr === "light" ? "dark" : "light"));
+  };
+
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
   };
 
   return (

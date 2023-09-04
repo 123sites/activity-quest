@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { createPortal } from "react-dom";
 import { motion } from "framer-motion";
+import "../../assets/login.css";
+import "../../pages/Login.js";
 
 export default function Modal({ title, children, onClose }) {
   const [x, setX] = useState(0);
@@ -10,17 +12,20 @@ export default function Modal({ title, children, onClose }) {
   return createPortal(
     <>
       <div className="backdrop" onClick={onClose} />
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        id="loginbox"
-        exit={{ opacity: 0, y: 30 }}
+      <motion.dialog
+        variants={{
+          hidden: { opacity: 0, y: 30 },
+          visible: { opacity: 1, y: 0 },
+        }}
+        initial="hidden"
+        animate="visible"
+        exit="hidden"
         open
         className="modal"
       >
         <h2>{title}</h2>
         {children}
-      </motion.div>
+      </motion.dialog>
     </>,
     document.getElementById("modal")
   );
