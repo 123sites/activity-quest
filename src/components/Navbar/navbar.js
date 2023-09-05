@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "../../assets/index.css";
 import "../../assets/navbar.css";
 import "../../App.css";
-import { AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Navbar = ({ handlePageChange }) => {
   const [currentPath, setCurrentPath] = useState("");
@@ -34,9 +34,7 @@ const Navbar = ({ handlePageChange }) => {
                   alt="Activity Quest Logo"
                 />
               </div>
-              <div
-                className={`brand-${theme} row ml-0 mr-1 navbar-brand navbar-expand-lg`}
-              >
+              <div className={`brand-${theme} row ml-0 mr-1 navbar-brand`}>
                 Activity Quest
               </div>
             </Link>
@@ -110,13 +108,18 @@ const Navbar = ({ handlePageChange }) => {
               </ul>
             </div>
             <div className="ml-3 mt-2 sun-moon">
-              <button onClick={toggleTheme}>
+              <motion.button
+                whileHover={{ scale: 1.1 }}
+                transition={{ type: "spring", stiffness: 500 }}
+                style={{ cursor: "pointer" }}
+                onClick={toggleTheme}
+              >
                 {theme === "light" ? (
                   <FontAwesomeIcon icon={faMoon} className="m-1 sun-moon" />
                 ) : (
                   <FontAwesomeIcon icon={faSun} className="m-1 sun-moon" />
                 )}
-              </button>
+              </motion.button>
             </div>
           </div>
         </div>
