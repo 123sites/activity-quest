@@ -33,13 +33,16 @@ const Home = ({ handlePageChange }) => {
           Your one-stop App that helps you find fun activities in your area!
         </h4>
       </div>
-      <motion.div className="d-flex carousel mx-4 px-4 text-center justify-content-center">
-        <iframe
-          src="https://happier-confidence-222439.framer.app/"
-          title="Images of events."
-          className="slider"
-        ></iframe>
-      </motion.div>
+      <div className="d-block row justify-content-center m-4">
+        <motion.div className="carousel active col w-100 m-4 p-4">
+          <iframe
+            src="https://happier-confidence-222439.framer.app/"
+            title="Images of events."
+            allowFullScreen
+            className="slider col data-framer-iframe"
+          ></iframe>
+        </motion.div>
+      </div>
     </div>
   );
 };
