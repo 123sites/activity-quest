@@ -22,31 +22,8 @@
   color: var(--dark-primary);
 }
 
-.imgs {
-  width: 25%;
-  height: 25%;
-  object-fit: cover;
-}
-
-.imgs:hover {
-  transform: scale(1.1);
-  transition: all 0.5s ease-in-out;
-}
-
-.view {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.video {
-  width: 50%;
-  height: 50%;
-  object-fit: cover;
-}
-
-.water {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
