@@ -100,13 +100,15 @@ const Login = ({ isOpen, onClose }) => {
                     onChange={(e) => setPassword(e.target.value)}
                   />
                   <br />
-                  <button
+                  <motion.button
+                    whileHover={{ scale: 1.1 }}
+                    transition={{ type: "spring", stiffness: 500 }}
                     onClick={handleLogin}
                     className={`btn-light m-3 btn-block btn-${theme} fw-bold`}
                     style={{ cursor: "pointer" }}
                   >
                     Login
-                  </button>
+                  </motion.button>
                 </div>
               </div>
             </div>
