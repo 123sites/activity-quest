@@ -34,7 +34,7 @@ const Navbar = ({ handlePageChange }) => {
                   alt="Activity Quest Logo"
                 />
               </div>
-              <div className={`brand-${theme} row ml-0 mr-1 navbar-brand`}>
+              <div className={`navbar-brand brand row ml-0 mr-1`}>
                 Activity Quest
               </div>
             </Link>

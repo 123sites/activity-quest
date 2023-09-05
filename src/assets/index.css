@@ -81,7 +81,7 @@ body[data-theme="dark"] {
 .btn-dark:hover,
 .btn-dark:active {
   background-color: var(--dark-accent);
-  color: var(--dark-secondary);
-  box-shadow: 0 5px var(--dark-primary);
+  color: var(--light-secondary);
+  box-shadow: 0 5px var(--dark-tertiary);
   transform: translateY(4px);
 }
