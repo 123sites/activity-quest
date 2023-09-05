@@ -14,7 +14,7 @@ const Footer = () => {
 
   return (
     <footer>
-      <div className={`text-center m-3 emojis-${theme}`}>
+      <div className={`text-center m-3`}>
         <a
           target="_blank"
           rel="noopener noreferrer"
