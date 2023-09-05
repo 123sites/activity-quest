@@ -33,10 +33,11 @@ const Home = ({ handlePageChange }) => {
           Your one-stop App that helps you find fun activities in your area!
         </h4>
       </div>
-      <motion.div className="d-flex carousel m-3 p-3 text-center justify-content-center">
+      <motion.div className="d-flex carousel mx-4 px-4 text-center justify-content-center">
         <iframe
           src="https://happier-confidence-222439.framer.app/"
           title="Images of events."
+          className="slider"
         ></iframe>
       </motion.div>
     </div>
