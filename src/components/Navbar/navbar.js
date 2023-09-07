@@ -49,7 +49,7 @@ const Navbar = ({ handlePageChange }) => {
             ></button>
           </div>
           <div className="nav-elements row">
-            <div className="col">
+            <div className="col active">
               <ul className="navbar-nav d-flex mb-2 ml-4 mb-lg-0">
                 <li className="nav-link">
                   <Link
@@ -77,7 +77,7 @@ const Navbar = ({ handlePageChange }) => {
                 </li>
               </ul>
             </div>
-            <div className="col">
+            <div className="col active">
               <ul className="navbar-nav d-flex mb-2 ml-4 mb-lg-0">
                 <li className="nav-link fw-boldest">
                   <Link

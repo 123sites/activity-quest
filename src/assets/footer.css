@@ -8,6 +8,10 @@
   color: var(--light-tertiary);
 }
 
+.footer-container {
+  margin-top: 2rem;
+}
+
 .copyright-dark {
   font-family: 'jetBrains' sans-serif;
   font-weight: bolder;

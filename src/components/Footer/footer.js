@@ -14,7 +14,7 @@ const Footer = () => {
 
   return (
     <footer>
-      <div className={`text-center m-3`}>
+      <div className={`footer-container text-center`}>
         <a
           target="_blank"
           rel="noopener noreferrer"
