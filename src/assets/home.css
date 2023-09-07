@@ -22,7 +22,16 @@
   color: var(--dark-primary);
 }
 
-.carousel {
+.carousel-dark {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  object-fit: cover;
+  transform: scale(.5);
+  filter: brightness(0.5);
+}
+
+.carousel-light {
   display: flex;
   justify-content: center;
   align-items: center;
