@@ -9,9 +9,10 @@ import Navbar from "./components/Navbar/navbar";
 import { ThemeProvider } from "./components/Theme/themeContext";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import useLocalStorage from "./hooks/useLocalStorage";
-import { motion } from "framer-motion";
 import "../src/components/Motion/loginModal.js";
 import "../src/pages/Login.js";
+import "../src/pages/Account";
+import "../src/pages/Signup.js";
 
 export const ThemeContext = createContext(null);
 
