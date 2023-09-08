@@ -26,15 +26,15 @@ const Home = ({ handlePageChange }) => {
   return (
     <div className="container-fluid">
       <div>
-        <h1 className={`d-flex justify-center htitle-${theme} m-5`}>
+        <h1 className={`htitle-${theme} m-5 text-center`}>
           Welcome to Activity Quest!
         </h1>
-        <h4 className={`d-flex justify-center htext-${theme} mx-5`}>
+        <h4 className={`htext-${theme} mx-5 text-center`}>
           Your one-stop App that helps you find fun activities in your area!
         </h4>
       </div>
-      <div className="d-block carousel-container row justify-content-center">
-        <motion.div className={`carousel-${theme} active col`}>
+      <div className="d-block carousel-container row justify-center">
+        <motion.div className={`carousel-${theme} col`}>
           <iframe
             src="https://happier-confidence-222439.framer.app/"
             title="Images of events."

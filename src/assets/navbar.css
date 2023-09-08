@@ -14,7 +14,7 @@ a {
   font-size: 1.75rem;
   font-weight: 600;
   color: var(--light-primary);
-  text-decoration: none;
+  /* text-decoration: none; */
   transition: all 0.3s ease 0s;
 }
 

@@ -32,7 +32,7 @@ const Navbar = ({ handlePageChange }) => {
               alt="Activity Quest Logo"
             />
           </div>
-          <div className={`navbar-brand col brand ml-0 mr-1`}>
+          <div className={`navbar-brand text-start col brand`}>
             Activity Quest
           </div>
         </Link>
