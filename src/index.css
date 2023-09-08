@@ -2,10 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'JetBrains Mono', monospace;
   font-family: 'Montserrat', sans-serif;
-  font-family: 'Nunito Sans', sans-serif;
-  font-family: 'Inter', sans-serif;
   font-weight: boldest;
   letter-spacing: 1.25px;
 }
@@ -25,7 +22,8 @@ html {
 body-1 {
   margin: 0;
   background-color: var(--body);
-  font-family: "jetbrains", sans-serif;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
   font-size: 1.2rem;
   color: var(--font-dark);
 }
@@ -33,7 +31,8 @@ body-1 {
 body-d {
   margin: 0;
   background-color: var(--body);
-  font-family: "jetbrains", sans-serif;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
   font-size: 1.2rem;
   color: var(--font-dark);
 }
@@ -386,7 +385,8 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'JetBrains Mono', monospace;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
   margin: 0 0 0.5rem;
   line-height: 1.25;
 }
