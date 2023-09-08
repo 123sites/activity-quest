@@ -27,7 +27,6 @@ a:hover {
 }
 
 .link-dark {
-  font-family: 'Montserrat', sans-serif;
   align-items: center;
   justify-content: center;
   font-size: 1rem;
@@ -37,13 +36,17 @@ a:hover {
 }
 
 .link-light {
-  font-family: 'Montserrat', sans-serif;
   align-items: center;
   justify-content: center;
   font-size: 1rem;
   font-weight: 600;
   color: var(--light-primary);
   text-decoration: none;
+}
+
+.link-light:active,
+.link-light:hover {
+  color: var(--dark-accent);
 }
 
 .logo {
@@ -60,20 +63,9 @@ a:hover {
 
 .nav-elements ul a {
   font-size: 16px;
-  color: var(--light-primary);
   font-weight: 700;
   text-decoration: none;
   transition: all 0.3s ease 0s;
-}
-
-.nav-elements-dark ul a.active-dark {
-  color: var(--dark-accent);
-  position: relative;
-}
-
-.nav-elements-light ul a.active-light {
-  color: var(--dark-accent);
-  position: relative;
 }
 
 .nav-elements ul a.active::after {
@@ -84,12 +76,13 @@ a:hover {
   width: 100%;
   height: 2px;
   background-color: var(--light-primary);
-  color: var(--dark-accent);
+  color: var(--dark-accent) !important;
   font-weight: 700;
 }
 
-.link:active,
-.link:hover {
+.link-dark:active,
+.link-dark:hover .link-light:active,
+.link-light:hover {
   color: var(--dark-accent);
   text-decoration: none;
 }

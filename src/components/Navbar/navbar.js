@@ -51,7 +51,7 @@ const Navbar = ({ handlePageChange }) => {
           <ul className="navbar-nav mb-2 ml-4 mb-lg-0">
             <li className="nav-item">
               <Link
-                className={`nav-link link-${theme} text-center link ml-4`}
+                className={`nav-link link-${theme} text-center ml-4`}
                 to="/home"
               >
                 Home
@@ -59,7 +59,7 @@ const Navbar = ({ handlePageChange }) => {
             </li>
             <li className="nav-item fw-boldest">
               <Link
-                className={`nav-link link-${theme} text-center link`}
+                className={`nav-link link-${theme} text-center`}
                 to="/account"
               >
                 Account
@@ -67,7 +67,7 @@ const Navbar = ({ handlePageChange }) => {
             </li>
             <li className="nav-item fw-boldest">
               <Link
-                className={`nav-link link-${theme} text-center link`}
+                className={`nav-link link-${theme} text-center`}
                 to="/favorites"
               >
                 Favorites
@@ -75,7 +75,7 @@ const Navbar = ({ handlePageChange }) => {
             </li>
             <li className="nav-item fw-boldest">
               <Link
-                className={`nav-link link-${theme} text-center link`}
+                className={`nav-link link-${theme} text-center`}
                 to="/signup"
               >
                 Sign-up
@@ -84,7 +84,7 @@ const Navbar = ({ handlePageChange }) => {
             <li className="nav-item fw-boldest">
               <AnimatePresence>
                 <Link
-                  className={`nav-link link-${theme} text-center link`}
+                  className={`nav-link link-${theme} text-center`}
                   to="/login"
                 >
                   Log-in

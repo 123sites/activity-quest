@@ -57,9 +57,9 @@ const Footer = () => {
           {""}
         </h4>
         <p>
-          <span className={`copyright-${theme}`}>
+          <div className={`copyright-${theme}`}>
             Copyright © Chel Freitas and Gayle Hoefer | C & G, Inc.
-          </span>
+          </div>
         </p>
       </div>
     </footer>
