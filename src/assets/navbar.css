@@ -33,6 +33,13 @@ a:hover {
   font-weight: 600;
   color: var(--dark-font) !important;
   text-decoration: none;
+  white-space: nowrap;
+}
+
+.link-dark:active,
+.link-dark:hover {
+  color: var(--dark-accent) !important;
+  text-decoration: none;
 }
 
 .link-light {
@@ -42,11 +49,12 @@ a:hover {
   font-weight: 600;
   color: var(--light-primary);
   text-decoration: none;
+  white-space: nowrap;
 }
 
 .link-light:active,
 .link-light:hover {
-  color: var(--dark-accent);
+  color: var(--dark-accent) !important;
 }
 
 .logo {
@@ -78,13 +86,6 @@ a:hover {
   background-color: var(--light-primary);
   color: var(--dark-accent) !important;
   font-weight: 700;
-}
-
-.link-dark:active,
-.link-dark:hover .link-light:active,
-.link-light:hover {
-  color: var(--dark-accent);
-  text-decoration: none;
 }
 
 .sun-moon {

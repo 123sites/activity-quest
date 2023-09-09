@@ -20,7 +20,7 @@ const Navbar = ({ handlePageChange }) => {
 
   return (
     <nav className={`navbar navbar-expand-lg sticky-lg-top top-${theme}`}>
-      <div className="container-fluid">
+      <div className="container">
         <Link
           className="nav-link row d-inline-flex navbar-container ml-4 mt-1 justify-content-center"
           to="/home"
@@ -40,20 +40,17 @@ const Navbar = ({ handlePageChange }) => {
           class="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
-          data-bs-target="#navbarTogglerDemo01"
-          aria-controls="navbarTogglerDemo01"
+          data-bs-target="#navbarToggler"
+          aria-controls="navbarToggler"
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div className="active collapse navbar-collapse">
-          <ul className="navbar-nav mb-2 ml-4 mb-lg-0">
+        <div className="collapse navbar-collapse" id="navbarToggler">
+          <ul className="navbar-nav mb-lg-0">
             <li className="nav-item">
-              <Link
-                className={`nav-link link-${theme} text-center ml-4`}
-                to="/home"
-              >
+              <Link className={`nav-link link-${theme} text-center`} to="/home">
                 Home
               </Link>
             </li>

@@ -32,11 +32,11 @@
 }
 
 .emojis-dark:active,
-:hover {
+.emojis-dark:hover {
   color: var(--dark-secondary)
 }
 
 .emojis-light:active,
-:hover {
+.emojis-light:hover {
   color: var(--dark-accent);
 }
