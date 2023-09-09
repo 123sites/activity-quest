@@ -1,0 +1,47 @@
+.accountCard-dark {
+  background-color: var(--dark-secondary);
+  border-radius: 30px;
+  box-shadow: 0 0 25px var(--dark-accent);
+  padding: 1rem;
+  margin: 1rem;
+}
+
+.accountCard-light {
+  background-color: var(--light-tertiary);
+  border-radius: 30px;
+  box-shadow: 0 0 25px var(--light-accent);
+  padding: 1rem;
+  margin: 1rem;
+}
+
+.cardTitle-dark,
+.cardText-dark,
+.subTitle-dark {
+  color: var(--dark-font);
+  letter-spacing: 2px;
+}
+
+.cardTitle-light,
+.cardText-light,
+.subTitle-light {
+  color: var(--light-primary);
+  letter-spacing: 2px;
+}
+
+.cardSubtitle-dark {
+  color: var(--light-primary) !important;
+  letter-spacing: 2px;
+}
+
+.cardSubtitle-light {
+  color: var(--light-primary) !important;
+  letter-spacing: 2px;
+}
+
+.cardLinkText-dark {
+  font-size: 1.2rem !important;
+}
+
+.cardLinkText-light {
+  font-size: 1.2rem !important;
+}

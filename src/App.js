@@ -2,6 +2,7 @@ import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { createContext, useState } from "react";
 import Home from "./pages/Home.js";
+import Account from "./pages/Account.js";
 import Signup from "./pages/Signup.js";
 import Login from "./pages/Login.js";
 import Footer from "./components/Footer/footer";
@@ -43,6 +44,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/home" element={<Home />} />
+          <Route path="/account" element={<Account />} />
           <Route path="/footer" element={<Footer />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />

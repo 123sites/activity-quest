@@ -8,6 +8,10 @@
   position: relative;
 }
 
+.brand {
+  letter-spacing: 2px;
+}
+
 .brand,
 a {
   align-items: center;
@@ -34,6 +38,7 @@ a:hover {
   color: var(--dark-font) !important;
   text-decoration: none;
   white-space: nowrap;
+  letter-spacing: 2px;
 }
 
 .link-dark:active,
@@ -50,6 +55,7 @@ a:hover {
   color: var(--light-primary);
   text-decoration: none;
   white-space: nowrap;
+  letter-spacing: 2px;
 }
 
 .link-light:active,
