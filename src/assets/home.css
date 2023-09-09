@@ -1,6 +1,6 @@
 .htitle-dark {
+  font-weight: bolder;
   color: var(--dark-secondary);
-
 }
 
 .htitle-light {
@@ -9,6 +9,7 @@
 }
 
 .htext-dark {
+  font-weight: bolder;
   color: var(--dark-secondary);
 }
 
@@ -18,7 +19,7 @@
 }
 
 .carousel-dark {
-  /* display: flex; */
+  display: flex;
   /* justify-content: center; */
   /* align-items: center; */
   /* object-fit: cover; */
@@ -27,7 +28,7 @@
 }
 
 .carousel-light {
-  /* display: flex; */
+  display: flex;
   /* justify-content: center; */
   /* align-items: center; */
   /* object-fit: cover; */
@@ -35,12 +36,11 @@
 }
 
 .slider {
-  width: 100%;
+  /* width: 90%; */
   height: 900px;
-  /* height: 250%; */
   /* display: flex; */
   /* justify-content: center; */
   /* align-items: center; */
-  margin-top: 1.5rem;
+  /* margin-top: 1.5rem; */
   /* margin-bottom: 6rem; */
 }
