@@ -1,32 +1,24 @@
-.container {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 15px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 100%;
-}
-
 .top-dark {
-  height: 60px;
   background-color: var(--dark-secondary);
   position: relative;
 }
 
 .top-light {
-  height: 60px;
   background-color: var(--light-tertiary);
   position: relative;
+}
+
+.brand {
+  letter-spacing: 2px;
 }
 
 .brand,
 a {
   align-items: center;
   font-size: 1.75rem;
-  font-weight: 400;
+  font-weight: 600;
   color: var(--light-primary);
-  text-decoration: none;
+  /* text-decoration: none; */
   transition: all 0.3s ease 0s;
 }
 
@@ -39,23 +31,36 @@ a:hover {
 }
 
 .link-dark {
-  font-family: 'Inter', sans-serif;
   align-items: center;
   justify-content: center;
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: var(--dark-font);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--dark-font) !important;
+  text-decoration: none;
+  white-space: nowrap;
+  letter-spacing: 2px;
+}
+
+.link-dark:active,
+.link-dark:hover {
+  color: var(--dark-accent) !important;
   text-decoration: none;
 }
 
 .link-light {
-  font-family: 'Inter', sans-serif;
   align-items: center;
   justify-content: center;
-  font-size: 1.25rem;
-  font-weight: 700;
+  font-size: 1rem;
+  font-weight: 600;
   color: var(--light-primary);
   text-decoration: none;
+  white-space: nowrap;
+  letter-spacing: 2px;
+}
+
+.link-light:active,
+.link-light:hover {
+  color: var(--dark-accent) !important;
 }
 
 .logo {
@@ -63,8 +68,6 @@ a:hover {
 }
 
 .nav-elements ul {
-  display: flex;
-  justify-content: space-between;
   list-style-type: none;
 }
 
@@ -74,20 +77,9 @@ a:hover {
 
 .nav-elements ul a {
   font-size: 16px;
-  color: var(--light-primary);
   font-weight: 700;
   text-decoration: none;
   transition: all 0.3s ease 0s;
-}
-
-.nav-elements-dark ul a.active-dark {
-  color: var(--dark-accent);
-  position: relative;
-}
-
-.nav-elements-light ul a.active-light {
-  color: var(--dark-accent);
-  position: relative;
 }
 
 .nav-elements ul a.active::after {
@@ -98,14 +90,8 @@ a:hover {
   width: 100%;
   height: 2px;
   background-color: var(--light-primary);
-  color: var(--dark-accent);
+  color: var(--dark-accent) !important;
   font-weight: 700;
-}
-
-.link:active,
-.link:hover {
-  color: var(--dark-accent);
-  text-decoration: none;
 }
 
 .sun-moon {

@@ -24,10 +24,7 @@
 }
 
 * {
-  font-family: 'JetBrains Mono', monospace;
   font-family: 'Montserrat', sans-serif;
-  font-family: 'Nunito Sans', sans-serif;
-  font-family: 'Inter', sans-serif;
   font-weight: bolder;
   letter-spacing: 1.25px;
 }
@@ -81,7 +78,7 @@ body[data-theme="dark"] {
 .btn-dark:hover,
 .btn-dark:active {
   background-color: var(--dark-accent);
-  color: var(--dark-secondary);
-  box-shadow: 0 5px var(--dark-primary);
+  color: var(--light-secondary);
+  box-shadow: 0 5px var(--dark-tertiary);
   transform: translateY(4px);
 }
