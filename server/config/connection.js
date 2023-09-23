@@ -1,5 +1,6 @@
 const Sequelize = require("sequelize");
 require("dotenv").config();
+console.log(`Event ${process.env.EVENT}`);
 
 let sequelize;
 
