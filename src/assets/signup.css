@@ -1,3 +1,19 @@
+.registrationMessage-dark {
+  color: var(--dark-secondary)
+}
+
+.registrationMessage-light {
+  color: var(--light-tertiary)
+}
+
+.loginMessage-dark {
+  color: var(--dark-secondary)
+}
+
+.loginMessage-light {
+  color: var(--dark-primary)
+}
+
 .outsideBox-dark {
   display: flex;
   color: var(--dark-accent);
@@ -5,20 +21,20 @@
 
 .outsideBox-light {
   display: flex;
-  color: var(--light-accent);
+  color: var(--light-accent) !important;
 }
 
 .box-dark {
   background-color: var(--dark-secondary);
   border-radius: 15px;
-  box-shadow: 2px 2px 2px 2px var(--dark-accent);
+  box-shadow: 2px 2px 2px 2px;
 }
 
 .box-light {
   padding: 16px;
   border-radius: 15px;
   border-color: var(--light-accent);
-  box-shadow: 5px 5px 5px var(--light-accent);
+  box-shadow: 5px 5px 5px;
 }
 
 .signup-dark {
@@ -28,9 +44,12 @@
 }
 
 .signup-light {
-  background-color: var(--light-tertiary) !important;
-  border-radius: 15px;
+  background-color: var(--dark-primary) !important;
+  border-radius: 5px !important;
+  color: var(--light-primary) !important;
+  font-weight: bolder;
   box-shadow: 5px 5px 5px var(--light-accent);
+  width: 22rem;
 }
 
 .input-dark {

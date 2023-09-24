@@ -66,18 +66,18 @@ const Signup = ({ isOpen, onClose }) => {
               <h1 className={`registrationMessage-${theme} fw-bolder`}>
                 Registration Successful!
               </h1>
-              <h3 className={`registrationMessage-${theme} fw-boler`}>
+              <h3 className={`loginMessage-${theme} fw-boler`}>
                 You are now logged in!
               </h3>
             </div>
           ) : (
             <div
-              className={`card d-flex p-2 box-${theme} align-items-center text-center`}
+              className={`card d-flex p-5 box-${theme} align-items-center text-center`}
             >
               <h4
                 className={`card card-header signup-${theme} col p-2 m-0 mb-2 text-center`}
               >
-                Sign Up
+                Sign up
               </h4>
               <input
                 type="text"
@@ -110,7 +110,7 @@ const Signup = ({ isOpen, onClose }) => {
                 className={`btn-light m-3 btn-block btn-${theme} fw-bold`}
                 style={{ cursor: "pointer" }}
               >
-                Sign Up
+                Sign up
               </motion.button>
             </div>
           )}

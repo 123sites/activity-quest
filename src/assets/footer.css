@@ -1,9 +1,7 @@
 footer {
-  bottom: 0;
-  height: 2em;
-  left: 0;
-  position: relative;
-  font-size: small;
+  bottom: 5px;
+  height: 200px;
+  position: absolute;
   width: 100%;
 }
 

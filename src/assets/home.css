@@ -25,6 +25,7 @@
   /* object-fit: cover; */
   transform: scale(.7);
   filter: brightness(0.5);
+  z-index: -1;
 }
 
 .carousel-light {
@@ -33,6 +34,7 @@
   /* align-items: center; */
   /* object-fit: cover; */
   transform: scale(.7);
+  z-index: -1;
 }
 
 .slider {
@@ -94,12 +96,4 @@
   color: var(--light-secondary);
   box-shadow: 0 5px var(--dark-tertiary);
   transform: translateY(4px);
-}
-
-.registrationMessage-dark {
-  color: var(--light-tertiary)
-}
-
-.registrationMessage-light {
-  color: var(--light-tertiary)
 }
