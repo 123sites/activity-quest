@@ -12,6 +12,7 @@ import { motion } from "framer-motion";
 import "../images/genealogists.png";
 import "../images/img1.jpg";
 import "../images/img3.jpg";
+// import { Carousel } from "react-bootstrap";
 
 const Home = ({ handlePageChange }) => {
   const { theme } = useContext(ThemeContext);
@@ -46,7 +47,9 @@ const Home = ({ handlePageChange }) => {
           ></iframe>
         </motion.div>
       </div>
-
+      {/* <>
+        <Carousel />
+      </> */}
       <div
         id="bootstrapCarousel"
         class="carousel slide"
@@ -58,7 +61,7 @@ const Home = ({ handlePageChange }) => {
           </div>
           <div className="../images/carousel-item" data-bs-interval="2000">
             <img
-              src="..images/genealogists.png"
+              src="../images/genealogists.png"
               className="d-block w-100"
               alt="..."
             />

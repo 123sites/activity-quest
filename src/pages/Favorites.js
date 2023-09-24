@@ -5,6 +5,7 @@ import "../assets/index.css";
 import "../App.css";
 import "../assets/navbar.css";
 import "../index.css";
+import "../components/Motion/styles.css";
 
 const Favorites = ({ handlePageChange }) => {
   const [currentPath, setCurrentPath] = useState("");

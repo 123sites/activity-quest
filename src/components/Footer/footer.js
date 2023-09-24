@@ -10,7 +10,7 @@ const Footer = () => {
   useEffect(() => {
     console.log(currentPath);
     setCurrentPath(window.location.pathname);
-  }, []);
+  }, [currentPath]);
 
   return (
     <footer>

@@ -7,6 +7,7 @@ import Signup from "./pages/Signup.js";
 import Login from "./pages/Login.js";
 import Footer from "./components/Footer/footer";
 import Navbar from "./components/Navbar/navbar";
+import Favorites from "./pages/Favorites.js";
 import { ThemeProvider } from "./components/Theme/themeContext";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import useLocalStorage from "./hooks/useLocalStorage";
@@ -45,6 +46,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/home" element={<Home />} />
           <Route path="/account" element={<Account />} />
+          <Route path="/favorites" element={<Favorites />} />
           <Route path="/footer" element={<Footer />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
