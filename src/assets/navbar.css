@@ -1,11 +1,15 @@
 .top-dark {
   background-color: var(--dark-secondary);
   position: relative;
+  position: sticky;
+  top: 0;
 }
 
 .top-light {
   background-color: var(--light-tertiary);
   position: relative;
+  position: sticky;
+  top: 0;
 }
 
 .brand {
