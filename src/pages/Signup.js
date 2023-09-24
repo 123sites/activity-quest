@@ -62,9 +62,13 @@ const Signup = ({ isOpen, onClose }) => {
       <main className="flex-row p-5 justify-center">
         <div className={`outsideBox-${theme}`}>
           {signedUp ? (
-            <div>
-              <h1>Registration Successful</h1>
-              <p>Your account has been created successfully.</p>
+            <div className="text-center mt-4">
+              <h1 className={`registrationMessage-${theme} fw-bolder`}>
+                Registration Successful!
+              </h1>
+              <h3 className={`registrationMessage-${theme} fw-boler`}>
+                You are now logged in!
+              </h3>
             </div>
           ) : (
             <div

@@ -95,3 +95,11 @@
   box-shadow: 0 5px var(--dark-tertiary);
   transform: translateY(4px);
 }
+
+.registrationMessage-dark {
+  color: var(--light-tertiary)
+}
+
+.registrationMessage-light {
+  color: var(--light-tertiary)
+}

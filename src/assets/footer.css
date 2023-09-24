@@ -1,3 +1,12 @@
+footer {
+  bottom: 0;
+  height: 2em;
+  left: 0;
+  position: relative;
+  font-size: small;
+  width: 100%;
+}
+
 .title-dark {
   font-weight: 600;
   color: var(--dark-secondary);
