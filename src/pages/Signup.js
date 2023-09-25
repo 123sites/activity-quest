@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import "../components/Footer/footer.js";
 import "../assets/index.css";
 import "../assets/signup.css";
@@ -72,11 +71,9 @@ const Signup = ({ isOpen, onClose }) => {
             </div>
           ) : (
             <div
-              className={`card d-flex p-5 box-${theme} align-items-center text-center`}
+              className={`card d-flex box-${theme} align-items-center text-center`}
             >
-              <h4
-                className={`card card-header signup-${theme} col p-2 m-0 mb-2 text-center`}
-              >
+              <h4 className={`card card-header signup-${theme} text-center`}>
                 Sign up
               </h4>
               <input

@@ -31,7 +31,6 @@
 }
 
 .box-light {
-  padding: 16px;
   border-radius: 15px;
   border-color: var(--light-accent);
   box-shadow: 5px 5px 5px;
@@ -44,7 +43,7 @@
 }
 
 .signup-light {
-  background-color: var(--dark-primary) !important;
+  background-color: var(--light-tertiary) !important;
   border-radius: 5px !important;
   color: var(--light-primary) !important;
   font-weight: bolder;

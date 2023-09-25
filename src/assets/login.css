@@ -23,13 +23,12 @@
 
 .loginTop-dark {
   background-color: var(--dark-primary) !important;
-  border-radius: 15px;
+  border-radius: 18px;
   box-shadow: 5px 5px 5px var(--dark-accent);
 }
 
 .loginTop-light {
   background-color: var(--light-tertiary) !important;
-  border-radius: 15px;
   box-shadow: 5px 5px 5px var(--light-accent);
 }
 
@@ -136,7 +135,7 @@
 
 .modal {
   top: 10%;
-  border-radius: 6px;
+  border-radius: 7px;
   padding: 1.5rem;
   width: 30rem;
   max-width: 90%;

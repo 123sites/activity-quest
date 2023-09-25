@@ -79,7 +79,7 @@ const Login = ({ isOpen, onClose }) => {
             >
               <div>
                 <h4
-                  className={`card-header col p-3 m-1 loginTop-${theme} text-center text-light login-card-header`}
+                  className={`card-header col p-3 m-1 loginTop-${theme} text-center fw-bolder login-card-header`}
                 >
                   Login
                 </h4>
