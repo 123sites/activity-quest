@@ -45,7 +45,6 @@ Dark mode:
 Our Team:
 
 - Chel Freitas
-- Gayle Hoefer
 
 ## License 📝
 
