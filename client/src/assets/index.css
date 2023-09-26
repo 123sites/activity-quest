@@ -59,6 +59,7 @@ body[data-theme="dark"] {
   background-color: var(--light-secondary);
   box-shadow: 0 5px var(--light-accent);
   transform: translateY(4px);
+  border-radius: 15px;
 }
 
 .btn-dark {
@@ -67,7 +68,7 @@ body[data-theme="dark"] {
   cursor: pointer;
   outline: none;
   font-size: 1rem;
-  font-weight: bolder;
+  font-weight: bolder !important;
   color: var(--dark-font);
   background-color: var(--dark-primary);
   border: none;
@@ -77,8 +78,10 @@ body[data-theme="dark"] {
 
 .btn-dark:hover,
 .btn-dark:active {
-  background-color: var(--dark-accent);
-  color: var(--light-secondary);
-  box-shadow: 0 5px var(--dark-tertiary);
+  background-color: var(--light-secondary);
+  color: var(--dark-accent);
+  font-weight: bolder;
+  box-shadow: 0 5px var(--dark-accent);
+  border-radius: 15px;
   transform: translateY(4px);
 }

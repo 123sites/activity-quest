@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { createPortal } from "react-dom";
 import { motion } from "framer-motion";
-import "../../assets/login.css";
-// import "../../pages/Login.js";
+import "../../assets/signup.css";
+import "../../components/Motion/motion";
 
 export default function Modal({ title, children, onClose }) {
   const [x, setX] = useState(0);

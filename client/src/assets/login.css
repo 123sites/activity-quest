@@ -1,4 +1,4 @@
-.outsideBox-dark {
+/* .outsideBox-dark {
   display: flex;
   color: var(--dark-accent);
 }
@@ -6,7 +6,7 @@
 .outsideBox-light {
   display: flex;
   color: var(--light-accent);
-}
+} */
 
 .box-dark {
   background-color: var(--dark-secondary);

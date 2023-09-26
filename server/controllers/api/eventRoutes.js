@@ -3,8 +3,17 @@ import fetch from "node-fetch";
 
 const router = Router();
 
+const cache = {
+  events: null,
+};
+
 router.get("/:lat/:long", async (req, res) => {
   try {
+    if (cache.events) {
+      res.status(200).json(cache.events);
+      return;
+    }
+
     const url =
       "https://app.ticketmaster.com/discovery/v2/events?apikey=GpeLjJqcyYeaASJ72dQUo73C6wvMaJVX&geoPoint=txhxs5990";
 
@@ -19,9 +28,10 @@ router.get("/:lat/:long", async (req, res) => {
     }
 
     const data = await response.json();
-    console.log(data);
 
-    res.status(200).json(data);
+    cache.events = data._embedded.events;
+
+    res.status(200).json(data._embedded.events);
   } catch (err) {
     console.error(err);
     res

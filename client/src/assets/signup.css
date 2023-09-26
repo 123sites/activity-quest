@@ -6,49 +6,49 @@
   color: var(--light-tertiary)
 }
 
-.loginMessage-dark {
+.signupMessage-dark {
   color: var(--dark-secondary)
 }
 
-.loginMessage-light {
+.signupMessage-light {
   color: var(--dark-primary)
 }
 
-.outsideBox-dark {
+.outsideBoxSignup-dark {
   display: flex;
   color: var(--dark-accent);
+  /* z-index: -1; */
 }
 
-.outsideBox-light {
+.outsideBoxSignup-light {
   display: flex;
   color: var(--light-accent) !important;
+  /* z-index: -1; */
 }
 
-.box-dark {
+.signupBox-dark {
   background-color: var(--dark-secondary);
   border-radius: 15px;
   box-shadow: 2px 2px 2px 2px;
+  z-index: -1;
 }
 
-.box-light {
+.signupBox-light {
   border-radius: 15px;
   border-color: var(--light-accent);
-  box-shadow: 5px 5px 5px;
+  box-shadow: 2px 2px 2px 2px;
+  z-index: -1;
 }
 
 .signup-dark {
   background-color: var(--dark-primary) !important;
-  border-radius: 15px;
+  border-radius: 18px;
   box-shadow: 5px 5px 5px var(--dark-accent);
 }
 
 .signup-light {
   background-color: var(--light-tertiary) !important;
-  border-radius: 5px !important;
-  color: var(--light-primary) !important;
-  font-weight: bolder;
   box-shadow: 5px 5px 5px var(--light-accent);
-  width: 22rem;
 }
 
 .input-dark {
@@ -64,7 +64,7 @@
 }
 
 .input-light {
-  font-size: 1.5rem;
+  font-size: 1rem;
   width: 100%;
   padding: 10px 20px;
   margin: 8px 0;
