@@ -13,7 +13,7 @@ const Footer = () => {
   }, [currentPath]);
 
   return (
-    <footer>
+    <footer className="mt-3">
       <div className={`footer-container text-center`}>
         <a
           target="_blank"

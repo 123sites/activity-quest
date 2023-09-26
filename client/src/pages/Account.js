@@ -22,10 +22,10 @@ const Account = ({ handlePageChange }) => {
     <div className="container-fluid">
       <div className="account-container">
         <div className="row justify-content-center">
-          <div className="col-12 col-md-6 col-lg-4 mt-5">
+          <div className="col-12 col-md-6 col-lg-4 mt-3">
             <div>
               <div className={`card-body text-center accountCard-${theme}`}>
-                <h5 className={`card-body cardTitle-${theme} fw-bolder `}>
+                <h5 className={`card-body cardTitle-${theme} fw-bolder`}>
                   Account
                 </h5>
                 <h6

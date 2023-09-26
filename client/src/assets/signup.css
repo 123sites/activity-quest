@@ -14,30 +14,17 @@
   color: var(--dark-primary)
 }
 
-.outsideBoxSignup-dark {
-  display: flex;
-  color: var(--dark-accent);
-  /* z-index: -1; */
-}
-
-.outsideBoxSignup-light {
-  display: flex;
-  color: var(--light-accent) !important;
-  /* z-index: -1; */
-}
-
 .signupBox-dark {
   background-color: var(--dark-secondary);
   border-radius: 15px;
-  box-shadow: 2px 2px 2px 2px;
-  z-index: -1;
+  box-shadow: 2px 2px 2px 2px var(--dark-accent);
 }
 
 .signupBox-light {
+  padding: 16px;
   border-radius: 15px;
   border-color: var(--light-accent);
-  box-shadow: 2px 2px 2px 2px;
-  z-index: -1;
+  box-shadow: 5px 5px 5px var(--light-accent);
 }
 
 .signup-dark {
@@ -45,6 +32,7 @@
   border-radius: 18px;
   box-shadow: 5px 5px 5px var(--dark-accent);
 }
+
 
 .signup-light {
   background-color: var(--light-tertiary) !important;

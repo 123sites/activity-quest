@@ -87,7 +87,7 @@ const Home = ({ handlePageChange }) => {
           <span className="visually-hidden">Previous</span>
         </button>
         <button
-          className={`carouselPrevious-${theme}`}
+          className={`carouselNext-${theme}`}
           type="button"
           data-bs-target="#bootstrapCarousel"
           data-bs-slide="next"

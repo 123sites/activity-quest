@@ -3,7 +3,7 @@ footer {
   height: 200px;
   position: absolute;
   width: 100%;
-  z-index: -1;
+  z-index: -10;
 }
 
 .title-dark {
@@ -41,7 +41,7 @@ footer {
 
 .emojis-dark:active,
 .emojis-dark:hover {
-  color: var(--dark-secondary)
+  color: var(--light-secondary)
 }
 
 .emojis-light:active,

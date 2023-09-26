@@ -48,7 +48,7 @@
   font-size: .5rem;
   font-weight: bolder;
   margin: 7px;
-  color: var(--light-primary);
+  color: var(--light-secondary);
   background-color: var(--light-tertiary);
   border: none;
   border-radius: 15px;
@@ -59,7 +59,7 @@
 .carouselNext-light:hover,
 .carouselPrevious-light:active,
 .carouselPrevious-light:hover {
-  color: var(--dark-accent);
+  color: var(--dark-accent) !important;
   background-color: var(--light-secondary);
   box-shadow: 0 5px var(--light-accent);
   transform: translateY(4px);
@@ -67,13 +67,13 @@
 
 .carouselNext-dark,
 .carouselPrevious-dark {
-  padding: 7px 10px;
+  padding: 4px 6px;
   text-align: center;
   cursor: pointer;
   outline: none;
   font-size: 1rem;
   font-weight: bolder;
-  color: var(--dark-font);
+  color: var(--dark-primary);
   background-color: var(--dark-secondary);
   border: none;
   border-radius: 15px;
