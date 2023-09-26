@@ -1,7 +1,7 @@
-const express = require("express");
-const routes = require("./controllers");
+import express from "express";
+import routes from "./controllers/index.js";
 // const { ApolloServer } = require("apollo-server-express");
-const path = require("path");
+import path from "path";
 // const { authMiddleware } = require("./utils/auth");
 
 // const { typeDefs, resolvers } = require("./schemas");
@@ -25,6 +25,8 @@ if (process.env.NODE_ENV === "production") {
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "../client/build/index.html"));
 });
+
+app.use(routes);
 
 app.listen(PORT, () => {
   console.log(`API server running on port ${PORT}!`);

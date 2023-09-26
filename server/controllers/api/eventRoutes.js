@@ -1,4 +1,7 @@
-const router = require("express").Router();
+import { Router } from "express";
+import fetch from "node-fetch";
+
+const router = Router();
 
 router.get("/:lat/:long", async (req, res) => {
   try {
@@ -27,4 +30,4 @@ router.get("/:lat/:long", async (req, res) => {
   }
 });
 
-module.exports = router;
+export default router;
