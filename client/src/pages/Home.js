@@ -20,21 +20,19 @@ const Home = ({ handlePageChange }) => {
     setCurrentPath(window.location.pathname);
   }, [currentPath]);
 
-  // useEffect(() => {
-  //   (async () => {
-  //     // Get recent events near the user's current location
-  //     navigator.geolocation.getCurrentPosition(async (position) => {
-  //       setEvents(
-  //         await getRecentEvents(
-  //           position.coords.latitude,
-  //           position.coords.longitude
-  //         )
-  //       );
-  //     });
-  //   })();
-  // }, []);
-
-  console.log("events: ", events);
+  useEffect(() => {
+    (async () => {
+      // Get recent events near the user's current location
+      navigator.geolocation.getCurrentPosition(async (position) => {
+        setEvents(
+          await getRecentEvents(
+            position.coords.latitude,
+            position.coords.longitude
+          )
+        );
+      });
+    })();
+  }, []);
 
   return (
     <div className="container">
@@ -52,27 +50,23 @@ const Home = ({ handlePageChange }) => {
         data-bs-ride="carousel"
       >
         <div className={`carousel-inner carousel-${theme} mt-3`}>
-          <div className="carousel-item active" data-bs-interval="10000">
-            <img
-              src="https://s1.ticketm.net/dam/a/890/16986d04-9e2b-46f8-8076-940610ad6890_1448921_RETINA_PORTRAIT_16_9.jpg"
-              className="d-block w-100"
-              alt="Images of events in your area."
-            />
-          </div>
-          <div className="carousel-item" data-bs-interval="2000">
-            <img
-              src="https://s1.ticketm.net/dam/a/890/16986d04-9e2b-46f8-8076-940610ad6890_1448921_RETINA_PORTRAIT_16_9.jpg"
-              className="d-block w-100"
-              alt="Images of events in your area."
-            />
-          </div>
-          <div className="carousel-item">
-            <img
-              src="https://s1.ticketm.net/dam/a/890/16986d04-9e2b-46f8-8076-940610ad6890_1448921_RETINA_PORTRAIT_16_9.jpg"
-              className="d-block w-100"
-              alt="Images of events in your area."
-            />
-          </div>
+          {events.map((event, i) => {
+            return (
+              <a href={event.url} target="_blank" rel="noreferrer">
+                <figure
+                  className={`carousel-item ${i === 0 ? "active" : ""}`}
+                  data-bs-interval="5000"
+                >
+                  <img
+                    src={event.images[5].url}
+                    className="d-block w-100"
+                    alt="Images of events in your area."
+                  />
+                  <figcaption>{event.name}</figcaption>
+                </figure>
+              </a>
+            );
+          })}
         </div>
         <button
           className={`carouselPrevious-${theme} m-3`}

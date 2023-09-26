@@ -89,3 +89,13 @@
   box-shadow: 0 5px var(--dark-tertiary);
   transform: translateY(4px);
 }
+
+.carousel-item figcaption {
+  position: absolute;
+  bottom: 0;
+  color: white;
+  text-align: left;
+  padding: 0.5em;
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(6px);
+}
