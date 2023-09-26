@@ -98,4 +98,6 @@
   padding: 0.5em;
   background: rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(6px);
+  font-size: min(1.5em, 4vw);
+  width: 100%;
 }

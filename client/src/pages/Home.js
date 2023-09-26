@@ -55,7 +55,7 @@ const Home = ({ handlePageChange }) => {
               <a href={event.url} target="_blank" rel="noreferrer">
                 <figure
                   className={`carousel-item ${i === 0 ? "active" : ""}`}
-                  data-bs-interval="5000"
+                  data-bs-interval="500000"
                 >
                   <img
                     src={event.images[5].url}
