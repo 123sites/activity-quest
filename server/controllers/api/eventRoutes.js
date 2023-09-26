@@ -1,5 +1,8 @@
 import { Router } from "express";
 import fetch from "node-fetch";
+import ngeohash from "ngeohash";
+import { config } from "dotenv";
+config();
 
 const router = Router();
 
@@ -14,8 +17,12 @@ router.get("/:lat/:long", async (req, res) => {
       return;
     }
 
-    const url =
-      "https://app.ticketmaster.com/discovery/v2/events?apikey=GpeLjJqcyYeaASJ72dQUo73C6wvMaJVX&geoPoint=txhxs5990";
+    const { lat, long } = req.params;
+
+    const url = new URL("https://app.ticketmaster.com/discovery/v2/events");
+    url.searchParams.set("apikey", process.env.TICKETMASTER_API_KEY);
+    url.searchParams.set("geoPoint", ngeohash.encode(lat, long));
+    url.searchParams.set("sort", "distance,date,asc");
 
     const response = await fetch(url, { method: "GET" });
 
