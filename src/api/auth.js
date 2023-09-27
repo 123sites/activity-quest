@@ -1,5 +1,7 @@
+const apiUrl = process.env.REACT_APP_API_URL || "";
+
 export async function signUp({ username, password }) {
-  const response = await fetch("/auth/signup", {
+  const response = await fetch(`${apiUrl}/auth/signup`, {
     method: "POST",
     // Send all cookies with this request.
     credentials: "include",
@@ -18,7 +20,7 @@ export async function signUp({ username, password }) {
 }
 
 export async function logIn({ username, password }) {
-  const response = await fetch("/auth/login", {
+  const response = await fetch(`${apiUrl}/auth/login`, {
     method: "POST",
     // Send all cookies with this request.
     credentials: "include",
@@ -37,7 +39,7 @@ export async function logIn({ username, password }) {
 }
 
 export async function getCurrentUser() {
-  const response = await fetch("/auth/user", {
+  const response = await fetch(`${apiUrl}/auth/user`, {
     method: "GET",
     // Send all cookies with this request.
     credentials: "include",
@@ -52,7 +54,7 @@ export async function getCurrentUser() {
 }
 
 export async function logout() {
-  const response = await fetch("/auth/logout", {
+  const response = await fetch(`${apiUrl}/auth/logout`, {
     method: "GET",
     // Send all cookies with this request.
     credentials: "include",
