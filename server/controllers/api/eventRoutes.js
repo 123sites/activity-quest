@@ -14,8 +14,11 @@ router.get("/:lat/:long", async (req, res) => {
   try {
     const { lat, long } = req.params;
 
-    if (cache.events[`${lat},${long}`]) {
-      res.status(200).json(cache.events[`${lat},${long}`]);
+    const cacheEntry = cache.events[`${lat},${long}`];
+
+    // If the cache entry expires in the future...
+    if (cacheEntry && cacheEntry.expiration > new Date()) {
+      res.status(200).json(cacheEntry.data);
       return;
     }
 
@@ -36,7 +39,11 @@ router.get("/:lat/:long", async (req, res) => {
 
     const data = await response.json();
 
-    cache.events[`${lat},${long}`] = data._embedded.events;
+    const currentDate = new Date();
+    cache.events[`${lat},${long}`] = {
+      expiration: currentDate.setDate(currentDate.getDate() + 1),
+      data: data._embedded.events,
+    };
 
     res.status(200).json(data._embedded.events);
   } catch (err) {
