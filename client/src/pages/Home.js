@@ -10,11 +10,19 @@ import { ThemeContext } from "../components/Theme/themeContext";
 import "../components/Motion/styles.css";
 import { getRecentEvents } from "../api/events.js";
 import { motion, AnimatePresence } from "framer-motion";
+import { getCurrentUser } from "../api/auth.js";
 
 const Home = ({ handlePageChange }) => {
   const { theme } = useContext(ThemeContext);
   const [currentPath, setCurrentPath] = useState("");
   const [events, setEvents] = useState([]);
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    (async () => {
+      setUser(await getCurrentUser());
+    })();
+  }, []);
 
   useEffect(() => {
     console.log(currentPath);
@@ -40,6 +48,7 @@ const Home = ({ handlePageChange }) => {
       <div className="container">
         <div>
           <h1 className={`htitle-${theme} m-3 text-center`}>
+            {!user ? "" : <div>Hello, {user.username}!</div>}
             Welcome to Activity Quest!
           </h1>
           <h4 className={`htext-${theme} text-center`}>

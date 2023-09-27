@@ -54,14 +54,14 @@ const Navbar = ({ handlePageChange }) => {
                 Home
               </Link>
             </li>
-            <li className="nav-item fw-boldest">
+            {/* <li className="nav-item fw-boldest">
               <Link
                 className={`nav-link link-${theme} text-center`}
                 to="/account"
               >
                 Account
               </Link>
-            </li>
+            </li> */}
             {/* <li className="nav-item fw-boldest">
               <Link
                 className={`nav-link link-${theme} text-center`}

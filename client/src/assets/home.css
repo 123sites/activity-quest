@@ -25,13 +25,11 @@
   object-fit: cover !important; */
   transform: scale(.9);
   filter: brightness(0.5);
-  /* z-index: -1; */
 }
 
 .carousel-light {
   /* display: flex; */
   transform: scale(.9);
-  /* z-index: -1; */
 }
 
 /* .carousel-inner {

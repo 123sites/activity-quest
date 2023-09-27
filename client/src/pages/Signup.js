@@ -10,12 +10,14 @@ import { ThemeContext } from "../components/Theme/themeContext";
 import "../components/Motion/loginModal.js";
 import { motion, AnimatePresence } from "framer-motion";
 import { signUp } from "../api/auth.js";
+import { useNavigate } from "react-router-dom";
 
 const Signup = ({ isOpen, onClose }) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [signedUp, setSignedUp] = useState(false);
+  const navigate = useNavigate();
 
   const [errors, setErrors] = useState(null);
 
@@ -55,7 +57,7 @@ const Signup = ({ isOpen, onClose }) => {
       try {
         const result = await signUp({ username, password });
 
-        setSignedUp(true);
+        navigate("/");
       } catch (err) {
         setErrors([err]);
       }

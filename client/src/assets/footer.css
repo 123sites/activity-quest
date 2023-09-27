@@ -1,11 +1,3 @@
-/* footer {
-  bottom: 5px;
-  height: 200px;
-  position: absolute;
-  width: 100%;
-  z-index: -10;
-} */
-
 .title-dark {
   font-weight: 600;
   color: var(--dark-secondary);

@@ -20,9 +20,9 @@ export async function hashPassword(password) {
   return await bcrypt.hash(password, saltRounds);
 }
 
-userSchema.methods.isCorrectPassword = async function (password) {
-  return bcrypt.compare(password, this.password);
-};
+export async function isPasswordCorrect(password, hash) {
+  return bcrypt.compare(password, hash);
+}
 
 const User = model("User", userSchema);
 export default User;

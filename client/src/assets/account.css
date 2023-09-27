@@ -1,5 +1,5 @@
 .account-container {
-  z-index: -1;
+  /* z-index: -1; */
 }
 
 .accountCard-dark {
@@ -7,7 +7,7 @@
   border-radius: 30px;
   box-shadow: 0 0 25px var(--dark-accent);
   padding: 2rem;
-  z-index: -1;
+  /* z-index: -1; */
 }
 
 .accountCard-light {
@@ -16,7 +16,7 @@
   box-shadow: 0 0 25px var(--light-accent);
   /* padding: 1rem;
   margin: 1rem; */
-  z-index: -1;
+  /* z-index: -1; */
 }
 
 .cardTitle-dark,
@@ -24,7 +24,7 @@
 .subTitle-dark {
   color: var(--dark-font);
   letter-spacing: 2px;
-  z-index: -1;
+  /* z-index: -1; */
 }
 
 .cardTitle-light,
@@ -32,27 +32,27 @@
 .subTitle-light {
   color: var(--light-primary);
   letter-spacing: 2px;
-  z-index: -1;
+  /* z-index: -1; */
 }
 
 .cardSubtitle-dark {
   color: var(--light-primary) !important;
   letter-spacing: 2px;
-  z-index: -1;
+  /* z-index: -1; */
 }
 
 .cardSubtitle-light {
   color: var(--light-primary) !important;
   letter-spacing: 2px;
-  z-index: -1;
+  /* z-index: -1; */
 }
 
 .cardLinkText-dark {
   font-size: 1.2rem !important;
-  z-index: -1;
+  /* z-index: -1; */
 }
 
 .cardLinkText-light {
   font-size: 1.2rem !important;
-  z-index: -1;
+  /* z-index: -1; */
 }

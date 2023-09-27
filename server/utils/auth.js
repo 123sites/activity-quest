@@ -1,7 +1,9 @@
 import jwt from "jsonwebtoken";
+import { config } from "dotenv";
+config();
 
-const secret = ".env";
-const expiration = "2h";
+const secret = process.env.JWT_SECRET;
+const expiration = "30d";
 
 export function authMiddleware({ req }) {
   let token = req.body.token || req.query.token || req.headers.authorization;

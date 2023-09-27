@@ -1,20 +1,23 @@
-import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import "../components/Footer/footer.js";
+import { AnimatePresence, motion } from "framer-motion";
+import React, { useContext, useEffect, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import "../App.css";
+import { logIn } from "../api/auth.js";
 import "../assets/index.css";
 import "../assets/login.css";
-import "../App.css";
 import "../assets/navbar.css";
-import "../index.css";
-import { useContext } from "react";
-import { ThemeContext } from "../components/Theme/themeContext";
+import "../components/Footer/footer.js";
 import "../components/Motion/loginModal.js";
-import { motion, AnimatePresence } from "framer-motion";
+import { ThemeContext } from "../components/Theme/themeContext";
+import "../index.css";
 
 const Login = ({ isOpen, onClose }) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [loggedIn, setLoggedIn] = useState(false);
+  const [errors, setErrors] = useState(null);
+  const navigate = useNavigate();
+
   const modalVariants = {
     hidden: {
       opacity: 0,
@@ -45,14 +48,13 @@ const Login = ({ isOpen, onClose }) => {
   }, [isOpen]);
 
   const { theme } = useContext(ThemeContext);
-  const [currentPath] = useState("");
-  console.log(currentPath);
 
-  const handleLogin = () => {
-    if (username === "user" && password === "password") {
-      setLoggedIn(true);
-    } else {
-      alert("Invalid credentials");
+  const handleLogin = async () => {
+    try {
+      const result = await logIn({ username, password });
+      navigate("/");
+    } catch (err) {
+      setErrors([err]);
     }
   };
 
@@ -100,6 +102,11 @@ const Login = ({ isOpen, onClose }) => {
                     onChange={(e) => setPassword(e.target.value)}
                   />
                   <br />
+                  {!errors
+                    ? ""
+                    : errors.map((error) => (
+                        <div className="text-danger">{error.message}</div>
+                      ))}
                   <motion.button
                     whileHover={{ scale: 1.1 }}
                     transition={{ type: "spring", stiffness: 500 }}
