@@ -1,0 +1,77 @@
+.message {
+  font-size: 1.5rem;
+  color: var(--light-red);
+  text-align: center;
+  margin-top: 10px;
+  border: none;
+}
+
+.box-dark {
+  background-color: var(--dark-secondary);
+  border-radius: 15px;
+  box-shadow: 2px 2px 2px 2px var(--dark-accent);
+
+}
+
+.box-light {
+  border-color: var(--light-accent);
+  box-shadow: 5px 5px 5px var(--light-accent);
+
+}
+
+.loginBox-dark {
+  background-color: var(--dark-primary) !important;
+  border-radius: 18px;
+  box-shadow: 5px 5px 5px var(--dark-accent);
+}
+
+.loginBox-light {
+  background-color: var(--light-tertiary) !important;
+  box-shadow: 5px 5px 5px var(--light-accent);
+}
+
+.loginInput-dark {
+  font-size: 1.25rem;
+  width: 100%;
+  padding: 10px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border-radius: 15px;
+  border: 2px solid var(--dark-secondary);
+  color: var(--dark-accent);
+  box-shadow: 5px 5px 5px var(--dark-accent);
+}
+
+.loginInput-light {
+  font-size: 1.25rem;
+  width: 100%;
+  padding: 10px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border-radius: 15px;
+  border: 2px solid var(--light-accent);
+  color: var(--light-accent);
+  background-color: var(--light-primary);
+  box-shadow: 5px 5px 5px var(--light-accent);
+}
+
+.modal {
+  top: 10%;
+  border-radius: 7px;
+  padding: 1.5rem;
+  width: 30rem;
+  max-width: 90%;
+  animation: slide-up-fade-in 0.3s ease-out forwards;
+}
+
+@keyframes slide-up-fade-in {
+  0% {
+    transform: translateY(30px);
+    opacity: 0
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
