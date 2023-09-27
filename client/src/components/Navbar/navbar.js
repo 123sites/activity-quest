@@ -10,7 +10,7 @@ import "../../App.css";
 import { motion, AnimatePresence } from "framer-motion";
 import { logout } from "../../api/auth";
 
-const Navbar = ({ handlePageChange }) => {
+const Navbar = ({ handlePageChange, user }) => {
   const [currentPath, setCurrentPath] = useState("");
   const { toggleTheme, theme } = useContext(ThemeContext);
 
@@ -76,33 +76,39 @@ const Navbar = ({ handlePageChange }) => {
                 Favorites
               </Link>
             </li> */}
-            <li className="nav-item fw-boldest">
-              <Link
-                className={`nav-link link-${theme} text-center`}
-                to="/signup"
-              >
-                Sign-up
-              </Link>
-            </li>
-            <li className="nav-item fw-boldest">
-              <AnimatePresence>
+
+            {!user ? (
+              <>
+                <li className="nav-item fw-boldest">
+                  <Link
+                    className={`nav-link link-${theme} text-center`}
+                    to="/signup"
+                  >
+                    Sign-up
+                  </Link>
+                </li>
+                <li className="nav-item fw-boldest">
+                  <AnimatePresence>
+                    <Link
+                      className={`nav-link link-${theme} text-center`}
+                      to="/login"
+                    >
+                      Log-in
+                    </Link>
+                  </AnimatePresence>
+                </li>
+              </>
+            ) : (
+              <li className="nav-item fw-boldest">
                 <Link
-                  className={`nav-link link-${theme} text-center`}
-                  to="/login"
+                  className={`nav-link link-${theme} text-center link`}
+                  to="/"
+                  onClick={handleLogout}
                 >
-                  Log-in
+                  Log-out
                 </Link>
-              </AnimatePresence>
-            </li>
-            <li className="nav-item fw-boldest">
-              <Link
-                className={`nav-link link-${theme} text-center link`}
-                to="/"
-                onClick={handleLogout}
-              >
-                Log-out
-              </Link>
-            </li>
+              </li>
+            )}
           </ul>
           <div className="ml-3 mt-2 sun-moon">
             <motion.button

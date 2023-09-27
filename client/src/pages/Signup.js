@@ -58,6 +58,7 @@ const Signup = ({ isOpen, onClose }) => {
         const result = await signUp({ username, password });
 
         navigate("/");
+        window.location.reload();
       } catch (err) {
         setErrors([err]);
       }

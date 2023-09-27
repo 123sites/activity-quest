@@ -1,6 +1,6 @@
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 import Home from "./pages/Home.js";
 import Account from "./pages/Account.js";
 import Signup from "./pages/Signup.js";
@@ -15,6 +15,7 @@ import "../src/components/Motion/loginModal.js";
 import "../src/pages/Login.js";
 import "../src/pages/Account";
 import "../src/pages/Signup.js";
+import { getCurrentUser } from "./api/auth";
 
 export const ThemeContext = createContext(null);
 
@@ -24,6 +25,14 @@ function App() {
   const [y, setY] = useState(0);
   const [rotate, setRotate] = useState(0);
   const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    (async () => {
+      setUser(await getCurrentUser());
+    })();
+  }, []);
 
   const toggleTheme = () => {
     setTheme((curr) => (curr === "light" ? "dark" : "light"));
@@ -37,14 +46,16 @@ function App() {
     setIsModalOpen(false);
   };
 
+  console.log("user: ", user);
+
   return (
     <BrowserRouter>
       <ThemeProvider>
         {" "}
-        <Navbar />
+        <Navbar user={user} />
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/home" element={<Home />} />
+          <Route path="/" element={<Home user={user} />} />
+          <Route path="/home" element={<Home user={user} />} />
           <Route path="/account" element={<Account />} />
           <Route path="/favorites" element={<Favorites />} />
           <Route path="/footer" element={<Footer />} />

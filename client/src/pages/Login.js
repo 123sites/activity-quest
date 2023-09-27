@@ -53,6 +53,8 @@ const Login = ({ isOpen, onClose }) => {
     try {
       const result = await logIn({ username, password });
       navigate("/");
+
+      window.location.reload();
     } catch (err) {
       setErrors([err]);
     }

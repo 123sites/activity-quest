@@ -1,28 +1,19 @@
-import React, { useState, useEffect } from "react";
-import { useContext } from "react";
-import "../components/Footer/footer.js";
-import "../assets/index.css";
-import "../assets/home.css";
+import { AnimatePresence, motion } from "framer-motion";
+import React, { useContext, useEffect, useState } from "react";
 import "../App.css";
-import "../assets/navbar.css";
-import "../index.css";
-import { ThemeContext } from "../components/Theme/themeContext";
-import "../components/Motion/styles.css";
 import { getRecentEvents } from "../api/events.js";
-import { motion, AnimatePresence } from "framer-motion";
-import { getCurrentUser } from "../api/auth.js";
+import "../assets/home.css";
+import "../assets/index.css";
+import "../assets/navbar.css";
+import "../components/Footer/footer.js";
+import "../components/Motion/styles.css";
+import { ThemeContext } from "../components/Theme/themeContext";
+import "../index.css";
 
-const Home = ({ handlePageChange }) => {
+const Home = ({ handlePageChange, user }) => {
   const { theme } = useContext(ThemeContext);
   const [currentPath, setCurrentPath] = useState("");
   const [events, setEvents] = useState([]);
-  const [user, setUser] = useState(null);
-
-  useEffect(() => {
-    (async () => {
-      setUser(await getCurrentUser());
-    })();
-  }, []);
 
   useEffect(() => {
     console.log(currentPath);
