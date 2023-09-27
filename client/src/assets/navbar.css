@@ -98,6 +98,10 @@ a:hover {
   font-weight: 700;
 }
 
+#navbarToggler {
+  justify-content: flex-end;
+}
+
 .sun-moon {
   display: inline-block;
   cursor: pointer;

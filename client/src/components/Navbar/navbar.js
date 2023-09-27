@@ -25,7 +25,7 @@ const Navbar = ({ handlePageChange, user }) => {
   };
 
   return (
-    <nav className={`navbar navbar-expand-lg top-${theme}`}>
+    <nav className={`navbar navbar-expand-lg top-${theme} z-1`}>
       <div className="container">
         <Link
           className="nav-link row d-inline-flex navbar-container ml-4 mt-1 justify-content-center"
