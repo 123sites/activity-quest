@@ -114,7 +114,7 @@ router.get("/user", async (req, res) => {
 router.get("/logout", (req, res) => {
   if (req.session.loggedIn) {
     req.session.destroy(() => {
-      res.render("login");
+      res.status(200).json({ message: "Logout successful." });
     });
   } else {
     res.status(404).end();

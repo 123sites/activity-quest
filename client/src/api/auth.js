@@ -50,3 +50,18 @@ export async function getCurrentUser() {
 
   return await response.json();
 }
+
+export async function logout() {
+  const response = await fetch("/auth/logout", {
+    method: "GET",
+    // Send all cookies with this request.
+    credentials: "include",
+  });
+
+  if (!response.ok) {
+    const data = await response.json();
+    throw new Error(data.message);
+  }
+
+  return await response.json();
+}

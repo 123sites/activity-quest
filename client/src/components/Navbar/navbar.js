@@ -8,6 +8,7 @@ import "../../assets/index.css";
 import "../../assets/navbar.css";
 import "../../App.css";
 import { motion, AnimatePresence } from "framer-motion";
+import { logout } from "../../api/auth";
 
 const Navbar = ({ handlePageChange }) => {
   const [currentPath, setCurrentPath] = useState("");
@@ -17,6 +18,11 @@ const Navbar = ({ handlePageChange }) => {
     console.log(currentPath);
     setCurrentPath(window.location.pathname);
   }, [currentPath]);
+
+  const handleLogout = async () => {
+    await logout();
+    window.location.reload();
+  };
 
   return (
     <nav className={`navbar navbar-expand-lg top-${theme}`}>
@@ -91,7 +97,8 @@ const Navbar = ({ handlePageChange }) => {
             <li className="nav-item fw-boldest">
               <Link
                 className={`nav-link link-${theme} text-center link`}
-                to="/logout"
+                to="/"
+                onClick={handleLogout}
               >
                 Log-out
               </Link>
