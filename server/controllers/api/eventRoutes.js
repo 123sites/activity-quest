@@ -7,17 +7,17 @@ config();
 const router = Router();
 
 const cache = {
-  events: null,
+  events: {},
 };
 
 router.get("/:lat/:long", async (req, res) => {
   try {
-    if (cache.events) {
-      res.status(200).json(cache.events);
+    const { lat, long } = req.params;
+
+    if (cache.events[`${lat},${long}`]) {
+      res.status(200).json(cache.events[`${lat},${long}`]);
       return;
     }
-
-    const { lat, long } = req.params;
 
     const url = new URL("https://app.ticketmaster.com/discovery/v2/events");
     url.searchParams.set("apikey", process.env.TICKETMASTER_API_KEY);
@@ -36,7 +36,7 @@ router.get("/:lat/:long", async (req, res) => {
 
     const data = await response.json();
 
-    cache.events = data._embedded.events;
+    cache.events[`${lat},${long}`] = data._embedded.events;
 
     res.status(200).json(data._embedded.events);
   } catch (err) {

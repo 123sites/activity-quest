@@ -46,63 +46,63 @@ const Home = ({ handlePageChange, user }) => {
             Your one-stop App that helps you find fun activities in your area!
           </h4>
         </div>
-        <span className="border border-4 border-black">
-          <div
-            id="bootstrapCarousel"
-            className="carousel slide text-center"
-            data-bs-ride="carousel"
-          >
-            <div className={`carousel-inner carousel-${theme} mt-3`}>
-              {events.map((event, i) => {
-                return (
-                  <a href={event.url} target="_blank" rel="noreferrer">
-                    <figure
-                      className={`carousel-item ${i === 0 ? "active" : ""}`}
-                      data-bs-interval="5000"
-                    >
-                      <img
-                        src={event.images[5].url}
-                        className="d-block w-100"
-                        alt="Images of events in your area."
-                      />
-                      <figcaption>{event.name}</figcaption>
-                    </figure>
-                  </a>
-                );
-              })}
-            </div>
-            <motion.button
-              className={`carouselPrevious-${theme} m-3`}
-              whileHover={{ scale: 1.1 }}
-              transition={{ type: "spring", stiffness: 500 }}
-              style={{ cursor: "pointer" }}
-              type="button"
-              data-bs-target="#bootstrapCarousel"
-              data-bs-slide="prev"
-            >
-              <span
-                className="carousel-control-prev-icon"
-                aria-hidden="true"
-              ></span>
-              <span className="visually-hidden">Previous</span>
-            </motion.button>
-            <motion.button
-              className={`carouselNext-${theme}`}
-              whileHover={{ scale: 1.1 }}
-              transition={{ type: "spring", stiffness: 500 }}
-              style={{ cursor: "pointer" }}
-              type="button"
-              data-bs-target="#bootstrapCarousel"
-              data-bs-slide="next"
-            >
-              <span
-                className="carousel-control-next-icon"
-                aria-hidden="true"
-              ></span>
-              <span className="visually-hidden">Next</span>
-            </motion.button>
+        {/* <span className="border border-4 border-black"> */}
+        <div
+          id="bootstrapCarousel"
+          className="carousel slide text-center"
+          data-bs-ride="carousel"
+        >
+          <div className={`carousel-inner carousel-${theme} mt-3`}>
+            {events.map((event, i) => {
+              return (
+                <a href={event.url} target="_blank" rel="noreferrer">
+                  <figure
+                    className={`carousel-item ${i === 0 ? "active" : ""}`}
+                    data-bs-interval="5000"
+                  >
+                    <img
+                      src={event.images[5].url}
+                      className="d-block w-100"
+                      alt="Images of events in your area."
+                    />
+                    <figcaption>{event.name}</figcaption>
+                  </figure>
+                </a>
+              );
+            })}
           </div>
-        </span>
+          <motion.button
+            className={`carouselPrevious-${theme} m-3`}
+            whileHover={{ scale: 1.1 }}
+            transition={{ type: "spring", stiffness: 500 }}
+            style={{ cursor: "pointer" }}
+            type="button"
+            data-bs-target="#bootstrapCarousel"
+            data-bs-slide="prev"
+          >
+            <span
+              className="carousel-control-prev-icon"
+              aria-hidden="true"
+            ></span>
+            <span className="visually-hidden">Previous</span>
+          </motion.button>
+          <motion.button
+            className={`carouselNext-${theme}`}
+            whileHover={{ scale: 1.1 }}
+            transition={{ type: "spring", stiffness: 500 }}
+            style={{ cursor: "pointer" }}
+            type="button"
+            data-bs-target="#bootstrapCarousel"
+            data-bs-slide="next"
+          >
+            <span
+              className="carousel-control-next-icon"
+              aria-hidden="true"
+            ></span>
+            <span className="visually-hidden">Next</span>
+          </motion.button>
+        </div>
+        {/* </span> */}
       </div>
     </AnimatePresence>
   );
