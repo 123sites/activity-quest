@@ -39,40 +39,15 @@
   justify-content: center;
 } */
 
-.carouselNext-light,
-.carouselPrevious-light {
-  padding: 10px 11px;
-  text-align: center;
-  cursor: pointer;
-  outline: none;
-  font-size: .5rem;
-  font-weight: bolder;
-  margin: 7px;
-  color: var(--light-secondary);
-  background-color: var(--light-tertiary);
-  border: none;
-  border-radius: 15px;
-  box-shadow: 0 9px #999;
-}
-
-.carouselNext-light:active,
-.carouselNext-light:hover,
-.carouselPrevious-light:active,
-.carouselPrevious-light:hover {
-  color: var(--dark-accent) !important;
-  background-color: var(--light-secondary);
-  box-shadow: 0 5px var(--light-accent);
-  transform: translateY(4px);
-}
-
 .carouselNext-dark,
 .carouselPrevious-dark {
   padding: 4px 6px;
   text-align: center;
   cursor: pointer;
   outline: none;
-  font-size: 1rem;
+  font-size: .5rem;
   font-weight: bolder;
+  margin: 3px;
   color: var(--dark-primary);
   background-color: var(--dark-secondary);
   border: none;
@@ -90,6 +65,32 @@
   transform: translateY(4px);
 }
 
+.carouselNext-light,
+.carouselPrevious-light {
+  padding: 4px 6px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  font-size: .5rem;
+  font-weight: bolder;
+  margin: 3px;
+  color: var(--light-secondary);
+  background-color: var(--light-tertiary);
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.carouselNext-light:active,
+.carouselNext-light:hover,
+.carouselPrevious-light:active,
+.carouselPrevious-light:hover {
+  color: var(--dark-accent) !important;
+  background-color: var(--light-secondary);
+  box-shadow: 0 5px var(--light-accent);
+  transform: translateY(4px);
+}
+
 .carousel-item figcaption {
   position: absolute;
   bottom: 0;
@@ -100,4 +101,16 @@
   backdrop-filter: blur(6px);
   font-size: min(1.5em, 4vw);
   width: 100%;
+}
+
+@keyframes slide-up-fade-in {
+  0% {
+    transform: translateY(30px);
+    opacity: 0
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }

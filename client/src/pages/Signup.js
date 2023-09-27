@@ -9,12 +9,16 @@ import "../index.css";
 import { ThemeContext } from "../components/Theme/themeContext";
 import "../components/Motion/loginModal.js";
 import { motion, AnimatePresence } from "framer-motion";
+import { signUp } from "../api/auth.js";
 
 const Signup = ({ isOpen, onClose }) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [signedUp, setSignedUp] = useState(false);
+
+  const [errors, setErrors] = useState(null);
+
   const modalVariants = {
     hidden: {
       opacity: 0,
@@ -45,16 +49,25 @@ const Signup = ({ isOpen, onClose }) => {
   }, [isOpen]);
 
   const { theme } = useContext(ThemeContext);
-  const [currentPath] = useState("");
-  console.log(currentPath);
 
-  const handleSignup = () => {
+  const handleSignup = async () => {
     if (password === confirmPassword) {
-      setSignedUp(true);
+      try {
+        const result = await signUp({ username, password });
+
+        setSignedUp(true);
+      } catch (err) {
+        setErrors([err]);
+      }
     } else {
       alert("Passwords do not match");
     }
   };
+
+  // const validateEmail(email) {
+  //   var regex = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
+  //   return regex.test(email);
+  // }
 
   return (
     <AnimatePresence>
@@ -72,46 +85,60 @@ const Signup = ({ isOpen, onClose }) => {
             </div>
           ) : (
             <div
-              className={`card d-flex p-2 signupBox-${theme} align-items-center text-center`}
+              className={`card d-flex p-3 signupBox-${theme} align-items-center text-center`}
             >
-              <h4
-                className={`card-header col p-2 m-1 signup-${theme} text-center fw-bolder login-card-header`}
-              >
-                Sign up
-              </h4>
-              <input
-                type="text"
-                className={`form-input input-${theme}`}
-                placeholder="Username"
-                value={username}
-                onChange={(e) => setUsername(e.target.value)}
-              />
-
-              <input
-                type="password"
-                className={`form-input input-${theme}`}
-                placeholder="Password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-              />
-
-              <input
-                type="password"
-                className={`form-input input-${theme}`}
-                placeholder="Confirm Password"
-                value={confirmPassword}
-                onChange={(e) => setConfirmPassword(e.target.value)}
-              />
-
-              <motion.button
-                whileHover={{ scale: 1.1 }}
-                transition={{ type: "spring", stiffness: 500 }}
-                onClick={handleSignup}
-                className={`btn-light m-3 btn-block btn-${theme} fw-bold`}
-                style={{ cursor: "pointer" }}
-              >
-                Sign up
-              </motion.button>
+              <div>
+                <h4
+                  className={`card-header col p-2 m-1 signup-${theme} text-center fw-bolder login-card-header`}
+                >
+                  Sign up
+                </h4>
+                <div className="card-body">
+                  {/* <input
+                    placeholder="Your email"
+                    className={`form-input input-${theme} row`}
+                    // value={email}
+                    onChange={(e) => setUsername(e.target.value)}
+                  /> */}
+                  <input
+                    type="text"
+                    className={`form-input input-${theme}`}
+                    placeholder="Username"
+                    value={username}
+                    onChange={(e) => setUsername(e.target.value)}
+                  />
+                  <br />
+                  <input
+                    type="password"
+                    className={`form-input input-${theme}`}
+                    placeholder="Password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                  />
+                  <br />
+                  <input
+                    type="password"
+                    className={`form-input input-${theme}`}
+                    placeholder="Confirm Password"
+                    value={confirmPassword}
+                    onChange={(e) => setConfirmPassword(e.target.value)}
+                  />
+                  {!errors
+                    ? ""
+                    : errors.map((error) => (
+                        <div className="text-danger">{error.message}</div>
+                      ))}
+                  <motion.button
+                    whileHover={{ scale: 1.1 }}
+                    transition={{ type: "spring", stiffness: 500 }}
+                    onClick={handleSignup}
+                    className={`btn-light m-3 btn-block btn-${theme} fw-bold`}
+                    style={{ cursor: "pointer" }}
+                  >
+                    Sign up
+                  </motion.button>
+                </div>
+              </div>
             </div>
           )}
         </div>

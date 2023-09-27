@@ -1,11 +1,15 @@
 import express from "express";
 import routes from "./controllers/index.js";
 // const { ApolloServer } = require("apollo-server-express");
-import path from "path";
+// import path from "path";
 // const { authMiddleware } = require("./utils/auth");
+import session from "express-session";
 
 // const { typeDefs, resolvers } = require("./schemas");
 // const db = require("./config/connection");
+import "./config/connection.js";
+import { config } from "dotenv";
+config();
 
 const PORT = process.env.PORT || 3001;
 const app = express();
@@ -15,6 +19,15 @@ const app = express();
 //   context: authMiddleware,
 // });
 
+const oneMonthInMs = 1000 * 60 * 60 * 24 * 30;
+app.use(
+  session({
+    secret: process.env.JWT_SECRET,
+    resave: false,
+    saveUninitialized: true,
+    cookie: { maxAge: oneMonthInMs },
+  })
+);
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 

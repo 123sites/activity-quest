@@ -21,8 +21,6 @@
 }
 
 .signupBox-light {
-  padding: 16px;
-  border-radius: 15px;
   border-color: var(--light-accent);
   box-shadow: 5px 5px 5px var(--light-accent);
 }
@@ -40,7 +38,7 @@
 }
 
 .input-dark {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   width: 100%;
   padding: 10px 20px;
   margin: 8px 0;
@@ -52,7 +50,7 @@
 }
 
 .input-light {
-  font-size: 1rem;
+  font-size: 1.25rem;
   width: 100%;
   padding: 10px 20px;
   margin: 8px 0;
@@ -62,4 +60,16 @@
   color: var(--light-accent);
   background-color: var(--light-primary);
   box-shadow: 5px 5px 5px var(--light-accent);
+}
+
+@keyframes slide-up-fade-in {
+  0% {
+    transform: translateY(30px);
+    opacity: 0
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
